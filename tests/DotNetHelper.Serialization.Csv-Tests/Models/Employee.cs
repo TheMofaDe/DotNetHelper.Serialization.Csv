@@ -1,4 +1,4 @@
-﻿namespace DotNetHelper.Serialization.Json.Tests.Models
+﻿namespace DotNetHelper.Serialization.Csv.Tests.Models
 {
    public class Employee
    {

@@ -62,7 +62,7 @@ namespace DotNetHelper.Serialization.Csv
             using (var csvReader = new CsvReader(sr, Configuration, false))
             {
                 csvReader.Read();
-                return csvReader.GetRecord<T>();
+                return GetRecord<T>(csvReader,typeof(T));
             }
         }
 
@@ -73,7 +73,7 @@ namespace DotNetHelper.Serialization.Csv
             using (var csvReader = new CsvReader(sr, Configuration, false))
             {
                 csvReader.Read();
-                return csvReader.GetRecord<T>();
+                return GetRecord<T>(csvReader,typeof(T));
             }
         }
 
@@ -132,7 +132,7 @@ namespace DotNetHelper.Serialization.Csv
             using (var sr = new StreamReader(stream, Configuration.Encoding, false, bufferSize, leaveStreamOpen))
             using (var csvReader = new CsvReader(sr, Configuration, false))
             {
-                return csvReader.GetRecords<T>().ToList();
+                return GetRecords<T>(csvReader,typeof(T)).ToList();
             }
         }
 
@@ -141,7 +141,7 @@ namespace DotNetHelper.Serialization.Csv
             csv.IsNullThrow(nameof(csv));
             using (var csvReader = new CsvReader(new StringReader(csv), Configuration, false))
             {
-                return csvReader.GetRecords(type).ToList();
+                return GetRecords(csvReader, type).ToList();
             }
         }
 
@@ -151,7 +151,7 @@ namespace DotNetHelper.Serialization.Csv
             using (var sr = new StreamReader(stream, Configuration.Encoding, false, bufferSize, leaveStreamOpen))
             using (var csvReader = new CsvReader(sr, Configuration, false))
             {
-                return csvReader.GetRecords(type).ToList();
+                return GetRecords(csvReader, type).ToList();
             }
         }
 
@@ -216,11 +216,12 @@ namespace DotNetHelper.Serialization.Csv
         {
             obj.IsNullThrow(nameof(obj));
             var sb = new StringBuilder();
-            using (var csv = new CsvWriter(new StringWriter(sb), Configuration))
+            using (var sw = new StringWriter(sb))
+            using (var csv = new CsvWriter(sw, Configuration))
             {
                 WriteRecord(csv, obj.GetType(), obj);
-                return sb.ToString();
-            }      
+            }
+            return sb.ToString();
         }
 
         /// <summary>
@@ -233,11 +234,12 @@ namespace DotNetHelper.Serialization.Csv
         {
             obj.IsNullThrow(nameof(obj));
             var sb = new StringBuilder();
-            using (var csv = new CsvWriter(new StringWriter(sb), Configuration))
+            using(var sw = new StringWriter(sb))
+            using (var csv = new CsvWriter(sw, Configuration))
             {
                 WriteRecord(csv, obj.GetType(), obj);
-                return sb.ToString();
             }
+            return sb.ToString();
         }
 
 
@@ -265,8 +267,88 @@ namespace DotNetHelper.Serialization.Csv
         }
 
 
-    
+        private T GetRecord<T>(CsvReader csvReader,Type type)
+        {
+            var mapping = Configuration.Maps[type];
+            if (mapping.MemberMaps.Count <= 0)
+            {
+                Configuration.AutoMap<T>();
+                var record = (T)csvReader.GetRecord(type);
+                return record;
+            }
+            else
+            {
+                return csvReader.GetRecord<T>();
+            }
+        }
 
+        private IEnumerable<T> GetRecords<T>(CsvReader csvReader, Type type)
+        {
+            var mapping = Configuration.Maps[type];
+            if (mapping.MemberMaps.Count <= 0)
+            {
+                if (typeof(IEnumerable).IsAssignableFrom(type))
+                {
+                    var underlyingType = FindElementType(type);
+                    var errorMessage = $"Types that inherit IEnumerable cannot be auto mapped. If your code looks like this {Environment.NewLine} " +
+                                       $"var list = new {nameof(DataSourceCsv)}.DeserializeToList(stream, {type.FullName}) then change it to {Environment.NewLine} " +
+                                       $"var list = new {nameof(DataSourceCsv)}.DeserializeToList(stream, {underlyingType.FullName}). Otherwise you need register a ClassMap documentation on how to do that can be found here." +
+                                       $" https://joshclose.github.io/CsvHelper/getting-started";
+                    throw new ConfigurationException(errorMessage);
+                }
+                Configuration.AutoMap<T>();
+
+                var record = csvReader.GetRecords(type);
+                return (IEnumerable<T>) record;
+            }
+            else
+            {
+                return csvReader.GetRecords<T>();
+            }
+        }
+
+
+        private IEnumerable<object> GetRecords(CsvReader csvReader, Type type)
+        {
+            var mapping = Configuration.Maps[type];
+            if (mapping.MemberMaps.Count <= 0)
+            {
+                Configuration.AutoMap(type);
+                var records = csvReader.GetRecords(type);
+                return records;
+            }
+            else
+            {
+                return csvReader.GetRecords(type);
+            }
+        }
+
+        /// <summary>Finds the type of the element of a type. Returns null if this type does not enumerate.</summary>
+        /// <param name="type">The type to check.</param>
+        /// <returns>The element type, if found; otherwise, <see langword="null"/>.</returns>
+        private Type FindElementType(Type type)
+        {
+            if (type.IsArray)
+                return type.GetElementType();
+
+            // type is IEnumerable<T>;
+            if (ImplIEnumT(type))
+                return type.GetGenericArguments().First();
+
+            // type implements/extends IEnumerable<T>;
+            var enumType = type.GetInterfaces().Where(ImplIEnumT).Select(t => t.GetGenericArguments().First()).FirstOrDefault();
+            if (enumType != null)
+                return enumType;
+
+            // type is IEnumerable
+            if (IsIEnum(type) || type.GetInterfaces().Any(IsIEnum))
+                return typeof(object);
+
+            return null;
+
+            bool IsIEnum(Type t) => t == typeof(System.Collections.IEnumerable);
+            bool ImplIEnumT(Type t) => t.IsGenericType && t.GetGenericTypeDefinition() == typeof(IEnumerable<>);
+        }
 
         public TypeCode GetTypeCode()
         {

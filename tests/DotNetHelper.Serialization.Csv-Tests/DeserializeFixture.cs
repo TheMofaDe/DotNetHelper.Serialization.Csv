@@ -1,16 +1,13 @@
 using System;
 using System.Collections.Generic;
-using System.Dynamic;
 using System.IO;
 using System.Linq;
 using System.Text;
 using CsvHelper.Configuration;
-using DotNetHelper.Serialization.Csv;
-using DotNetHelper.Serialization.Json.Tests.Models;
-using Newtonsoft.Json;
+using DotNetHelper.Serialization.Csv.Tests.Models;
 using NUnit.Framework;
 
-namespace DotNetHelper.Serialization.Json.Tests
+namespace DotNetHelper.Serialization.Csv.Tests
 {
     [TestFixture]
     [NonParallelizable] //since were sharing a single file across multiple test cases we don't want Parallelizable
@@ -18,7 +15,7 @@ namespace DotNetHelper.Serialization.Json.Tests
     {
         
 
-        public DataSourceCsv DataSource { get; set; } = new DataSourceCsv();
+        public DataSourceCsv DataSource { get; set; } =  new DataSourceCsv(new Configuration { Encoding = Encoding.UTF8 });
 
         public CsvDeserializerTextFixture()
         {
@@ -29,8 +26,7 @@ namespace DotNetHelper.Serialization.Json.Tests
         [OneTimeSetUp]
         public void RunBeforeAnyTests()
         {
-            var configuration = new Configuration {Encoding = Encoding.UTF8};
-            DataSource = new DataSourceCsv(configuration);
+           DataSource = new DataSourceCsv(new Configuration { Encoding = Encoding.UTF8 });
         }
 
         [OneTimeTearDown]
@@ -201,21 +197,12 @@ namespace DotNetHelper.Serialization.Json.Tests
             EnsureStreamIsNotDisposeAndIsAtEndOfStream(stream);
         }
 
-
-        //[Author("Joseph McNeal Jr", "josephmcnealjr@gmail.com")]
-        //[Test]
-        //public void Test_Deserialize_Csv_To_Typed_Object_List()
-        //{
-        //    var list = DataSource.DeserializeToList(MockData.EmployeeAsJsonList,typeof(List<Employee>));
-        //    EnsureDynamicObjectMatchMockData(list.First());
-        //}
-
         [Author("Joseph McNeal Jr", "josephmcnealjr@gmail.com")]
         [Test]
         public void Test_Deserialize_Stream_To_Typed_Object_List_And_Stream_Is_Dispose()
         {
             var stream = MockData.GetEmployeeListAsStream(DataSource.Configuration.Encoding);
-            List<dynamic> list = DataSource.DeserializeToList(stream, typeof(List<Employee>));
+            List<dynamic> list = DataSource.DeserializeToList(stream, typeof(Employee));
             EnsureFirstNameAndLastNameMatchMockData(list.First().FirstName.ToString(), list.First().LastName.ToString());
             EnsureStreamIsDispose(stream);
         }
@@ -224,7 +211,7 @@ namespace DotNetHelper.Serialization.Json.Tests
         public void Test_Deserialize_Stream_To_Typed_Object_List_And_Stream_Wont_Dispose()
         {
             var stream = MockData.GetEmployeeListAsStream(DataSource.Configuration.Encoding);
-            List<dynamic> list = DataSource.DeserializeToList(stream, typeof(List<Employee>),1024,true);
+            List<dynamic> list = DataSource.DeserializeToList(stream, typeof(Employee),1024,true);
             EnsureFirstNameAndLastNameMatchMockData(list.First().FirstName.ToString(), list.First().LastName.ToString());
             EnsureStreamIsNotDisposeAndIsAtEndOfStream(stream);
         }

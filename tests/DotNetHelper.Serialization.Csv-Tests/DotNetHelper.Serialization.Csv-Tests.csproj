@@ -5,7 +5,7 @@
 
     <IsPackable>false</IsPackable>
 
-    <RootNamespace>DotNetHelper.Serialization.Json.Tests</RootNamespace>
+    <RootNamespace>DotNetHelper.Serialization.Csv.Tests</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

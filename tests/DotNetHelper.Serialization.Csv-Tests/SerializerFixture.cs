@@ -1,16 +1,11 @@
 using System;
-using System.Collections.Generic;
-using System.Dynamic;
 using System.IO;
-using System.Linq;
 using System.Text;
 using CsvHelper.Configuration;
-using DotNetHelper.Serialization.Csv;
-using DotNetHelper.Serialization.Json.Tests.Models;
-using Newtonsoft.Json;
+using DotNetHelper.Serialization.Csv.Tests.Models;
 using NUnit.Framework;
 
-namespace DotNetHelper.Serialization.Json.Tests
+namespace DotNetHelper.Serialization.Csv.Tests
 {
     [TestFixture]
     [NonParallelizable] //since were sharing a single file across multiple test cases we don't want Parallelizable
@@ -57,15 +52,15 @@ namespace DotNetHelper.Serialization.Json.Tests
         [Test]
         public void Test_Serialize_Generic_To_Csv()
         {
-            var json = DataSource.SerializeToString(MockData.Employee);
-            EnsureGenericObjectMatchMockDataJson(json);
+            var csv = DataSource.SerializeToString(MockData.Employee);
+            EnsureGenericObjectMatchMockDataJson(csv);
         }
         [Author("Joseph McNeal Jr", "josephmcnealjr@gmail.com")]
         [Test]
         public void Test_Serialize_Object_To_Csv()
         {
-            var json = DataSource.SerializeToString((object)MockData.Employee);
-            EnsureGenericObjectMatchMockDataJson(json);
+            var csv = DataSource.SerializeToString((object)MockData.Employee);
+            EnsureGenericObjectMatchMockDataJson(csv);
         }
         [Author("Joseph McNeal Jr", "josephmcnealjr@gmail.com")]
         [Test]
