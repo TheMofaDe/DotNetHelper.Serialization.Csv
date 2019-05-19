@@ -1,0 +1,22 @@
+### YamlMime:ManagedReference
+items:
+- uid: DotNetHelper.Serialization.Csv
+  commentId: N:DotNetHelper.Serialization.Csv
+  id: DotNetHelper.Serialization.Csv
+  children:
+  - DotNetHelper.Serialization.Csv.DataSourceCsv
+  langs:
+  - csharp
+  - vb
+  name: DotNetHelper.Serialization.Csv
+  nameWithType: DotNetHelper.Serialization.Csv
+  fullName: DotNetHelper.Serialization.Csv
+  type: Namespace
+  assemblies:
+  - DotNetHelper.Serialization.Csv
+references:
+- uid: DotNetHelper.Serialization.Csv.DataSourceCsv
+  commentId: T:DotNetHelper.Serialization.Csv.DataSourceCsv
+  name: DataSourceCsv
+  nameWithType: DataSourceCsv
+  fullName: DotNetHelper.Serialization.Csv.DataSourceCsv
