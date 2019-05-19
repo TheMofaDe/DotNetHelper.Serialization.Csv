@@ -19,12 +19,6 @@ references:
   commentId: M:DotNetHelper.Serialization.Csv.DataSourceCsv.#ctor(CsvHelper.Configuration.Configuration)
   fullName: DotNetHelper.Serialization.Csv.DataSourceCsv.DataSourceCsv(CsvHelper.Configuration.Configuration)
   nameWithType: DataSourceCsv.DataSourceCsv(Configuration)
-- uid: DotNetHelper.Serialization.Csv.DataSourceCsv.#ctor(System.Text.Encoding,CsvHelper.Configuration.Configuration)
-  name: DataSourceCsv(Encoding, Configuration)
-  href: api/DotNetHelper.Serialization.Csv.DataSourceCsv.html#DotNetHelper_Serialization_Csv_DataSourceCsv__ctor_System_Text_Encoding_CsvHelper_Configuration_Configuration_
-  commentId: M:DotNetHelper.Serialization.Csv.DataSourceCsv.#ctor(System.Text.Encoding,CsvHelper.Configuration.Configuration)
-  fullName: DotNetHelper.Serialization.Csv.DataSourceCsv.DataSourceCsv(System.Text.Encoding, CsvHelper.Configuration.Configuration)
-  nameWithType: DataSourceCsv.DataSourceCsv(Encoding, Configuration)
 - uid: DotNetHelper.Serialization.Csv.DataSourceCsv.#ctor*
   name: DataSourceCsv
   href: api/DotNetHelper.Serialization.Csv.DataSourceCsv.html#DotNetHelper_Serialization_Csv_DataSourceCsv__ctor_
@@ -143,19 +137,6 @@ references:
   fullName.vb: DotNetHelper.Serialization.Csv.DataSourceCsv.DeserializeToList(Of T)(System.String)
   nameWithType: DataSourceCsv.DeserializeToList<T>(String)
   nameWithType.vb: DataSourceCsv.DeserializeToList(Of T)(String)
-- uid: DotNetHelper.Serialization.Csv.DataSourceCsv.Encoding
-  name: Encoding
-  href: api/DotNetHelper.Serialization.Csv.DataSourceCsv.html#DotNetHelper_Serialization_Csv_DataSourceCsv_Encoding
-  commentId: P:DotNetHelper.Serialization.Csv.DataSourceCsv.Encoding
-  fullName: DotNetHelper.Serialization.Csv.DataSourceCsv.Encoding
-  nameWithType: DataSourceCsv.Encoding
-- uid: DotNetHelper.Serialization.Csv.DataSourceCsv.Encoding*
-  name: Encoding
-  href: api/DotNetHelper.Serialization.Csv.DataSourceCsv.html#DotNetHelper_Serialization_Csv_DataSourceCsv_Encoding_
-  commentId: Overload:DotNetHelper.Serialization.Csv.DataSourceCsv.Encoding
-  isSpec: "True"
-  fullName: DotNetHelper.Serialization.Csv.DataSourceCsv.Encoding
-  nameWithType: DataSourceCsv.Encoding
 - uid: DotNetHelper.Serialization.Csv.DataSourceCsv.GetTypeCode
   name: GetTypeCode()
   href: api/DotNetHelper.Serialization.Csv.DataSourceCsv.html#DotNetHelper_Serialization_Csv_DataSourceCsv_GetTypeCode

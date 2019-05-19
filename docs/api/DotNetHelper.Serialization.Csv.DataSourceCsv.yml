@@ -6,7 +6,6 @@ items:
   parent: DotNetHelper.Serialization.Csv
   children:
   - DotNetHelper.Serialization.Csv.DataSourceCsv.#ctor(CsvHelper.Configuration.Configuration)
-  - DotNetHelper.Serialization.Csv.DataSourceCsv.#ctor(System.Text.Encoding,CsvHelper.Configuration.Configuration)
   - DotNetHelper.Serialization.Csv.DataSourceCsv.Configuration
   - DotNetHelper.Serialization.Csv.DataSourceCsv.Deserialize(System.IO.Stream,System.Int32,System.Boolean)
   - DotNetHelper.Serialization.Csv.DataSourceCsv.Deserialize(System.IO.Stream,System.Type,System.Int32,System.Boolean)
@@ -20,7 +19,6 @@ items:
   - DotNetHelper.Serialization.Csv.DataSourceCsv.DeserializeToList(System.String,System.Type)
   - DotNetHelper.Serialization.Csv.DataSourceCsv.DeserializeToList``1(System.IO.Stream,System.Int32,System.Boolean)
   - DotNetHelper.Serialization.Csv.DataSourceCsv.DeserializeToList``1(System.String)
-  - DotNetHelper.Serialization.Csv.DataSourceCsv.Encoding
   - DotNetHelper.Serialization.Csv.DataSourceCsv.GetTypeCode
   - DotNetHelper.Serialization.Csv.DataSourceCsv.SerializeToStream(System.Object,System.Type,System.Int32,System.Boolean)
   - DotNetHelper.Serialization.Csv.DataSourceCsv.SerializeToStream(System.Object,System.Type,System.IO.Stream,System.Int32,System.Boolean)
@@ -55,7 +53,7 @@ items:
     remote:
       path: src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNet-Starter-Template
+      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv.git
     id: DataSourceCsv
     path: ../src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
     startLine: 16
@@ -101,7 +99,7 @@ items:
     remote:
       path: src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNet-Starter-Template
+      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv.git
     id: Configuration
     path: ../src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
     startLine: 23
@@ -124,44 +122,6 @@ items:
   modifiers.vb:
   - Public
   - ReadOnly
-- uid: DotNetHelper.Serialization.Csv.DataSourceCsv.Encoding
-  commentId: P:DotNetHelper.Serialization.Csv.DataSourceCsv.Encoding
-  id: Encoding
-  parent: DotNetHelper.Serialization.Csv.DataSourceCsv
-  langs:
-  - csharp
-  - vb
-  name: Encoding
-  nameWithType: DataSourceCsv.Encoding
-  fullName: DotNetHelper.Serialization.Csv.DataSourceCsv.Encoding
-  type: Property
-  source:
-    remote:
-      path: src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
-      branch: master
-      repo: https://github.com/TheMofaDe/DotNet-Starter-Template
-    id: Encoding
-    path: ../src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
-    startLine: 28
-  assemblies:
-  - DotNetHelper.Serialization.Csv
-  namespace: DotNetHelper.Serialization.Csv
-  summary: "\nGets or sets the encoding.\n"
-  example: []
-  syntax:
-    content: public Encoding Encoding { get; set; }
-    parameters: []
-    return:
-      type: System.Text.Encoding
-      description: The encoding.
-    content.vb: Public Property Encoding As Encoding
-  overload: DotNetHelper.Serialization.Csv.DataSourceCsv.Encoding*
-  modifiers.csharp:
-  - public
-  - get
-  - set
-  modifiers.vb:
-  - Public
 - uid: DotNetHelper.Serialization.Csv.DataSourceCsv.#ctor(CsvHelper.Configuration.Configuration)
   commentId: M:DotNetHelper.Serialization.Csv.DataSourceCsv.#ctor(CsvHelper.Configuration.Configuration)
   id: '#ctor(CsvHelper.Configuration.Configuration)'
@@ -177,10 +137,10 @@ items:
     remote:
       path: src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNet-Starter-Template
+      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv.git
     id: .ctor
     path: ../src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
-    startLine: 34
+    startLine: 30
   assemblies:
   - DotNetHelper.Serialization.Csv
   namespace: DotNetHelper.Serialization.Csv
@@ -193,45 +153,6 @@ items:
       type: CsvHelper.Configuration.Configuration
       description: The configuration.
     content.vb: Public Sub New(configuration As Configuration = Nothing)
-  overload: DotNetHelper.Serialization.Csv.DataSourceCsv.#ctor*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: DotNetHelper.Serialization.Csv.DataSourceCsv.#ctor(System.Text.Encoding,CsvHelper.Configuration.Configuration)
-  commentId: M:DotNetHelper.Serialization.Csv.DataSourceCsv.#ctor(System.Text.Encoding,CsvHelper.Configuration.Configuration)
-  id: '#ctor(System.Text.Encoding,CsvHelper.Configuration.Configuration)'
-  parent: DotNetHelper.Serialization.Csv.DataSourceCsv
-  langs:
-  - csharp
-  - vb
-  name: DataSourceCsv(Encoding, Configuration)
-  nameWithType: DataSourceCsv.DataSourceCsv(Encoding, Configuration)
-  fullName: DotNetHelper.Serialization.Csv.DataSourceCsv.DataSourceCsv(System.Text.Encoding, CsvHelper.Configuration.Configuration)
-  type: Constructor
-  source:
-    remote:
-      path: src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
-      branch: master
-      repo: https://github.com/TheMofaDe/DotNet-Starter-Template
-    id: .ctor
-    path: ../src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
-    startLine: 44
-  assemblies:
-  - DotNetHelper.Serialization.Csv
-  namespace: DotNetHelper.Serialization.Csv
-  summary: "\nInitializes a new instance of the <xref href=\"DotNetHelper.Serialization.Csv.DataSourceCsv\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
-  example: []
-  syntax:
-    content: public DataSourceCsv(Encoding encoding, Configuration configuration = null)
-    parameters:
-    - id: encoding
-      type: System.Text.Encoding
-      description: The encoding.
-    - id: configuration
-      type: CsvHelper.Configuration.Configuration
-      description: The configuration.
-    content.vb: Public Sub New(encoding As Encoding, configuration As Configuration = Nothing)
   overload: DotNetHelper.Serialization.Csv.DataSourceCsv.#ctor*
   modifiers.csharp:
   - public
@@ -252,10 +173,10 @@ items:
     remote:
       path: src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNet-Starter-Template
+      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv.git
     id: Deserialize
     path: ../src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
-    startLine: 50
+    startLine: 35
   assemblies:
   - DotNetHelper.Serialization.Csv
   namespace: DotNetHelper.Serialization.Csv
@@ -289,10 +210,10 @@ items:
     remote:
       path: src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNet-Starter-Template
+      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv.git
     id: Deserialize
     path: ../src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
-    startLine: 60
+    startLine: 45
   assemblies:
   - DotNetHelper.Serialization.Csv
   namespace: DotNetHelper.Serialization.Csv
@@ -330,10 +251,10 @@ items:
     remote:
       path: src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNet-Starter-Template
+      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv.git
     id: Deserialize
     path: ../src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
-    startLine: 71
+    startLine: 56
   assemblies:
   - DotNetHelper.Serialization.Csv
   namespace: DotNetHelper.Serialization.Csv
@@ -374,10 +295,10 @@ items:
     remote:
       path: src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNet-Starter-Template
+      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv.git
     id: Deserialize
     path: ../src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
-    startLine: 81
+    startLine: 68
   assemblies:
   - DotNetHelper.Serialization.Csv
   namespace: DotNetHelper.Serialization.Csv
@@ -422,10 +343,10 @@ items:
     remote:
       path: src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNet-Starter-Template
+      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv.git
     id: Deserialize
     path: ../src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
-    startLine: 92
+    startLine: 79
   assemblies:
   - DotNetHelper.Serialization.Csv
   namespace: DotNetHelper.Serialization.Csv
@@ -461,10 +382,10 @@ items:
     remote:
       path: src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNet-Starter-Template
+      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv.git
     id: Deserialize
     path: ../src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
-    startLine: 102
+    startLine: 89
   assemblies:
   - DotNetHelper.Serialization.Csv
   namespace: DotNetHelper.Serialization.Csv
@@ -504,10 +425,10 @@ items:
     remote:
       path: src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNet-Starter-Template
+      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv.git
     id: DeserializeToList
     path: ../src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
-    startLine: 113
+    startLine: 100
   assemblies:
   - DotNetHelper.Serialization.Csv
   namespace: DotNetHelper.Serialization.Csv
@@ -541,10 +462,10 @@ items:
     remote:
       path: src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNet-Starter-Template
+      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv.git
     id: DeserializeToList
     path: ../src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
-    startLine: 122
+    startLine: 109
   assemblies:
   - DotNetHelper.Serialization.Csv
   namespace: DotNetHelper.Serialization.Csv
@@ -582,10 +503,10 @@ items:
     remote:
       path: src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNet-Starter-Template
+      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv.git
     id: DeserializeToList
     path: ../src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
-    startLine: 132
+    startLine: 119
   assemblies:
   - DotNetHelper.Serialization.Csv
   namespace: DotNetHelper.Serialization.Csv
@@ -626,10 +547,10 @@ items:
     remote:
       path: src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNet-Starter-Template
+      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv.git
     id: DeserializeToList
     path: ../src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
-    startLine: 141
+    startLine: 128
   assemblies:
   - DotNetHelper.Serialization.Csv
   namespace: DotNetHelper.Serialization.Csv
@@ -674,10 +595,10 @@ items:
     remote:
       path: src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNet-Starter-Template
+      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv.git
     id: DeserializeToList
     path: ../src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
-    startLine: 151
+    startLine: 138
   assemblies:
   - DotNetHelper.Serialization.Csv
   namespace: DotNetHelper.Serialization.Csv
@@ -713,10 +634,10 @@ items:
     remote:
       path: src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNet-Starter-Template
+      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv.git
     id: DeserializeToList
     path: ../src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
-    startLine: 160
+    startLine: 147
   assemblies:
   - DotNetHelper.Serialization.Csv
   namespace: DotNetHelper.Serialization.Csv
@@ -754,10 +675,10 @@ items:
     remote:
       path: src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNet-Starter-Template
+      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv.git
     id: SerializeToStream
     path: ../src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
-    startLine: 172
+    startLine: 159
   assemblies:
   - DotNetHelper.Serialization.Csv
   namespace: DotNetHelper.Serialization.Csv
@@ -802,10 +723,10 @@ items:
     remote:
       path: src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNet-Starter-Template
+      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv.git
     id: SerializeToStream
     path: ../src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
-    startLine: 185
+    startLine: 172
   assemblies:
   - DotNetHelper.Serialization.Csv
   namespace: DotNetHelper.Serialization.Csv
@@ -845,10 +766,10 @@ items:
     remote:
       path: src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNet-Starter-Template
+      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv.git
     id: SerializeToStream
     path: ../src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
-    startLine: 196
+    startLine: 183
   assemblies:
   - DotNetHelper.Serialization.Csv
   namespace: DotNetHelper.Serialization.Csv
@@ -893,10 +814,10 @@ items:
     remote:
       path: src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNet-Starter-Template
+      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv.git
     id: SerializeToStream
     path: ../src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
-    startLine: 209
+    startLine: 196
   assemblies:
   - DotNetHelper.Serialization.Csv
   namespace: DotNetHelper.Serialization.Csv
@@ -936,10 +857,10 @@ items:
     remote:
       path: src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNet-Starter-Template
+      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv.git
     id: SerializeToString
     path: ../src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
-    startLine: 227
+    startLine: 214
   assemblies:
   - DotNetHelper.Serialization.Csv
   namespace: DotNetHelper.Serialization.Csv
@@ -977,10 +898,10 @@ items:
     remote:
       path: src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNet-Starter-Template
+      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv.git
     id: SerializeToString
     path: ../src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
-    startLine: 244
+    startLine: 232
   assemblies:
   - DotNetHelper.Serialization.Csv
   namespace: DotNetHelper.Serialization.Csv
@@ -1026,10 +947,10 @@ items:
     remote:
       path: src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNet-Starter-Template
+      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv.git
     id: GetTypeCode
     path: ../src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
-    startLine: 283
+    startLine: 352
   assemblies:
   - DotNetHelper.Serialization.Csv
   namespace: DotNetHelper.Serialization.Csv
@@ -1060,10 +981,10 @@ items:
     remote:
       path: src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNet-Starter-Template
+      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv.git
     id: ToBoolean
     path: ../src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
-    startLine: 287
+    startLine: 356
   assemblies:
   - DotNetHelper.Serialization.Csv
   namespace: DotNetHelper.Serialization.Csv
@@ -1097,10 +1018,10 @@ items:
     remote:
       path: src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNet-Starter-Template
+      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv.git
     id: ToByte
     path: ../src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
-    startLine: 292
+    startLine: 361
   assemblies:
   - DotNetHelper.Serialization.Csv
   namespace: DotNetHelper.Serialization.Csv
@@ -1134,10 +1055,10 @@ items:
     remote:
       path: src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNet-Starter-Template
+      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv.git
     id: ToChar
     path: ../src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
-    startLine: 297
+    startLine: 366
   assemblies:
   - DotNetHelper.Serialization.Csv
   namespace: DotNetHelper.Serialization.Csv
@@ -1171,10 +1092,10 @@ items:
     remote:
       path: src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNet-Starter-Template
+      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv.git
     id: ToDateTime
     path: ../src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
-    startLine: 302
+    startLine: 371
   assemblies:
   - DotNetHelper.Serialization.Csv
   namespace: DotNetHelper.Serialization.Csv
@@ -1208,10 +1129,10 @@ items:
     remote:
       path: src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNet-Starter-Template
+      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv.git
     id: ToDecimal
     path: ../src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
-    startLine: 307
+    startLine: 376
   assemblies:
   - DotNetHelper.Serialization.Csv
   namespace: DotNetHelper.Serialization.Csv
@@ -1245,10 +1166,10 @@ items:
     remote:
       path: src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNet-Starter-Template
+      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv.git
     id: ToDouble
     path: ../src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
-    startLine: 312
+    startLine: 381
   assemblies:
   - DotNetHelper.Serialization.Csv
   namespace: DotNetHelper.Serialization.Csv
@@ -1282,10 +1203,10 @@ items:
     remote:
       path: src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNet-Starter-Template
+      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv.git
     id: ToInt16
     path: ../src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
-    startLine: 317
+    startLine: 386
   assemblies:
   - DotNetHelper.Serialization.Csv
   namespace: DotNetHelper.Serialization.Csv
@@ -1319,10 +1240,10 @@ items:
     remote:
       path: src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNet-Starter-Template
+      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv.git
     id: ToInt32
     path: ../src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
-    startLine: 322
+    startLine: 391
   assemblies:
   - DotNetHelper.Serialization.Csv
   namespace: DotNetHelper.Serialization.Csv
@@ -1356,10 +1277,10 @@ items:
     remote:
       path: src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNet-Starter-Template
+      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv.git
     id: ToInt64
     path: ../src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
-    startLine: 327
+    startLine: 396
   assemblies:
   - DotNetHelper.Serialization.Csv
   namespace: DotNetHelper.Serialization.Csv
@@ -1393,10 +1314,10 @@ items:
     remote:
       path: src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNet-Starter-Template
+      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv.git
     id: ToSByte
     path: ../src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
-    startLine: 332
+    startLine: 401
   assemblies:
   - DotNetHelper.Serialization.Csv
   namespace: DotNetHelper.Serialization.Csv
@@ -1430,10 +1351,10 @@ items:
     remote:
       path: src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNet-Starter-Template
+      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv.git
     id: ToSingle
     path: ../src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
-    startLine: 337
+    startLine: 406
   assemblies:
   - DotNetHelper.Serialization.Csv
   namespace: DotNetHelper.Serialization.Csv
@@ -1467,10 +1388,10 @@ items:
     remote:
       path: src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNet-Starter-Template
+      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv.git
     id: ToString
     path: ../src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
-    startLine: 342
+    startLine: 411
   assemblies:
   - DotNetHelper.Serialization.Csv
   namespace: DotNetHelper.Serialization.Csv
@@ -1504,10 +1425,10 @@ items:
     remote:
       path: src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNet-Starter-Template
+      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv.git
     id: ToType
     path: ../src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
-    startLine: 347
+    startLine: 416
   assemblies:
   - DotNetHelper.Serialization.Csv
   namespace: DotNetHelper.Serialization.Csv
@@ -1543,10 +1464,10 @@ items:
     remote:
       path: src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNet-Starter-Template
+      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv.git
     id: ToUInt16
     path: ../src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
-    startLine: 352
+    startLine: 421
   assemblies:
   - DotNetHelper.Serialization.Csv
   namespace: DotNetHelper.Serialization.Csv
@@ -1580,10 +1501,10 @@ items:
     remote:
       path: src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNet-Starter-Template
+      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv.git
     id: ToUInt32
     path: ../src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
-    startLine: 357
+    startLine: 426
   assemblies:
   - DotNetHelper.Serialization.Csv
   namespace: DotNetHelper.Serialization.Csv
@@ -1617,10 +1538,10 @@ items:
     remote:
       path: src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNet-Starter-Template
+      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv.git
     id: ToUInt64
     path: ../src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
-    startLine: 362
+    startLine: 431
   assemblies:
   - DotNetHelper.Serialization.Csv
   namespace: DotNetHelper.Serialization.Csv
@@ -1975,24 +1896,6 @@ references:
   name: CsvHelper.Configuration
   nameWithType: CsvHelper.Configuration
   fullName: CsvHelper.Configuration
-- uid: DotNetHelper.Serialization.Csv.DataSourceCsv.Encoding*
-  commentId: Overload:DotNetHelper.Serialization.Csv.DataSourceCsv.Encoding
-  name: Encoding
-  nameWithType: DataSourceCsv.Encoding
-  fullName: DotNetHelper.Serialization.Csv.DataSourceCsv.Encoding
-- uid: System.Text.Encoding
-  commentId: T:System.Text.Encoding
-  parent: System.Text
-  isExternal: true
-  name: Encoding
-  nameWithType: Encoding
-  fullName: System.Text.Encoding
-- uid: System.Text
-  commentId: N:System.Text
-  isExternal: true
-  name: System.Text
-  nameWithType: System.Text
-  fullName: System.Text
 - uid: DotNetHelper.Serialization.Csv.DataSourceCsv
   commentId: T:DotNetHelper.Serialization.Csv.DataSourceCsv
   name: DataSourceCsv
