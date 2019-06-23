@@ -195,10 +195,12 @@ namespace DotNetHelper.Serialization.Csv
             }
         }
 
-        public Stream SerializeToStream<T>(T obj, int bufferSize = 1024, bool leaveStreamOpen = false) where T : class
+
+
+        public Stream SerializeToStream<T>(T obj, int bufferSize = 1024) where T : class
         {
             var memoryStream = new MemoryStream();
-            using (var sw = new StreamWriter(memoryStream, Configuration.Encoding, bufferSize, leaveStreamOpen))
+            using (var sw = new StreamWriter(memoryStream, Configuration.Encoding, bufferSize, true))
             {
                 using (var csv = new CsvWriter(sw, Configuration))
                 {
@@ -208,10 +210,10 @@ namespace DotNetHelper.Serialization.Csv
             return memoryStream;
         }
 
-        public Stream SerializeListToStream<T>(IEnumerable<T> objs, int bufferSize = 1024, bool leaveStreamOpen = false) where T : class
+        public Stream SerializeListToStream<T>(IEnumerable<T> objs, int bufferSize = 1024) where T : class
         {
             var memoryStream = new MemoryStream();
-            using (var sw = new StreamWriter(memoryStream, Configuration.Encoding, bufferSize, leaveStreamOpen))
+            using (var sw = new StreamWriter(memoryStream, Configuration.Encoding, bufferSize, true))
             {
                 using (var csv = new CsvWriter(sw, Configuration))
                 {
@@ -221,10 +223,10 @@ namespace DotNetHelper.Serialization.Csv
             return memoryStream;
         }
 
-        public Stream SerializeToStream(object obj, Type type, int bufferSize = 1024, bool leaveStreamOpen = false)
+        public Stream SerializeToStream(object obj, Type type, int bufferSize = 1024)
         {
             var memoryStream = new MemoryStream();
-            using (var sw = new StreamWriter(memoryStream, Configuration.Encoding, bufferSize, leaveStreamOpen))
+            using (var sw = new StreamWriter(memoryStream, Configuration.Encoding, bufferSize, true))
             {
                 using (var csv = new CsvWriter(sw, Configuration))
                 {

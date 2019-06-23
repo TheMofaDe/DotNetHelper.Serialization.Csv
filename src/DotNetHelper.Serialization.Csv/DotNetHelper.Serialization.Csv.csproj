@@ -6,7 +6,7 @@
 
   <ItemGroup>
     <PackageReference Include="CsvHelper" Version="12.1.2" />
-    <PackageReference Include="DotNetHelper.Serialization.Abstractions" Version="1.0.5" />
+    <PackageReference Include="DotNetHelper.Serialization.Abstractions" Version="1.0.7" />
   </ItemGroup>
 
 </Project>

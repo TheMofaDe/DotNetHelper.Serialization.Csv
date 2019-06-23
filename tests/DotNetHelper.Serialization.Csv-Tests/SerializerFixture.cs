@@ -62,6 +62,12 @@ namespace DotNetHelper.Serialization.Csv.Tests
             var csv = DataSource.SerializeToString((object)MockData.Employee);
             EnsureGenericObjectMatchMockDataJson(csv);
         }
+        [Test]
+        public void Test_Serialize_ObjectList_To_Csv()
+        {
+            var csv = DataSource.SerializeToString((object)MockData.EmployeeList);
+            EnsureGenericObjectMatchMockDataJsonSingleList(csv);
+        }
         [Author("Joseph McNeal Jr", "josephmcnealjr@gmail.com")]
         [Test]
         public void Test_Serialize_Generic_List_To_My_Stream_And_Stream_Wont_Dispose()
@@ -74,6 +80,7 @@ namespace DotNetHelper.Serialization.Csv.Tests
             using (var reader = new StreamReader(stream, DataSource.Configuration.Encoding))
             {
                 string value = reader.ReadToEnd();
+                EnsureGenericObjectMatchMockDataJsonSingleList(value);
                 // Do something with the value
             }
         }
@@ -127,7 +134,7 @@ namespace DotNetHelper.Serialization.Csv.Tests
         public void Test_Serialize_Generic_To_Stream_And_Stream_Wont_Dispose()
         {
 
-            var stream = Stream.Synchronized(DataSource.SerializeToStream(MockData.Employee, 1024, true));
+            var stream = Stream.Synchronized(DataSource.SerializeToStream(MockData.Employee, 1024));
             // TODO :: EnsureStreamMatchMockDataJson(stream);
             EnsureStreamIsNotDisposeAndIsAtEndOfStream(stream);
             stream.Seek(0, SeekOrigin.Begin);
@@ -137,9 +144,9 @@ namespace DotNetHelper.Serialization.Csv.Tests
         public void Test_Serialize_Generic_To_Stream_And_Stream_Is_Dispose()
         {
 
-            var stream = DataSource.SerializeToStream(MockData.Employee, 1024, false);
+            var stream = DataSource.SerializeToStream(MockData.Employee, 1024);
             // TODO :: EnsureStreamMatchMockDataJson(stream);
-            EnsureStreamIsDispose(stream);
+            EnsureStreamIsNotDisposeAndIsAtEndOfStream(stream);
         }
 
 
@@ -149,7 +156,7 @@ namespace DotNetHelper.Serialization.Csv.Tests
         public void Test_Serialize_Object_To_Stream_And_Stream_Wont_Dispose()
         {
 
-            var stream = Stream.Synchronized(DataSource.SerializeToStream(MockData.Employee,MockData.Employee.GetType(), 1024, true));
+            var stream = Stream.Synchronized(DataSource.SerializeToStream(MockData.Employee,MockData.Employee.GetType(), 1024));
             // TODO :: EnsureStreamMatchMockDataJson(stream);
             EnsureStreamIsNotDisposeAndIsAtEndOfStream(stream);
             stream.Seek(0, SeekOrigin.Begin);
@@ -159,9 +166,10 @@ namespace DotNetHelper.Serialization.Csv.Tests
         public void Test_Serialize_Object_To_Stream_And_Stream_Is_Dispose()
         {
 
-            var stream = DataSource.SerializeToStream(MockData.Employee, MockData.Employee.GetType(),1024, false);
+            var stream = DataSource.SerializeToStream(MockData.Employee, MockData.Employee.GetType(),1024);
             // TODO :: EnsureStreamMatchMockDataJson(stream);
-            EnsureStreamIsDispose(stream);
+            EnsureStreamIsNotDisposeAndIsAtEndOfStream(stream);
+            
         }
 
 
@@ -171,6 +179,11 @@ namespace DotNetHelper.Serialization.Csv.Tests
         private void EnsureGenericObjectMatchMockDataJson(string csv)
         {
             var equals = string.Equals(csv, MockData.EmployeeAsCsvWithHeader, StringComparison.OrdinalIgnoreCase);
+            Assert.IsTrue(equals, $"Test failed due to json not matching mock data json");
+        }
+        private void EnsureGenericObjectMatchMockDataJsonSingleList(string csv)
+        {
+            var equals = string.Equals(csv, MockData.EmployeeAsCsvWithHeaderList, StringComparison.OrdinalIgnoreCase);
             Assert.IsTrue(equals, $"Test failed due to json not matching mock data json");
         }
 

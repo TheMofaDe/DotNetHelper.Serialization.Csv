@@ -12,7 +12,8 @@ namespace DotNetHelper.Serialization.Csv.Tests
         public static string EmployeeAsCsvWithHeader { get; } = @"FirstName,LastName
 Kate,Blake";
 
-        public static List<Employee> EmployeeList { get; } = new List<Employee>() { Employee };
+        public static List<Employee> EmployeeList { get; } = new List<Employee>() { Employee
+            , new Employee(){FirstName = "Mabelle",LastName = "Black" } };
         public static string EmployeeAsCsvWithHeaderList { get; } = @"FirstName,LastName
 Kate,Blake
 Mabelle,Black
