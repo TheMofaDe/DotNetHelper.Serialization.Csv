@@ -8,6 +8,7 @@ using System.Text;
 using System.Xml;
 using CsvHelper;
 using CsvHelper.Configuration;
+using DotNetHelper.Serialization.Csv.Extension;
 using DotNetHelper.Serialization.Json.Extension;
 using ISerializer = DotNetHelper.Serialization.Abstractions.Interface.ISerializer;
 
@@ -170,6 +171,19 @@ namespace DotNetHelper.Serialization.Csv
             }
         }
 
+        public void SerializeListToStream<T>(IEnumerable<T> objs, Stream stream, int bufferSize = 1024, bool leaveStreamOpen = false) where T : class
+        {
+            objs.IsNullThrow(nameof(objs));
+            stream.IsNullThrow(nameof(stream));
+            using (var sw = new StreamWriter(stream, Configuration.Encoding, bufferSize, leaveStreamOpen))
+            {
+                using (var csv = new CsvWriter(sw, Configuration))
+                {
+                    WriteRecords(csv, objs);
+                }
+            }
+        }
+
         public void SerializeToStream(object obj, Type type, Stream stream, int bufferSize = 1024, bool leaveStreamOpen = false)
         {
             using (var sw = new StreamWriter(stream, Configuration.Encoding, bufferSize, leaveStreamOpen))
@@ -189,6 +203,19 @@ namespace DotNetHelper.Serialization.Csv
                 using (var csv = new CsvWriter(sw, Configuration))
                 {
                     WriteRecord(csv, obj.GetType(), obj);
+                }
+            }
+            return memoryStream;
+        }
+
+        public Stream SerializeListToStream<T>(IEnumerable<T> objs, int bufferSize = 1024, bool leaveStreamOpen = false) where T : class
+        {
+            var memoryStream = new MemoryStream();
+            using (var sw = new StreamWriter(memoryStream, Configuration.Encoding, bufferSize, leaveStreamOpen))
+            {
+                using (var csv = new CsvWriter(sw, Configuration))
+                {
+                    WriteRecords(csv, objs);
                 }
             }
             return memoryStream;
@@ -242,6 +269,23 @@ namespace DotNetHelper.Serialization.Csv
             return sb.ToString();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="obj"></param>
+        /// <returns></returns>
+        public string SerializeListToString<T>(IEnumerable<T> obj) where T : class
+        {
+            obj.IsNullThrow(nameof(obj));
+            var sb = new StringBuilder();
+            using (var sw = new StringWriter(sb))
+            using (var csv = new CsvWriter(sw, Configuration))
+            {
+                WriteRecords(csv, obj);
+            }
+            return sb.ToString();
+        }
 
         /// <summary>
         /// Checks if developer wants to include the type headers
@@ -253,17 +297,34 @@ namespace DotNetHelper.Serialization.Csv
         {
             if (Configuration.HasHeaderRecord)
             {
-                csv.WriteHeader(type);
+                if (obj is IEnumerable)
+                {
+                    csv.WriteHeader(type.GetEnumerableItemType());
+                }
+                else
+                {
+                    csv.WriteHeader(type);
+                }
                 csv.NextRecord();
             }
             if (obj is IEnumerable)
             {
-                csv.WriteRecords(obj as IEnumerable<dynamic>);
+                csv.WriteRecords(obj as IEnumerable<object>);
             }
             else
             {
                 csv.WriteRecord(obj);
             }
+        }
+
+        private void WriteRecords<T>(CsvWriter csv, IEnumerable<T> obj)
+        {
+            if (Configuration.HasHeaderRecord)
+            {
+                csv.WriteHeader<T>();
+                csv.NextRecord();
+            }
+            csv.WriteRecords(obj);
         }
 
 

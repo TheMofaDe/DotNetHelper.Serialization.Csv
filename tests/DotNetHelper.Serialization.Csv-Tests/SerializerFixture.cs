@@ -64,14 +64,31 @@ namespace DotNetHelper.Serialization.Csv.Tests
         }
         [Author("Joseph McNeal Jr", "josephmcnealjr@gmail.com")]
         [Test]
+        public void Test_Serialize_Generic_List_To_My_Stream_And_Stream_Wont_Dispose()
+        {
+            var stream = new MemoryStream();
+            DataSource.SerializeToStream(MockData.EmployeeList,stream,1024,true);
+            // TODO :: EnsureStreamMatchMockDataJson(stream);
+            EnsureStreamIsNotDisposeAndIsAtEndOfStream(stream);
+            stream.Seek(0, SeekOrigin.Begin);
+            using (var reader = new StreamReader(stream, DataSource.Configuration.Encoding))
+            {
+                string value = reader.ReadToEnd();
+                // Do something with the value
+            }
+        }
+
+        [Author("Joseph McNeal Jr", "josephmcnealjr@gmail.com")]
+        [Test]
         public void Test_Serialize_Generic_To_My_Stream_And_Stream_Wont_Dispose()
         {
             var stream = new MemoryStream();
-            DataSource.SerializeToStream(MockData.Employee,stream,1024,true);
+            DataSource.SerializeToStream(MockData.Employee, stream, 1024, true);
             // TODO :: EnsureStreamMatchMockDataJson(stream);
             EnsureStreamIsNotDisposeAndIsAtEndOfStream(stream);
             stream.Seek(0, SeekOrigin.Begin);
         }
+
         [Author("Joseph McNeal Jr", "josephmcnealjr@gmail.com")]
         [Test]
         public void Test_Serialize_Generic_To_My_Stream_And_Stream_Is_Dispose()
