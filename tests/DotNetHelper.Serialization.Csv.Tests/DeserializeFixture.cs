@@ -217,6 +217,31 @@ namespace DotNetHelper.Serialization.Csv.Tests
         }
 
 
+
+        [Author("Joseph McNeal Jr", "josephmcnealjr@gmail.com")]
+        [Test]
+        public void Test_Deserialize_Json_To_Typed_Object_Of_List()
+        {
+            List<object> employees = (List<object>) DataSource.Deserialize(MockData.EmployeeAsCsvWithHeaderList, typeof(List<Employee>));
+            var employee = employees.First() as Employee;
+            EnsureFirstNameAndLastNameMatchMockData(employee.FirstName, employee.LastName);
+
+
+
+        }
+
+        [Author("Joseph McNeal Jr", "josephmcnealjr@gmail.com")]
+        [Test]
+        public void Test_Deserialize_Json_To_Typed_Object_Of_List2()
+        {
+            var employees = DataSource.DeserializeToList(MockData.EmployeeAsCsvWithHeaderList, typeof(List<Employee>));
+            var employee = employees.First() as Employee;
+            EnsureFirstNameAndLastNameMatchMockData(employee.FirstName, employee.LastName);
+        }
+
+
+
+
         private void EnsureFirstNameAndLastNameMatchMockData(string firstName,string lastName)
         {
             if (firstName.Equals(MockData.Employee.FirstName) && lastName.Equals(MockData.Employee.LastName))

@@ -143,7 +143,7 @@ Task("Test")
 
 		var tf = targetFramework.Replace("netstandard","netcoreapp");
 
-	    var testAssemblies = GetFiles("./tests/**/bin/" + parameters.Configuration + "/" + tf + "/*DotNetHelper.ObjectToSql.Tests.dll");
+	    var testAssemblies = GetFiles("./tests/**/bin/" + parameters.Configuration + "/" + tf + "/*.Tests.dll");
 
 		var nunitSettings = new NUnit3Settings
 		{
@@ -163,7 +163,7 @@ Task("Test")
 			OldStyle = true,
 			MergeOutput = false
         }     
-        .WithFilter("+[*]* -[*.Tests*]*")
+        .WithFilter("+[*]* +[*.Tests*]*")
 		.WithFilter("-[*NUnit3.*]*"));
 
         }
@@ -516,7 +516,7 @@ Task("Publish-Coverage")
     .IsDependentOn("Test")
     .Does<BuildParameters>((parameters) =>
 {
-    var coverageFiles = GetFiles(parameters.Paths.Directories.TestCoverageOutput + "/*TestResult.xml");
+    var coverageFiles = GetFiles(parameters.Paths.Directories.TestCoverageOutput + "/*Coverage.xml");
 
     var token = parameters.Credentials.CodeCov.Token;
     if(string.IsNullOrEmpty(token)) {
@@ -551,8 +551,8 @@ Task("Publish-AppVeyor")
         if (FileExists(package.PackagePath)) { AppVeyor.UploadArtifact(package.PackagePath); }
     }
 
-    if (FileExists(parameters.Paths.Directories.TestCoverageOutput + $"/TestResult.xml")) {
-        AppVeyor.UploadTestResults(parameters.Paths.Directories.TestCoverageOutput + $"/TestResult.xml" , AppVeyorTestResultsType.NUnit3);
+    if (FileExists(parameters.Paths.Files.TestCoverageOutputFilePath)) {
+        AppVeyor.UploadTestResults(parameters.Paths.Files.TestCoverageOutputFilePath, AppVeyorTestResultsType.NUnit3);
     }
 })
 .OnError(exception =>
