@@ -85,7 +85,7 @@ namespace DotNetHelper.Serialization.Csv
             {
                 if (typeof(IEnumerable).IsAssignableFrom(type))
                 {
-                      return GetRecords(csvReader, type).AsList();
+                      return GetRecords(csvReader, type).ConvertListToTypeList(type);//.AsList();
                 }
                 csvReader.Read();
                 return csvReader.GetRecord(type);
@@ -384,9 +384,21 @@ namespace DotNetHelper.Serialization.Csv
                 var mapping = Configuration.Maps[underlyType];
                 if (mapping == null)
                 {
-                    Configuration.AutoMap(underlyType);
+                   // Configuration.AutoMap(underlyType);
                 }
-                return csvReader.GetRecords(underlyType);
+                //var list = new List<dynamic>(){};
+                //while (csvReader.Read())
+                //{
+                //    var obj = csvReader.GetRecord(underlyType);
+                //    var d = Convert.ChangeType(obj, underlyType);
+                //    list.Add(obj);
+                //}
+                //return list;
+             
+                var list =  csvReader.GetRecords(underlyType);
+                //if (list.GetType() != type)
+                  //  return list.ConvertListToTypeList(type) as IEnumerable<object>;
+                return list;
             }
             else
             {

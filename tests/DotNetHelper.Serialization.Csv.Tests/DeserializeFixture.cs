@@ -222,14 +222,15 @@ namespace DotNetHelper.Serialization.Csv.Tests
         [Test]
         public void Test_Deserialize_Json_To_Typed_Object_Of_List()
         {
-            List<object> employees = (List<object>) DataSource.Deserialize(MockData.EmployeeAsCsvWithHeaderList, typeof(List<Employee>));
-            var employee = employees.First() as Employee;
+            var objects = DataSource.Deserialize(MockData.EmployeeAsCsvWithHeaderList, typeof(List<Employee>));
+            var employees = (List<Employee>)objects;
+            var employee = employees.First();
             EnsureFirstNameAndLastNameMatchMockData(employee.FirstName, employee.LastName);
 
 
 
         }
-
+        
         [Author("Joseph McNeal Jr", "josephmcnealjr@gmail.com")]
         [Test]
         public void Test_Deserialize_Json_To_Typed_Object_Of_List2()

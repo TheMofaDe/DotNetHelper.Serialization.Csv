@@ -21,5 +21,17 @@ namespace DotNetHelper.Serialization.Json.Extension
         /// <param name="source">The enumerable to return as a list.</param>
         public static List<T> AsList<T>(this IEnumerable<T> source) => (source == null || source is List<T>) ? (List<T>)source : source.ToList();
 
+
+        public static object ConvertListToTypeList(this IEnumerable<object> items, Type type)
+        {
+            var containedType = type.GenericTypeArguments.First();
+            var enumerableType = typeof(Enumerable);
+            var castMethod = enumerableType.GetMethod(nameof(Enumerable.Cast)).MakeGenericMethod(containedType);
+            var toListMethod = enumerableType.GetMethod(nameof(Enumerable.ToList)).MakeGenericMethod(containedType);
+            var itemsToCast = items.Select(item => Convert.ChangeType(item, containedType));
+            var castedItems = castMethod.Invoke(null, new[] { itemsToCast });
+            return toListMethod.Invoke(null, new[] { castedItems });
+        }
+
     }
 }
