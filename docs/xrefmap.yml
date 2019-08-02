@@ -137,25 +137,53 @@ references:
   fullName.vb: DotNetHelper.Serialization.Csv.DataSourceCsv.DeserializeToList(Of T)(System.String)
   nameWithType: DataSourceCsv.DeserializeToList<T>(String)
   nameWithType.vb: DataSourceCsv.DeserializeToList(Of T)(String)
-- uid: DotNetHelper.Serialization.Csv.DataSourceCsv.GetTypeCode
-  name: GetTypeCode()
-  href: api/DotNetHelper.Serialization.Csv.DataSourceCsv.html#DotNetHelper_Serialization_Csv_DataSourceCsv_GetTypeCode
-  commentId: M:DotNetHelper.Serialization.Csv.DataSourceCsv.GetTypeCode
-  fullName: DotNetHelper.Serialization.Csv.DataSourceCsv.GetTypeCode()
-  nameWithType: DataSourceCsv.GetTypeCode()
-- uid: DotNetHelper.Serialization.Csv.DataSourceCsv.GetTypeCode*
-  name: GetTypeCode
-  href: api/DotNetHelper.Serialization.Csv.DataSourceCsv.html#DotNetHelper_Serialization_Csv_DataSourceCsv_GetTypeCode_
-  commentId: Overload:DotNetHelper.Serialization.Csv.DataSourceCsv.GetTypeCode
+- uid: DotNetHelper.Serialization.Csv.DataSourceCsv.SerializeListToStream*
+  name: SerializeListToStream
+  href: api/DotNetHelper.Serialization.Csv.DataSourceCsv.html#DotNetHelper_Serialization_Csv_DataSourceCsv_SerializeListToStream_
+  commentId: Overload:DotNetHelper.Serialization.Csv.DataSourceCsv.SerializeListToStream
   isSpec: "True"
-  fullName: DotNetHelper.Serialization.Csv.DataSourceCsv.GetTypeCode
-  nameWithType: DataSourceCsv.GetTypeCode
-- uid: DotNetHelper.Serialization.Csv.DataSourceCsv.SerializeToStream(System.Object,System.Type,System.Int32,System.Boolean)
-  name: SerializeToStream(Object, Type, Int32, Boolean)
-  href: api/DotNetHelper.Serialization.Csv.DataSourceCsv.html#DotNetHelper_Serialization_Csv_DataSourceCsv_SerializeToStream_System_Object_System_Type_System_Int32_System_Boolean_
-  commentId: M:DotNetHelper.Serialization.Csv.DataSourceCsv.SerializeToStream(System.Object,System.Type,System.Int32,System.Boolean)
-  fullName: DotNetHelper.Serialization.Csv.DataSourceCsv.SerializeToStream(System.Object, System.Type, System.Int32, System.Boolean)
-  nameWithType: DataSourceCsv.SerializeToStream(Object, Type, Int32, Boolean)
+  fullName: DotNetHelper.Serialization.Csv.DataSourceCsv.SerializeListToStream
+  nameWithType: DataSourceCsv.SerializeListToStream
+- uid: DotNetHelper.Serialization.Csv.DataSourceCsv.SerializeListToStream``1(System.Collections.Generic.IEnumerable{``0},System.Int32)
+  name: SerializeListToStream<T>(IEnumerable<T>, Int32)
+  href: api/DotNetHelper.Serialization.Csv.DataSourceCsv.html#DotNetHelper_Serialization_Csv_DataSourceCsv_SerializeListToStream__1_System_Collections_Generic_IEnumerable___0__System_Int32_
+  commentId: M:DotNetHelper.Serialization.Csv.DataSourceCsv.SerializeListToStream``1(System.Collections.Generic.IEnumerable{``0},System.Int32)
+  name.vb: SerializeListToStream(Of T)(IEnumerable(Of T), Int32)
+  fullName: DotNetHelper.Serialization.Csv.DataSourceCsv.SerializeListToStream<T>(System.Collections.Generic.IEnumerable<T>, System.Int32)
+  fullName.vb: DotNetHelper.Serialization.Csv.DataSourceCsv.SerializeListToStream(Of T)(System.Collections.Generic.IEnumerable(Of T), System.Int32)
+  nameWithType: DataSourceCsv.SerializeListToStream<T>(IEnumerable<T>, Int32)
+  nameWithType.vb: DataSourceCsv.SerializeListToStream(Of T)(IEnumerable(Of T), Int32)
+- uid: DotNetHelper.Serialization.Csv.DataSourceCsv.SerializeListToStream``1(System.Collections.Generic.IEnumerable{``0},System.IO.Stream,System.Int32,System.Boolean)
+  name: SerializeListToStream<T>(IEnumerable<T>, Stream, Int32, Boolean)
+  href: api/DotNetHelper.Serialization.Csv.DataSourceCsv.html#DotNetHelper_Serialization_Csv_DataSourceCsv_SerializeListToStream__1_System_Collections_Generic_IEnumerable___0__System_IO_Stream_System_Int32_System_Boolean_
+  commentId: M:DotNetHelper.Serialization.Csv.DataSourceCsv.SerializeListToStream``1(System.Collections.Generic.IEnumerable{``0},System.IO.Stream,System.Int32,System.Boolean)
+  name.vb: SerializeListToStream(Of T)(IEnumerable(Of T), Stream, Int32, Boolean)
+  fullName: DotNetHelper.Serialization.Csv.DataSourceCsv.SerializeListToStream<T>(System.Collections.Generic.IEnumerable<T>, System.IO.Stream, System.Int32, System.Boolean)
+  fullName.vb: DotNetHelper.Serialization.Csv.DataSourceCsv.SerializeListToStream(Of T)(System.Collections.Generic.IEnumerable(Of T), System.IO.Stream, System.Int32, System.Boolean)
+  nameWithType: DataSourceCsv.SerializeListToStream<T>(IEnumerable<T>, Stream, Int32, Boolean)
+  nameWithType.vb: DataSourceCsv.SerializeListToStream(Of T)(IEnumerable(Of T), Stream, Int32, Boolean)
+- uid: DotNetHelper.Serialization.Csv.DataSourceCsv.SerializeListToString*
+  name: SerializeListToString
+  href: api/DotNetHelper.Serialization.Csv.DataSourceCsv.html#DotNetHelper_Serialization_Csv_DataSourceCsv_SerializeListToString_
+  commentId: Overload:DotNetHelper.Serialization.Csv.DataSourceCsv.SerializeListToString
+  isSpec: "True"
+  fullName: DotNetHelper.Serialization.Csv.DataSourceCsv.SerializeListToString
+  nameWithType: DataSourceCsv.SerializeListToString
+- uid: DotNetHelper.Serialization.Csv.DataSourceCsv.SerializeListToString``1(System.Collections.Generic.IEnumerable{``0})
+  name: SerializeListToString<T>(IEnumerable<T>)
+  href: api/DotNetHelper.Serialization.Csv.DataSourceCsv.html#DotNetHelper_Serialization_Csv_DataSourceCsv_SerializeListToString__1_System_Collections_Generic_IEnumerable___0__
+  commentId: M:DotNetHelper.Serialization.Csv.DataSourceCsv.SerializeListToString``1(System.Collections.Generic.IEnumerable{``0})
+  name.vb: SerializeListToString(Of T)(IEnumerable(Of T))
+  fullName: DotNetHelper.Serialization.Csv.DataSourceCsv.SerializeListToString<T>(System.Collections.Generic.IEnumerable<T>)
+  fullName.vb: DotNetHelper.Serialization.Csv.DataSourceCsv.SerializeListToString(Of T)(System.Collections.Generic.IEnumerable(Of T))
+  nameWithType: DataSourceCsv.SerializeListToString<T>(IEnumerable<T>)
+  nameWithType.vb: DataSourceCsv.SerializeListToString(Of T)(IEnumerable(Of T))
+- uid: DotNetHelper.Serialization.Csv.DataSourceCsv.SerializeToStream(System.Object,System.Type,System.Int32)
+  name: SerializeToStream(Object, Type, Int32)
+  href: api/DotNetHelper.Serialization.Csv.DataSourceCsv.html#DotNetHelper_Serialization_Csv_DataSourceCsv_SerializeToStream_System_Object_System_Type_System_Int32_
+  commentId: M:DotNetHelper.Serialization.Csv.DataSourceCsv.SerializeToStream(System.Object,System.Type,System.Int32)
+  fullName: DotNetHelper.Serialization.Csv.DataSourceCsv.SerializeToStream(System.Object, System.Type, System.Int32)
+  nameWithType: DataSourceCsv.SerializeToStream(Object, Type, Int32)
 - uid: DotNetHelper.Serialization.Csv.DataSourceCsv.SerializeToStream(System.Object,System.Type,System.IO.Stream,System.Int32,System.Boolean)
   name: SerializeToStream(Object, Type, Stream, Int32, Boolean)
   href: api/DotNetHelper.Serialization.Csv.DataSourceCsv.html#DotNetHelper_Serialization_Csv_DataSourceCsv_SerializeToStream_System_Object_System_Type_System_IO_Stream_System_Int32_System_Boolean_
@@ -169,15 +197,15 @@ references:
   isSpec: "True"
   fullName: DotNetHelper.Serialization.Csv.DataSourceCsv.SerializeToStream
   nameWithType: DataSourceCsv.SerializeToStream
-- uid: DotNetHelper.Serialization.Csv.DataSourceCsv.SerializeToStream``1(``0,System.Int32,System.Boolean)
-  name: SerializeToStream<T>(T, Int32, Boolean)
-  href: api/DotNetHelper.Serialization.Csv.DataSourceCsv.html#DotNetHelper_Serialization_Csv_DataSourceCsv_SerializeToStream__1___0_System_Int32_System_Boolean_
-  commentId: M:DotNetHelper.Serialization.Csv.DataSourceCsv.SerializeToStream``1(``0,System.Int32,System.Boolean)
-  name.vb: SerializeToStream(Of T)(T, Int32, Boolean)
-  fullName: DotNetHelper.Serialization.Csv.DataSourceCsv.SerializeToStream<T>(T, System.Int32, System.Boolean)
-  fullName.vb: DotNetHelper.Serialization.Csv.DataSourceCsv.SerializeToStream(Of T)(T, System.Int32, System.Boolean)
-  nameWithType: DataSourceCsv.SerializeToStream<T>(T, Int32, Boolean)
-  nameWithType.vb: DataSourceCsv.SerializeToStream(Of T)(T, Int32, Boolean)
+- uid: DotNetHelper.Serialization.Csv.DataSourceCsv.SerializeToStream``1(``0,System.Int32)
+  name: SerializeToStream<T>(T, Int32)
+  href: api/DotNetHelper.Serialization.Csv.DataSourceCsv.html#DotNetHelper_Serialization_Csv_DataSourceCsv_SerializeToStream__1___0_System_Int32_
+  commentId: M:DotNetHelper.Serialization.Csv.DataSourceCsv.SerializeToStream``1(``0,System.Int32)
+  name.vb: SerializeToStream(Of T)(T, Int32)
+  fullName: DotNetHelper.Serialization.Csv.DataSourceCsv.SerializeToStream<T>(T, System.Int32)
+  fullName.vb: DotNetHelper.Serialization.Csv.DataSourceCsv.SerializeToStream(Of T)(T, System.Int32)
+  nameWithType: DataSourceCsv.SerializeToStream<T>(T, Int32)
+  nameWithType.vb: DataSourceCsv.SerializeToStream(Of T)(T, Int32)
 - uid: DotNetHelper.Serialization.Csv.DataSourceCsv.SerializeToStream``1(``0,System.IO.Stream,System.Int32,System.Boolean)
   name: SerializeToStream<T>(T, Stream, Int32, Boolean)
   href: api/DotNetHelper.Serialization.Csv.DataSourceCsv.html#DotNetHelper_Serialization_Csv_DataSourceCsv_SerializeToStream__1___0_System_IO_Stream_System_Int32_System_Boolean_
@@ -209,211 +237,6 @@ references:
   fullName.vb: DotNetHelper.Serialization.Csv.DataSourceCsv.SerializeToString(Of T)(T)
   nameWithType: DataSourceCsv.SerializeToString<T>(T)
   nameWithType.vb: DataSourceCsv.SerializeToString(Of T)(T)
-- uid: DotNetHelper.Serialization.Csv.DataSourceCsv.ToBoolean(System.IFormatProvider)
-  name: ToBoolean(IFormatProvider)
-  href: api/DotNetHelper.Serialization.Csv.DataSourceCsv.html#DotNetHelper_Serialization_Csv_DataSourceCsv_ToBoolean_System_IFormatProvider_
-  commentId: M:DotNetHelper.Serialization.Csv.DataSourceCsv.ToBoolean(System.IFormatProvider)
-  fullName: DotNetHelper.Serialization.Csv.DataSourceCsv.ToBoolean(System.IFormatProvider)
-  nameWithType: DataSourceCsv.ToBoolean(IFormatProvider)
-- uid: DotNetHelper.Serialization.Csv.DataSourceCsv.ToBoolean*
-  name: ToBoolean
-  href: api/DotNetHelper.Serialization.Csv.DataSourceCsv.html#DotNetHelper_Serialization_Csv_DataSourceCsv_ToBoolean_
-  commentId: Overload:DotNetHelper.Serialization.Csv.DataSourceCsv.ToBoolean
-  isSpec: "True"
-  fullName: DotNetHelper.Serialization.Csv.DataSourceCsv.ToBoolean
-  nameWithType: DataSourceCsv.ToBoolean
-- uid: DotNetHelper.Serialization.Csv.DataSourceCsv.ToByte(System.IFormatProvider)
-  name: ToByte(IFormatProvider)
-  href: api/DotNetHelper.Serialization.Csv.DataSourceCsv.html#DotNetHelper_Serialization_Csv_DataSourceCsv_ToByte_System_IFormatProvider_
-  commentId: M:DotNetHelper.Serialization.Csv.DataSourceCsv.ToByte(System.IFormatProvider)
-  fullName: DotNetHelper.Serialization.Csv.DataSourceCsv.ToByte(System.IFormatProvider)
-  nameWithType: DataSourceCsv.ToByte(IFormatProvider)
-- uid: DotNetHelper.Serialization.Csv.DataSourceCsv.ToByte*
-  name: ToByte
-  href: api/DotNetHelper.Serialization.Csv.DataSourceCsv.html#DotNetHelper_Serialization_Csv_DataSourceCsv_ToByte_
-  commentId: Overload:DotNetHelper.Serialization.Csv.DataSourceCsv.ToByte
-  isSpec: "True"
-  fullName: DotNetHelper.Serialization.Csv.DataSourceCsv.ToByte
-  nameWithType: DataSourceCsv.ToByte
-- uid: DotNetHelper.Serialization.Csv.DataSourceCsv.ToChar(System.IFormatProvider)
-  name: ToChar(IFormatProvider)
-  href: api/DotNetHelper.Serialization.Csv.DataSourceCsv.html#DotNetHelper_Serialization_Csv_DataSourceCsv_ToChar_System_IFormatProvider_
-  commentId: M:DotNetHelper.Serialization.Csv.DataSourceCsv.ToChar(System.IFormatProvider)
-  fullName: DotNetHelper.Serialization.Csv.DataSourceCsv.ToChar(System.IFormatProvider)
-  nameWithType: DataSourceCsv.ToChar(IFormatProvider)
-- uid: DotNetHelper.Serialization.Csv.DataSourceCsv.ToChar*
-  name: ToChar
-  href: api/DotNetHelper.Serialization.Csv.DataSourceCsv.html#DotNetHelper_Serialization_Csv_DataSourceCsv_ToChar_
-  commentId: Overload:DotNetHelper.Serialization.Csv.DataSourceCsv.ToChar
-  isSpec: "True"
-  fullName: DotNetHelper.Serialization.Csv.DataSourceCsv.ToChar
-  nameWithType: DataSourceCsv.ToChar
-- uid: DotNetHelper.Serialization.Csv.DataSourceCsv.ToDateTime(System.IFormatProvider)
-  name: ToDateTime(IFormatProvider)
-  href: api/DotNetHelper.Serialization.Csv.DataSourceCsv.html#DotNetHelper_Serialization_Csv_DataSourceCsv_ToDateTime_System_IFormatProvider_
-  commentId: M:DotNetHelper.Serialization.Csv.DataSourceCsv.ToDateTime(System.IFormatProvider)
-  fullName: DotNetHelper.Serialization.Csv.DataSourceCsv.ToDateTime(System.IFormatProvider)
-  nameWithType: DataSourceCsv.ToDateTime(IFormatProvider)
-- uid: DotNetHelper.Serialization.Csv.DataSourceCsv.ToDateTime*
-  name: ToDateTime
-  href: api/DotNetHelper.Serialization.Csv.DataSourceCsv.html#DotNetHelper_Serialization_Csv_DataSourceCsv_ToDateTime_
-  commentId: Overload:DotNetHelper.Serialization.Csv.DataSourceCsv.ToDateTime
-  isSpec: "True"
-  fullName: DotNetHelper.Serialization.Csv.DataSourceCsv.ToDateTime
-  nameWithType: DataSourceCsv.ToDateTime
-- uid: DotNetHelper.Serialization.Csv.DataSourceCsv.ToDecimal(System.IFormatProvider)
-  name: ToDecimal(IFormatProvider)
-  href: api/DotNetHelper.Serialization.Csv.DataSourceCsv.html#DotNetHelper_Serialization_Csv_DataSourceCsv_ToDecimal_System_IFormatProvider_
-  commentId: M:DotNetHelper.Serialization.Csv.DataSourceCsv.ToDecimal(System.IFormatProvider)
-  fullName: DotNetHelper.Serialization.Csv.DataSourceCsv.ToDecimal(System.IFormatProvider)
-  nameWithType: DataSourceCsv.ToDecimal(IFormatProvider)
-- uid: DotNetHelper.Serialization.Csv.DataSourceCsv.ToDecimal*
-  name: ToDecimal
-  href: api/DotNetHelper.Serialization.Csv.DataSourceCsv.html#DotNetHelper_Serialization_Csv_DataSourceCsv_ToDecimal_
-  commentId: Overload:DotNetHelper.Serialization.Csv.DataSourceCsv.ToDecimal
-  isSpec: "True"
-  fullName: DotNetHelper.Serialization.Csv.DataSourceCsv.ToDecimal
-  nameWithType: DataSourceCsv.ToDecimal
-- uid: DotNetHelper.Serialization.Csv.DataSourceCsv.ToDouble(System.IFormatProvider)
-  name: ToDouble(IFormatProvider)
-  href: api/DotNetHelper.Serialization.Csv.DataSourceCsv.html#DotNetHelper_Serialization_Csv_DataSourceCsv_ToDouble_System_IFormatProvider_
-  commentId: M:DotNetHelper.Serialization.Csv.DataSourceCsv.ToDouble(System.IFormatProvider)
-  fullName: DotNetHelper.Serialization.Csv.DataSourceCsv.ToDouble(System.IFormatProvider)
-  nameWithType: DataSourceCsv.ToDouble(IFormatProvider)
-- uid: DotNetHelper.Serialization.Csv.DataSourceCsv.ToDouble*
-  name: ToDouble
-  href: api/DotNetHelper.Serialization.Csv.DataSourceCsv.html#DotNetHelper_Serialization_Csv_DataSourceCsv_ToDouble_
-  commentId: Overload:DotNetHelper.Serialization.Csv.DataSourceCsv.ToDouble
-  isSpec: "True"
-  fullName: DotNetHelper.Serialization.Csv.DataSourceCsv.ToDouble
-  nameWithType: DataSourceCsv.ToDouble
-- uid: DotNetHelper.Serialization.Csv.DataSourceCsv.ToInt16(System.IFormatProvider)
-  name: ToInt16(IFormatProvider)
-  href: api/DotNetHelper.Serialization.Csv.DataSourceCsv.html#DotNetHelper_Serialization_Csv_DataSourceCsv_ToInt16_System_IFormatProvider_
-  commentId: M:DotNetHelper.Serialization.Csv.DataSourceCsv.ToInt16(System.IFormatProvider)
-  fullName: DotNetHelper.Serialization.Csv.DataSourceCsv.ToInt16(System.IFormatProvider)
-  nameWithType: DataSourceCsv.ToInt16(IFormatProvider)
-- uid: DotNetHelper.Serialization.Csv.DataSourceCsv.ToInt16*
-  name: ToInt16
-  href: api/DotNetHelper.Serialization.Csv.DataSourceCsv.html#DotNetHelper_Serialization_Csv_DataSourceCsv_ToInt16_
-  commentId: Overload:DotNetHelper.Serialization.Csv.DataSourceCsv.ToInt16
-  isSpec: "True"
-  fullName: DotNetHelper.Serialization.Csv.DataSourceCsv.ToInt16
-  nameWithType: DataSourceCsv.ToInt16
-- uid: DotNetHelper.Serialization.Csv.DataSourceCsv.ToInt32(System.IFormatProvider)
-  name: ToInt32(IFormatProvider)
-  href: api/DotNetHelper.Serialization.Csv.DataSourceCsv.html#DotNetHelper_Serialization_Csv_DataSourceCsv_ToInt32_System_IFormatProvider_
-  commentId: M:DotNetHelper.Serialization.Csv.DataSourceCsv.ToInt32(System.IFormatProvider)
-  fullName: DotNetHelper.Serialization.Csv.DataSourceCsv.ToInt32(System.IFormatProvider)
-  nameWithType: DataSourceCsv.ToInt32(IFormatProvider)
-- uid: DotNetHelper.Serialization.Csv.DataSourceCsv.ToInt32*
-  name: ToInt32
-  href: api/DotNetHelper.Serialization.Csv.DataSourceCsv.html#DotNetHelper_Serialization_Csv_DataSourceCsv_ToInt32_
-  commentId: Overload:DotNetHelper.Serialization.Csv.DataSourceCsv.ToInt32
-  isSpec: "True"
-  fullName: DotNetHelper.Serialization.Csv.DataSourceCsv.ToInt32
-  nameWithType: DataSourceCsv.ToInt32
-- uid: DotNetHelper.Serialization.Csv.DataSourceCsv.ToInt64(System.IFormatProvider)
-  name: ToInt64(IFormatProvider)
-  href: api/DotNetHelper.Serialization.Csv.DataSourceCsv.html#DotNetHelper_Serialization_Csv_DataSourceCsv_ToInt64_System_IFormatProvider_
-  commentId: M:DotNetHelper.Serialization.Csv.DataSourceCsv.ToInt64(System.IFormatProvider)
-  fullName: DotNetHelper.Serialization.Csv.DataSourceCsv.ToInt64(System.IFormatProvider)
-  nameWithType: DataSourceCsv.ToInt64(IFormatProvider)
-- uid: DotNetHelper.Serialization.Csv.DataSourceCsv.ToInt64*
-  name: ToInt64
-  href: api/DotNetHelper.Serialization.Csv.DataSourceCsv.html#DotNetHelper_Serialization_Csv_DataSourceCsv_ToInt64_
-  commentId: Overload:DotNetHelper.Serialization.Csv.DataSourceCsv.ToInt64
-  isSpec: "True"
-  fullName: DotNetHelper.Serialization.Csv.DataSourceCsv.ToInt64
-  nameWithType: DataSourceCsv.ToInt64
-- uid: DotNetHelper.Serialization.Csv.DataSourceCsv.ToSByte(System.IFormatProvider)
-  name: ToSByte(IFormatProvider)
-  href: api/DotNetHelper.Serialization.Csv.DataSourceCsv.html#DotNetHelper_Serialization_Csv_DataSourceCsv_ToSByte_System_IFormatProvider_
-  commentId: M:DotNetHelper.Serialization.Csv.DataSourceCsv.ToSByte(System.IFormatProvider)
-  fullName: DotNetHelper.Serialization.Csv.DataSourceCsv.ToSByte(System.IFormatProvider)
-  nameWithType: DataSourceCsv.ToSByte(IFormatProvider)
-- uid: DotNetHelper.Serialization.Csv.DataSourceCsv.ToSByte*
-  name: ToSByte
-  href: api/DotNetHelper.Serialization.Csv.DataSourceCsv.html#DotNetHelper_Serialization_Csv_DataSourceCsv_ToSByte_
-  commentId: Overload:DotNetHelper.Serialization.Csv.DataSourceCsv.ToSByte
-  isSpec: "True"
-  fullName: DotNetHelper.Serialization.Csv.DataSourceCsv.ToSByte
-  nameWithType: DataSourceCsv.ToSByte
-- uid: DotNetHelper.Serialization.Csv.DataSourceCsv.ToSingle(System.IFormatProvider)
-  name: ToSingle(IFormatProvider)
-  href: api/DotNetHelper.Serialization.Csv.DataSourceCsv.html#DotNetHelper_Serialization_Csv_DataSourceCsv_ToSingle_System_IFormatProvider_
-  commentId: M:DotNetHelper.Serialization.Csv.DataSourceCsv.ToSingle(System.IFormatProvider)
-  fullName: DotNetHelper.Serialization.Csv.DataSourceCsv.ToSingle(System.IFormatProvider)
-  nameWithType: DataSourceCsv.ToSingle(IFormatProvider)
-- uid: DotNetHelper.Serialization.Csv.DataSourceCsv.ToSingle*
-  name: ToSingle
-  href: api/DotNetHelper.Serialization.Csv.DataSourceCsv.html#DotNetHelper_Serialization_Csv_DataSourceCsv_ToSingle_
-  commentId: Overload:DotNetHelper.Serialization.Csv.DataSourceCsv.ToSingle
-  isSpec: "True"
-  fullName: DotNetHelper.Serialization.Csv.DataSourceCsv.ToSingle
-  nameWithType: DataSourceCsv.ToSingle
-- uid: DotNetHelper.Serialization.Csv.DataSourceCsv.ToString(System.IFormatProvider)
-  name: ToString(IFormatProvider)
-  href: api/DotNetHelper.Serialization.Csv.DataSourceCsv.html#DotNetHelper_Serialization_Csv_DataSourceCsv_ToString_System_IFormatProvider_
-  commentId: M:DotNetHelper.Serialization.Csv.DataSourceCsv.ToString(System.IFormatProvider)
-  fullName: DotNetHelper.Serialization.Csv.DataSourceCsv.ToString(System.IFormatProvider)
-  nameWithType: DataSourceCsv.ToString(IFormatProvider)
-- uid: DotNetHelper.Serialization.Csv.DataSourceCsv.ToString*
-  name: ToString
-  href: api/DotNetHelper.Serialization.Csv.DataSourceCsv.html#DotNetHelper_Serialization_Csv_DataSourceCsv_ToString_
-  commentId: Overload:DotNetHelper.Serialization.Csv.DataSourceCsv.ToString
-  isSpec: "True"
-  fullName: DotNetHelper.Serialization.Csv.DataSourceCsv.ToString
-  nameWithType: DataSourceCsv.ToString
-- uid: DotNetHelper.Serialization.Csv.DataSourceCsv.ToType(System.Type,System.IFormatProvider)
-  name: ToType(Type, IFormatProvider)
-  href: api/DotNetHelper.Serialization.Csv.DataSourceCsv.html#DotNetHelper_Serialization_Csv_DataSourceCsv_ToType_System_Type_System_IFormatProvider_
-  commentId: M:DotNetHelper.Serialization.Csv.DataSourceCsv.ToType(System.Type,System.IFormatProvider)
-  fullName: DotNetHelper.Serialization.Csv.DataSourceCsv.ToType(System.Type, System.IFormatProvider)
-  nameWithType: DataSourceCsv.ToType(Type, IFormatProvider)
-- uid: DotNetHelper.Serialization.Csv.DataSourceCsv.ToType*
-  name: ToType
-  href: api/DotNetHelper.Serialization.Csv.DataSourceCsv.html#DotNetHelper_Serialization_Csv_DataSourceCsv_ToType_
-  commentId: Overload:DotNetHelper.Serialization.Csv.DataSourceCsv.ToType
-  isSpec: "True"
-  fullName: DotNetHelper.Serialization.Csv.DataSourceCsv.ToType
-  nameWithType: DataSourceCsv.ToType
-- uid: DotNetHelper.Serialization.Csv.DataSourceCsv.ToUInt16(System.IFormatProvider)
-  name: ToUInt16(IFormatProvider)
-  href: api/DotNetHelper.Serialization.Csv.DataSourceCsv.html#DotNetHelper_Serialization_Csv_DataSourceCsv_ToUInt16_System_IFormatProvider_
-  commentId: M:DotNetHelper.Serialization.Csv.DataSourceCsv.ToUInt16(System.IFormatProvider)
-  fullName: DotNetHelper.Serialization.Csv.DataSourceCsv.ToUInt16(System.IFormatProvider)
-  nameWithType: DataSourceCsv.ToUInt16(IFormatProvider)
-- uid: DotNetHelper.Serialization.Csv.DataSourceCsv.ToUInt16*
-  name: ToUInt16
-  href: api/DotNetHelper.Serialization.Csv.DataSourceCsv.html#DotNetHelper_Serialization_Csv_DataSourceCsv_ToUInt16_
-  commentId: Overload:DotNetHelper.Serialization.Csv.DataSourceCsv.ToUInt16
-  isSpec: "True"
-  fullName: DotNetHelper.Serialization.Csv.DataSourceCsv.ToUInt16
-  nameWithType: DataSourceCsv.ToUInt16
-- uid: DotNetHelper.Serialization.Csv.DataSourceCsv.ToUInt32(System.IFormatProvider)
-  name: ToUInt32(IFormatProvider)
-  href: api/DotNetHelper.Serialization.Csv.DataSourceCsv.html#DotNetHelper_Serialization_Csv_DataSourceCsv_ToUInt32_System_IFormatProvider_
-  commentId: M:DotNetHelper.Serialization.Csv.DataSourceCsv.ToUInt32(System.IFormatProvider)
-  fullName: DotNetHelper.Serialization.Csv.DataSourceCsv.ToUInt32(System.IFormatProvider)
-  nameWithType: DataSourceCsv.ToUInt32(IFormatProvider)
-- uid: DotNetHelper.Serialization.Csv.DataSourceCsv.ToUInt32*
-  name: ToUInt32
-  href: api/DotNetHelper.Serialization.Csv.DataSourceCsv.html#DotNetHelper_Serialization_Csv_DataSourceCsv_ToUInt32_
-  commentId: Overload:DotNetHelper.Serialization.Csv.DataSourceCsv.ToUInt32
-  isSpec: "True"
-  fullName: DotNetHelper.Serialization.Csv.DataSourceCsv.ToUInt32
-  nameWithType: DataSourceCsv.ToUInt32
-- uid: DotNetHelper.Serialization.Csv.DataSourceCsv.ToUInt64(System.IFormatProvider)
-  name: ToUInt64(IFormatProvider)
-  href: api/DotNetHelper.Serialization.Csv.DataSourceCsv.html#DotNetHelper_Serialization_Csv_DataSourceCsv_ToUInt64_System_IFormatProvider_
-  commentId: M:DotNetHelper.Serialization.Csv.DataSourceCsv.ToUInt64(System.IFormatProvider)
-  fullName: DotNetHelper.Serialization.Csv.DataSourceCsv.ToUInt64(System.IFormatProvider)
-  nameWithType: DataSourceCsv.ToUInt64(IFormatProvider)
-- uid: DotNetHelper.Serialization.Csv.DataSourceCsv.ToUInt64*
-  name: ToUInt64
-  href: api/DotNetHelper.Serialization.Csv.DataSourceCsv.html#DotNetHelper_Serialization_Csv_DataSourceCsv_ToUInt64_
-  commentId: Overload:DotNetHelper.Serialization.Csv.DataSourceCsv.ToUInt64
-  isSpec: "True"
-  fullName: DotNetHelper.Serialization.Csv.DataSourceCsv.ToUInt64
-  nameWithType: DataSourceCsv.ToUInt64
+- uid: TSD
+  name: THIS IS THE HOME PAGE TO TUTORIALS
+  href: tutorials/index.html

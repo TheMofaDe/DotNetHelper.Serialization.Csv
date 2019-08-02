@@ -22,6 +22,12 @@ namespace DotNetHelper.Serialization.Json.Extension
         public static List<T> AsList<T>(this IEnumerable<T> source) => (source == null || source is List<T>) ? (List<T>)source : source.ToList();
 
 
+        /// <summary>
+        /// https://stackoverflow.com/questions/22939552/convert-listobject-to-listtype-type-is-known-at-runtime
+        /// </summary>
+        /// <param name="items"></param>
+        /// <param name="type"></param>
+        /// <returns></returns>
         public static object ConvertListToTypeList(this IEnumerable<object> items, Type type)
         {
             var containedType = type.GenericTypeArguments.First();
