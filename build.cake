@@ -167,8 +167,6 @@ Task("Test")
 		.WithFilter("+[*]*")
         .WithFilter("-[*.tests]*")
 		.WithFilter("-[*.Tests]*")
-		.WithFilter("-[DotNetHelper.Serialization.Csv.Tests]*")
-		.WithFilter("-[DotNetHelper.Serialization.Csv.Tests.dll]*")
 		);
 
         }

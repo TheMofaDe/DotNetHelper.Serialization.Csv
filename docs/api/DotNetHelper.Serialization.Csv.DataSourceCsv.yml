@@ -161,7 +161,7 @@ items:
       repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv.git
     id: Deserialize
     path: ../src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
-    startLine: 37
+    startLine: 36
   assemblies:
   - DotNetHelper.Serialization.Csv
   namespace: DotNetHelper.Serialization.Csv
@@ -198,7 +198,7 @@ items:
       repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv.git
     id: Deserialize
     path: ../src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
-    startLine: 47
+    startLine: 46
   assemblies:
   - DotNetHelper.Serialization.Csv
   namespace: DotNetHelper.Serialization.Csv
@@ -239,7 +239,7 @@ items:
       repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv.git
     id: Deserialize
     path: ../src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
-    startLine: 58
+    startLine: 57
   assemblies:
   - DotNetHelper.Serialization.Csv
   namespace: DotNetHelper.Serialization.Csv
@@ -283,7 +283,7 @@ items:
       repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv.git
     id: Deserialize
     path: ../src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
-    startLine: 70
+    startLine: 69
   assemblies:
   - DotNetHelper.Serialization.Csv
   namespace: DotNetHelper.Serialization.Csv
@@ -331,7 +331,7 @@ items:
       repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv.git
     id: Deserialize
     path: ../src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
-    startLine: 81
+    startLine: 80
   assemblies:
   - DotNetHelper.Serialization.Csv
   namespace: DotNetHelper.Serialization.Csv
@@ -370,7 +370,7 @@ items:
       repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv.git
     id: Deserialize
     path: ../src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
-    startLine: 95
+    startLine: 94
   assemblies:
   - DotNetHelper.Serialization.Csv
   namespace: DotNetHelper.Serialization.Csv
@@ -413,7 +413,7 @@ items:
       repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv.git
     id: DeserializeToList
     path: ../src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
-    startLine: 106
+    startLine: 105
   assemblies:
   - DotNetHelper.Serialization.Csv
   namespace: DotNetHelper.Serialization.Csv
@@ -450,7 +450,7 @@ items:
       repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv.git
     id: DeserializeToList
     path: ../src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
-    startLine: 115
+    startLine: 114
   assemblies:
   - DotNetHelper.Serialization.Csv
   namespace: DotNetHelper.Serialization.Csv
@@ -491,7 +491,7 @@ items:
       repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv.git
     id: DeserializeToList
     path: ../src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
-    startLine: 125
+    startLine: 124
   assemblies:
   - DotNetHelper.Serialization.Csv
   namespace: DotNetHelper.Serialization.Csv
@@ -535,7 +535,7 @@ items:
       repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv.git
     id: DeserializeToList
     path: ../src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
-    startLine: 134
+    startLine: 133
   assemblies:
   - DotNetHelper.Serialization.Csv
   namespace: DotNetHelper.Serialization.Csv
@@ -583,7 +583,7 @@ items:
       repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv.git
     id: DeserializeToList
     path: ../src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
-    startLine: 144
+    startLine: 143
   assemblies:
   - DotNetHelper.Serialization.Csv
   namespace: DotNetHelper.Serialization.Csv
@@ -622,7 +622,7 @@ items:
       repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv.git
     id: DeserializeToList
     path: ../src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
-    startLine: 153
+    startLine: 152
   assemblies:
   - DotNetHelper.Serialization.Csv
   namespace: DotNetHelper.Serialization.Csv
@@ -663,7 +663,7 @@ items:
       repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv.git
     id: SerializeToStream
     path: ../src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
-    startLine: 165
+    startLine: 164
   assemblies:
   - DotNetHelper.Serialization.Csv
   namespace: DotNetHelper.Serialization.Csv
@@ -711,7 +711,7 @@ items:
       repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv.git
     id: SerializeListToStream
     path: ../src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
-    startLine: 178
+    startLine: 177
   assemblies:
   - DotNetHelper.Serialization.Csv
   namespace: DotNetHelper.Serialization.Csv
@@ -757,7 +757,7 @@ items:
       repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv.git
     id: SerializeToStream
     path: ../src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
-    startLine: 191
+    startLine: 190
   assemblies:
   - DotNetHelper.Serialization.Csv
   namespace: DotNetHelper.Serialization.Csv
@@ -800,7 +800,7 @@ items:
       repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv.git
     id: SerializeToStream
     path: ../src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
-    startLine: 204
+    startLine: 203
   assemblies:
   - DotNetHelper.Serialization.Csv
   namespace: DotNetHelper.Serialization.Csv
@@ -846,7 +846,7 @@ items:
       repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv.git
     id: SerializeListToStream
     path: ../src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
-    startLine: 217
+    startLine: 216
   assemblies:
   - DotNetHelper.Serialization.Csv
   namespace: DotNetHelper.Serialization.Csv
@@ -890,7 +890,7 @@ items:
       repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv.git
     id: SerializeToStream
     path: ../src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
-    startLine: 230
+    startLine: 229
   assemblies:
   - DotNetHelper.Serialization.Csv
   namespace: DotNetHelper.Serialization.Csv
@@ -931,7 +931,7 @@ items:
       repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv.git
     id: SerializeToString
     path: ../src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
-    startLine: 248
+    startLine: 247
   assemblies:
   - DotNetHelper.Serialization.Csv
   namespace: DotNetHelper.Serialization.Csv
@@ -972,7 +972,7 @@ items:
       repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv.git
     id: SerializeToString
     path: ../src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
-    startLine: 266
+    startLine: 265
   assemblies:
   - DotNetHelper.Serialization.Csv
   namespace: DotNetHelper.Serialization.Csv
@@ -1021,7 +1021,7 @@ items:
       repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv.git
     id: SerializeListToString
     path: ../src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
-    startLine: 284
+    startLine: 283
   assemblies:
   - DotNetHelper.Serialization.Csv
   namespace: DotNetHelper.Serialization.Csv
