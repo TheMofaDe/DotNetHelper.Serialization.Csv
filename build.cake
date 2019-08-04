@@ -128,7 +128,7 @@ Task("Build")
 
 Task("Test")
     .WithCriteria<BuildParameters>((context, parameters) => parameters.IsRunningOnWindows,  "Unit tests will only run on windows agent.")
-   // .WithCriteria<BuildParameters>((context, parameters) => parameters.EnabledUnitTests, "Unit tests were disabled.")
+    .WithCriteria<BuildParameters>((context, parameters) => parameters.EnabledUnitTests, "Unit tests were disabled.")
     .IsDependentOn("Build")
     .Does<BuildParameters>((parameters) =>
 {
@@ -167,6 +167,8 @@ Task("Test")
 		.WithFilter("+[*]*")
         .WithFilter("-[*.tests]*")
 		.WithFilter("-[*.Tests]*")
+		.WithFilter("-[DotNetHelper.Serialization.Csv.Tests]*")
+		.WithFilter("-[DotNetHelper.Serialization.Csv.Tests.dll]*")
 		);
 
         }
@@ -181,10 +183,10 @@ Task("Generate-Docs")
 .WithCriteria<BuildParameters>((context, parameters) => parameters.IsRunningOnWindows,  "Generate-Docs will only run on windows agent.")
 .Does<BuildParameters>((parameters) => 
 {
-	// DocFxMetadata("./docs/docfx.json");
-	// DocFxBuild("./docs/docfx.json");
-	// if(DirectoryExists(parameters.Paths.Directories.Artifacts))
-	// Zip("./docs/_site/", parameters.Paths.Directories.Artifacts + "/docfx.zip");
+	 DocFxMetadata("./docs/docfx.json");
+	 DocFxBuild("./docs/docfx.json");
+	 if(DirectoryExists(parameters.Paths.Directories.Artifacts))
+	 Zip("./docs/_site/", parameters.Paths.Directories.Artifacts + "/docfx.zip");
 });
 
 
@@ -515,8 +517,8 @@ Task("Release-Notes")
 
 Task("Publish-Coverage")
     .WithCriteria<BuildParameters>((context, parameters) => parameters.IsRunningOnWindows,       "Publish-Coverage works only on Windows agents.")
-  //  .WithCriteria<BuildParameters>((context, parameters) => parameters.IsRunningOnAppVeyor, "Publish-Coverage works only on AppVeyor.")
-  //  .WithCriteria<BuildParameters>((context, parameters) => parameters.IsStableRelease() || parameters.IsPreRelease(), "Publish-Coverage works only for releases.")
+    .WithCriteria<BuildParameters>((context, parameters) => parameters.IsRunningOnAppVeyor, "Publish-Coverage works only on AppVeyor.")
+    .WithCriteria<BuildParameters>((context, parameters) => parameters.IsStableRelease() || parameters.IsPreRelease(), "Publish-Coverage works only for releases.")
     .IsDependentOn("Test")
     .Does<BuildParameters>((parameters) =>
 {
