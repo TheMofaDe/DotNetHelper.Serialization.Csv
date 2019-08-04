@@ -1,12 +1,92 @@
 ﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
 <html>
-<head>
-    <title>DotNetHelper.Serialization.Csv</title>
-</head>
-<body>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>DotNetHelper.Serialization.Csv | DotNetHelper.Serialization.Csv </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="DotNetHelper.Serialization.Csv | DotNetHelper.Serialization.Csv ">
+    <meta name="generator" content="docfx 2.43.1.0">
+    
+    <link rel="shortcut icon" href="logo/favicon.ico">
+    <link rel="stylesheet" href="styles/docfx.vendor.css">
+    <link rel="stylesheet" href="styles/docfx.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <meta property="docfx:navrel" content="toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="">
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="index.html">
+                <img id="logo" class="svg" src="logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+                
+                <ul class="nav level1 navbar-nav">
+                      <li>
+                          <a href="index.html" title="Home">Home</a>
+                      </li>
+                      <li>
+                          <a href="api/DotNetHelper.Serialization.Csv.html" title="API">API</a>
+                      </li>
+                      <li>
+                          <a href="https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv/blob/master/CHANGELOG.md" title="Change Log">Change Log</a>
+                      </li>
+                      <li>
+                          <a href="https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv" title="Github">Github</a>
+                      </li>
+                </ul>    </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="dotnethelperserializationcsv">DotNetHelper.Serialization.Csv</h1>
 
-    <h1 id="dotnethelper.serialization.csv">DotNetHelper.Serialization.Csv</h1>
-<h4 id="dotnethelper.serialization.csv-is-a-lightweight-serialization-library-for-csv"><em>DotNetHelper.Serialization.Csv is a lightweight serialization library for csv.</em></h4>
+<h4 id="dotnethelperserializationcsv-is-a-lightweight-serialization-library-for-csv"><em>DotNetHelper.Serialization.Csv is a lightweight serialization library for csv.</em></h4>
 <table>
 <thead>
 <tr>
@@ -17,17 +97,17 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: center;"><img src="https://img.shields.io/nuget/dt/DotNetHelper.Serialization.Csv.svg?style=flat-square" alt="Build Status" /></td>
-<td style="text-align: center;"><img src="https://img.shields.io/appveyor/tests/TheMofaDe/DotNetHelper.Serialization.Csv.svg?style=flat-square" alt="Build Status" /></td>
-<td style="text-align: center;"><a href="https://codecov.io/gh/TheMofaDe/DotNetHelper.Serialization.Csv"><img src="https://codecov.io/gh/TheMofaDe/DotNetHelper.Serialization.Csv/branch/master/graph/badge.svg" alt="codecov" /></a></td>
+<td style="text-align: center;"><img src="https://img.shields.io/nuget/dt/DotNetHelper.Serialization.Csv.svg?style=flat-square" alt="Build Status"></td>
+<td style="text-align: center;"><img src="https://img.shields.io/appveyor/tests/TheMofaDe/DotNetHelper.Serialization.Csv.svg?style=flat-square" alt="Build Status"></td>
+<td style="text-align: center;"><a href="https://codecov.io/gh/TheMofaDe/DotNetHelper.Serialization.Csv"><img src="https://codecov.io/gh/TheMofaDe/DotNetHelper.Serialization.Csv/branch/master/graph/badge.svg" alt="codecov"></a></td>
 </tr>
 </tbody>
 </table>
 <h2 id="how-to-use">How to use</h2>
-<pre><code class="language-csharp">var csvSerializer = new DataSourceCsv(); 
+<pre><code class="lang-csharp">var csvSerializer = new DataSourceCsv(); 
 </code></pre>
 <p>the class DataSourceCSV have access to the following apis</p>
-<pre><code class="language-csharp">        
+<pre><code class="lang-csharp">        
         //Serialize an object to the provided stream
         void SerializeToStream&lt;T&gt;(T obj, Stream stream, int bufferSize = 1024, bool leaveStreamOpen = false) where T : class;
         void SerializeToStream(object obj, Type type, Stream stream, int bufferSize = 1024, bool leaveStreamOpen = false);
@@ -61,7 +141,7 @@
 </code></pre>
 <h2 id="serialization-with-files">Serialization with Files</h2>
 <h4 id="this-example-is-going-to-reference-a-employee-class-and-two-global-variables">This example is going to reference a employee class and two global variables</h4>
-<pre><code class="language-csharp">public class Employee {
+<pre><code class="lang-csharp">public class Employee {
             public string FirstName { get; set; } = &quot;Jon&quot;;
             public string LastName { get; set; } = &quot;Last&quot;;
             public int Id { get; set; }
@@ -71,23 +151,58 @@
             var employee = new Employee {Id = 1};
 </code></pre>
 <h4 id="write-single-object-to-file">Write single object to file</h4>
-<pre><code class="language-csharp">            using (var fileStream = new FileStream($@&quot;C:\Temp\employee.csv&quot;, FileMode.Create, FileAccess.Write))
+<pre><code class="lang-csharp">            using (var fileStream = new FileStream($@&quot;C:\Temp\employee.csv&quot;, FileMode.Create, FileAccess.Write))
                    csvSerializer.SerializeToStream(employee, fileStream);
 </code></pre>
 <h4 id="write-list-of-objects-to-file">Write list of objects to file</h4>
-<pre><code class="language-csharp">            using (var fileStream = new FileStream($@&quot;C:\Temp\employeeList.csv&quot;, FileMode.Create, FileAccess.Write))
+<pre><code class="lang-csharp">            using (var fileStream = new FileStream($@&quot;C:\Temp\employeeList.csv&quot;, FileMode.Create, FileAccess.Write))
                 csvSerializer.SerializeListToStream(new List&lt;Employee&gt;(){employee}, fileStream);
 </code></pre>
 <h4 id="read-single-object-from-file">Read single object from file</h4>
-<pre><code class="language-csharp">             var employeeFromFile = csvSerializer.Deserialize&lt;Employee&gt;(new StreamReader($@&quot;C:\Temp\employee.csv&quot;).BaseStream);
+<pre><code class="lang-csharp">             var employeeFromFile = csvSerializer.Deserialize&lt;Employee&gt;(new StreamReader($@&quot;C:\Temp\employee.csv&quot;).BaseStream);
 </code></pre>
 <h4 id="read-list-of-objects-from-file">Read list of objects from file</h4>
-<pre><code class="language-csharp">            var employeesFromFile = csvSerializer.DeserializeToList&lt;Employee&gt;(new StreamReader($@&quot;C:\Temp\employeeList.csv&quot;).BaseStream);
+<pre><code class="lang-csharp">            var employeesFromFile = csvSerializer.DeserializeToList&lt;Employee&gt;(new StreamReader($@&quot;C:\Temp\employeeList.csv&quot;).BaseStream);
 </code></pre>
 <h2 id="serialization-with-json">Serialization with JSON</h2>
 <p><a href="https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv">JSON LINK</a></p>
 <!-- Links. -->
-
-
-</body>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv/blob/master/docs/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright © 2019  <strong>Joseph McNeal Jr</strong>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="styles/docfx.js"></script>
+    <script type="text/javascript" src="styles/main.js"></script>
+  </body>
 </html>
