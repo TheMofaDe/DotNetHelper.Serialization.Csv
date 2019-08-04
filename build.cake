@@ -128,7 +128,7 @@ Task("Build")
 
 Task("Test")
     .WithCriteria<BuildParameters>((context, parameters) => parameters.IsRunningOnWindows,  "Unit tests will only run on windows agent.")
-    .WithCriteria<BuildParameters>((context, parameters) => parameters.EnabledUnitTests, "Unit tests were disabled.")
+   // .WithCriteria<BuildParameters>((context, parameters) => parameters.EnabledUnitTests, "Unit tests were disabled.")
     .IsDependentOn("Build")
     .Does<BuildParameters>((parameters) =>
 {
@@ -163,9 +163,10 @@ Task("Test")
             LogLevel = OpenCoverLogLevel.Info,
 			OldStyle = true,
 			MergeOutput = false
-        }     
-        .WithFilter("+[*.Tests]*")
-		//.WithFilter("-[*NUnit3.*]*")
+        } 
+		.WithFilter("-[*.Tests]")
+       // .WithFilter("+[*.Tests]*")
+	//	.WithFilter("-[*NUnit3.*]*")
 		);
 
         }
@@ -180,10 +181,10 @@ Task("Generate-Docs")
 .WithCriteria<BuildParameters>((context, parameters) => parameters.IsRunningOnWindows,  "Generate-Docs will only run on windows agent.")
 .Does<BuildParameters>((parameters) => 
 {
-	DocFxMetadata("./docs/docfx.json");
-	DocFxBuild("./docs/docfx.json");
-	if(DirectoryExists(parameters.Paths.Directories.Artifacts))
-	Zip("./docs/_site/", parameters.Paths.Directories.Artifacts + "/docfx.zip");
+	// DocFxMetadata("./docs/docfx.json");
+	// DocFxBuild("./docs/docfx.json");
+	// if(DirectoryExists(parameters.Paths.Directories.Artifacts))
+	// Zip("./docs/_site/", parameters.Paths.Directories.Artifacts + "/docfx.zip");
 });
 
 
@@ -514,14 +515,15 @@ Task("Release-Notes")
 
 Task("Publish-Coverage")
     .WithCriteria<BuildParameters>((context, parameters) => parameters.IsRunningOnWindows,       "Publish-Coverage works only on Windows agents.")
-    .WithCriteria<BuildParameters>((context, parameters) => parameters.IsRunningOnAppVeyor, "Publish-Coverage works only on AppVeyor.")
-    .WithCriteria<BuildParameters>((context, parameters) => parameters.IsStableRelease() || parameters.IsPreRelease(), "Publish-Coverage works only for releases.")
+  //  .WithCriteria<BuildParameters>((context, parameters) => parameters.IsRunningOnAppVeyor, "Publish-Coverage works only on AppVeyor.")
+  //  .WithCriteria<BuildParameters>((context, parameters) => parameters.IsStableRelease() || parameters.IsPreRelease(), "Publish-Coverage works only for releases.")
     .IsDependentOn("Test")
     .Does<BuildParameters>((parameters) =>
 {
     var coverageFiles = GetFiles(parameters.Paths.Directories.TestCoverageOutput + "/*Coverage.xml");
 
     var token = parameters.Credentials.CodeCov.Token;
+	token = "a258031c-353a-4851-9f1a-81360aaeda6a";
     if(string.IsNullOrEmpty(token)) {
         throw new InvalidOperationException("Could not resolve CodeCov token.");
     }
