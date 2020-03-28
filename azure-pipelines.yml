@@ -1,6 +1,6 @@
 variables:
 - group: EnvironmentVariables
-  DOTNET_SDK_VERSION: '3.1.3'
+  DOTNET_SDK_VERSION: '3.1.201'
   DOTNET_PACKAGE_TYPE: 'sdk'
   RUBY_VERSION: '2.5'
 

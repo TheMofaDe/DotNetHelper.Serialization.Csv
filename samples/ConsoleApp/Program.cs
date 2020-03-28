@@ -20,15 +20,15 @@ namespace ConsoleApp
         {
             // 
             var csvSerializer = new DataSourceCsv(new Configuration() { });
-            var employee = new Employee {Id = 1};
+            var employee = new Employee { Id = 1 };
 
             // WRITE A SINGLE OBJECT TO A FILE
             using (var fileStream = new FileStream($@"C:\Temp\employee.csv", FileMode.Create, FileAccess.Write))
-                   csvSerializer.SerializeToStream(employee, fileStream);
+                csvSerializer.SerializeToStream(employee, fileStream);
 
             // WRITE A LIST OF OBJECTS TO A FILE
             using (var fileStream = new FileStream($@"C:\Temp\employeeList.csv", FileMode.Create, FileAccess.Write))
-                csvSerializer.SerializeListToStream(new List<Employee>(){employee}, fileStream);
+                csvSerializer.SerializeListToStream(new List<Employee>() { employee }, fileStream);
 
 
             // READ OBJECT FROM CSV FILE 

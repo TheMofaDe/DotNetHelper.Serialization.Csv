@@ -39,7 +39,7 @@ items:
     remote:
       path: src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv.git
+      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv
     id: DataSourceCsv
     path: ../src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
     startLine: 17
@@ -84,7 +84,7 @@ items:
     remote:
       path: src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv.git
+      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv
     id: Configuration
     path: ../src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
     startLine: 24
@@ -122,7 +122,7 @@ items:
     remote:
       path: src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv.git
+      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv
     id: .ctor
     path: ../src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
     startLine: 31
@@ -158,7 +158,7 @@ items:
     remote:
       path: src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv.git
+      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv
     id: Deserialize
     path: ../src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
     startLine: 36
@@ -195,7 +195,7 @@ items:
     remote:
       path: src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv.git
+      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv
     id: Deserialize
     path: ../src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
     startLine: 46
@@ -236,7 +236,7 @@ items:
     remote:
       path: src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv.git
+      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv
     id: Deserialize
     path: ../src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
     startLine: 57
@@ -280,7 +280,7 @@ items:
     remote:
       path: src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv.git
+      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv
     id: Deserialize
     path: ../src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
     startLine: 69
@@ -328,7 +328,7 @@ items:
     remote:
       path: src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv.git
+      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv
     id: Deserialize
     path: ../src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
     startLine: 80
@@ -367,7 +367,7 @@ items:
     remote:
       path: src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv.git
+      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv
     id: Deserialize
     path: ../src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
     startLine: 94
@@ -410,7 +410,7 @@ items:
     remote:
       path: src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv.git
+      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv
     id: DeserializeToList
     path: ../src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
     startLine: 105
@@ -447,7 +447,7 @@ items:
     remote:
       path: src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv.git
+      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv
     id: DeserializeToList
     path: ../src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
     startLine: 114
@@ -488,7 +488,7 @@ items:
     remote:
       path: src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv.git
+      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv
     id: DeserializeToList
     path: ../src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
     startLine: 124
@@ -532,7 +532,7 @@ items:
     remote:
       path: src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv.git
+      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv
     id: DeserializeToList
     path: ../src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
     startLine: 133
@@ -580,7 +580,7 @@ items:
     remote:
       path: src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv.git
+      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv
     id: DeserializeToList
     path: ../src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
     startLine: 143
@@ -619,7 +619,7 @@ items:
     remote:
       path: src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv.git
+      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv
     id: DeserializeToList
     path: ../src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
     startLine: 152
@@ -660,7 +660,7 @@ items:
     remote:
       path: src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv.git
+      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv
     id: SerializeToStream
     path: ../src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
     startLine: 164
@@ -708,7 +708,7 @@ items:
     remote:
       path: src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv.git
+      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv
     id: SerializeListToStream
     path: ../src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
     startLine: 177
@@ -754,7 +754,7 @@ items:
     remote:
       path: src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv.git
+      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv
     id: SerializeToStream
     path: ../src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
     startLine: 190
@@ -797,7 +797,7 @@ items:
     remote:
       path: src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv.git
+      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv
     id: SerializeToStream
     path: ../src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
     startLine: 203
@@ -843,7 +843,7 @@ items:
     remote:
       path: src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv.git
+      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv
     id: SerializeListToStream
     path: ../src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
     startLine: 216
@@ -887,7 +887,7 @@ items:
     remote:
       path: src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv.git
+      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv
     id: SerializeToStream
     path: ../src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
     startLine: 229
@@ -928,7 +928,7 @@ items:
     remote:
       path: src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv.git
+      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv
     id: SerializeToString
     path: ../src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
     startLine: 247
@@ -969,7 +969,7 @@ items:
     remote:
       path: src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv.git
+      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv
     id: SerializeToString
     path: ../src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
     startLine: 265
@@ -1018,7 +1018,7 @@ items:
     remote:
       path: src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv.git
+      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv
     id: SerializeListToString
     path: ../src/DotNetHelper.Serialization.Csv/DataSourceCsv.cs
     startLine: 283

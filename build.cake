@@ -15,22 +15,19 @@
 #addin "nuget:?package=xunit.assert&version=2.4.1"
 
 
-
 // Install tools.
 #tool "nuget:?package=NUnit.ConsoleRunner&version=3.10.0"
-#tool "nuget:?package=GitReleaseNotes&version=0.7.1"
-#tool "nuget:?package=ILRepack&version=2.0.16"
-#tool "nuget:?package=Codecov&version=1.9.0"
+#tool "nuget:?package=Codecov&version=1.10.0"
 #tool "nuget:?package=nuget.commandline&version=5.4.0"
-#tool "nuget:?package=GitVersion.CommandLine&version=5.1.3"
-#tool "nuget:?package=docfx.console&version=2.48.0"
+#tool "nuget:?package=GitVersion.CommandLine&version=5.2.4"
+#tool "nuget:?package=docfx.console&version=2.51.0"
 #tool "nuget:?package=WiX.Toolset.UnofficialFork&version=3.11.1"
 #tool "nuget:?package=OpenCover&version=4.7.922"
-#tool "nuget:?package=ReportGenerator&version=4.4.7"
+#tool "nuget:?package=ReportGenerator&version=4.5.2"
 
 // Install .NET Core Global tools.
 #tool "dotnet:?package=GitReleaseManager.Tool&version=0.10.3"
-#tool "dotnet:?package=dotnet-format&version=3.1.37601"
+#tool "dotnet:?package=dotnet-format&version=3.3.111304"
 
 // Load other scripts.
 #load "./build/parameters.cake"

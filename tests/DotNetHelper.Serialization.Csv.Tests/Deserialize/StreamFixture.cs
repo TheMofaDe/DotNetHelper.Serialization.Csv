@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -7,26 +7,22 @@ using CsvHelper.Configuration;
 using DotNetHelper.Serialization.Csv.Tests.Models;
 using NUnit.Framework;
 
-namespace DotNetHelper.Serialization.Csv.Tests
+namespace DotNetHelper.Serialization.Csv.Tests.Deserialize
 {
     [TestFixture]
     [NonParallelizable] //since were sharing a single file across multiple test cases we don't want Parallelizable
-    public class CsvDeserializerTextFixture 
+    public class StreamTestFixture
     {
-        
-
-        public DataSourceCsv DataSource { get; set; } =  new DataSourceCsv(new Configuration { Encoding = Encoding.UTF8 });
-
-        public CsvDeserializerTextFixture()
+        public DataSourceCsv DataSource { get; set; } = new DataSourceCsv(new Configuration { Encoding = Encoding.UTF8 });
+        public StreamTestFixture()
         {
 
         }
 
-
         [OneTimeSetUp]
         public void RunBeforeAnyTests()
         {
-           DataSource = new DataSourceCsv(new Configuration { Encoding = Encoding.UTF8 });
+            DataSource = new DataSourceCsv(new Configuration { Encoding = Encoding.UTF8 });
         }
 
         [OneTimeTearDown]
@@ -34,8 +30,6 @@ namespace DotNetHelper.Serialization.Csv.Tests
         {
 
         }
-
-
 
         [SetUp]
         public void Init()
@@ -49,13 +43,8 @@ namespace DotNetHelper.Serialization.Csv.Tests
 
         }
 
-        [Author("Joseph McNeal Jr", "josephmcnealjr@gmail.com")]
-        [Test]
-        public void Test_Deserialize_Csv_To_Dynamic()
-        {
-            var dyn = DataSource.Deserialize(MockData.EmployeeAsCsvWithHeader);
-            EnsureDynamicObjectMatchMockData(dyn);
-        }
+
+
         [Author("Joseph McNeal Jr", "josephmcnealjr@gmail.com")]
         [Test]
         public void Test_Deserialize_Stream_To_Dynamic_And_Stream_Is_Dispose()
@@ -65,23 +54,15 @@ namespace DotNetHelper.Serialization.Csv.Tests
             EnsureDynamicObjectMatchMockData(dyn);
             EnsureStreamIsDispose(stream);
         }
+        
         [Author("Joseph McNeal Jr", "josephmcnealjr@gmail.com")]
         [Test]
         public void Test_Deserialize_Stream_To_Dynamic_And_Stream_Wont_Dispose()
         {
             var stream = MockData.GetEmployeeAsStream(DataSource.Configuration.Encoding);
-            var dyn = DataSource.Deserialize(stream,1024,true);
+            var dyn = DataSource.Deserialize(stream, 1024, true);
             EnsureDynamicObjectMatchMockData(dyn);
             EnsureStreamIsNotDisposeAndIsAtEndOfStream(stream);
-        }
-
-
-        [Author("Joseph McNeal Jr", "josephmcnealjr@gmail.com")]
-        [Test]
-        public void Test_Deserialize_Csv_To_Generic()
-        {
-            var employee = DataSource.Deserialize<Employee>(MockData.EmployeeAsCsvWithHeader);
-            EnsureGenericObjectMatchMockData(employee);
         }
 
         [Author("Joseph McNeal Jr", "josephmcnealjr@gmail.com")]
@@ -100,11 +81,12 @@ namespace DotNetHelper.Serialization.Csv.Tests
         public void Test_Deserialize_Stream_To_Generic()
         {
             var stream = MockData.GetEmployeeAsStream(DataSource.Configuration.Encoding);
-            var dyn = DataSource.Deserialize<Employee>(stream,1024,true);
+            var dyn = DataSource.Deserialize<Employee>(stream, 1024, true);
             EnsureGenericObjectMatchMockData(dyn);
             EnsureStreamIsNotDisposeAndIsAtEndOfStream(stream);
 
         }
+
 
 
         [Author("Joseph McNeal Jr", "josephmcnealjr@gmail.com")]
@@ -131,23 +113,14 @@ namespace DotNetHelper.Serialization.Csv.Tests
         public void Test_Deserialize_Stream_To_Typed_Object_And_Stream_Wont_Dispose()
         {
             var stream = MockData.GetEmployeeAsStream(DataSource.Configuration.Encoding);
-            var employee = DataSource.Deserialize(stream, typeof(Employee),1024,true);
+            var employee = DataSource.Deserialize(stream, typeof(Employee), 1024, true);
             dynamic dyn = employee;
             EnsureFirstNameAndLastNameMatchMockData(dyn.FirstName.ToString(), dyn.LastName.ToString());
             EnsureStreamIsNotDisposeAndIsAtEndOfStream(stream);
         }
 
-  
 
 
-
-        [Author("Joseph McNeal Jr", "josephmcnealjr@gmail.com")]
-        [Test]
-        public void Test_Deserialize_Csv_To_Dynamic_List()
-        {
-            var employees = DataSource.DeserializeToList(MockData.EmployeeAsCsvWithHeaderList);
-            EnsureFirstNameAndLastNameMatchMockData(employees.First().FirstName.ToString(), employees.First().LastName.ToString());
-        }
 
         [Author("Joseph McNeal Jr", "josephmcnealjr@gmail.com")]
         [Test]
@@ -164,19 +137,12 @@ namespace DotNetHelper.Serialization.Csv.Tests
         public void Test_Deserialize_Stream_To_Dynamic_List_And_Stream_Wont_Dispose()
         {
             var stream = MockData.GetEmployeeListAsStream(DataSource.Configuration.Encoding);
-            var dyn = DataSource.DeserializeToList(stream,1024,true);
+            var dyn = DataSource.DeserializeToList(stream, 1024, true);
             EnsureDynamicObjectMatchMockData(dyn.First());
             EnsureStreamIsNotDisposeAndIsAtEndOfStream(stream);
         }
 
-        [Author("Joseph McNeal Jr", "josephmcnealjr@gmail.com")]
-        [Test]
-        public void Test_Deserialize_Csv_To_Generic_List()
-        {
-            var employees = DataSource.DeserializeToList<Employee>(MockData.EmployeeAsCsvWithHeaderList);
-            EnsureGenericObjectMatchMockData(employees.First());
-        }
-
+   
         [Author("Joseph McNeal Jr", "josephmcnealjr@gmail.com")]
         [Test]
         public void Test_Deserialize_Stream_To_Generic_List_And_Stream_Is_Dispose()
@@ -192,7 +158,7 @@ namespace DotNetHelper.Serialization.Csv.Tests
         public void Test_Deserialize_Stream_To_Generic_List_And_Stream_Wont_Dispose()
         {
             var stream = MockData.GetEmployeeListAsStream(DataSource.Configuration.Encoding);
-            var dyn = DataSource.DeserializeToList<Employee>(stream,1024,true);
+            var dyn = DataSource.DeserializeToList<Employee>(stream, 1024, true);
             EnsureDynamicObjectMatchMockData(dyn.First());
             EnsureStreamIsNotDisposeAndIsAtEndOfStream(stream);
         }
@@ -211,7 +177,7 @@ namespace DotNetHelper.Serialization.Csv.Tests
         public void Test_Deserialize_Stream_To_Typed_Object_List_And_Stream_Wont_Dispose()
         {
             var stream = MockData.GetEmployeeListAsStream(DataSource.Configuration.Encoding);
-            List<dynamic> list = DataSource.DeserializeToList(stream, typeof(Employee),1024,true);
+            List<dynamic> list = DataSource.DeserializeToList(stream, typeof(Employee), 1024, true);
             EnsureFirstNameAndLastNameMatchMockData(list.First().FirstName.ToString(), list.First().LastName.ToString());
             EnsureStreamIsNotDisposeAndIsAtEndOfStream(stream);
         }
@@ -230,7 +196,7 @@ namespace DotNetHelper.Serialization.Csv.Tests
 
 
         }
-        
+
         [Author("Joseph McNeal Jr", "josephmcnealjr@gmail.com")]
         [Test]
         public void Test_Deserialize_Json_To_Typed_Object_Of_List2()
@@ -243,7 +209,7 @@ namespace DotNetHelper.Serialization.Csv.Tests
 
 
 
-        private void EnsureFirstNameAndLastNameMatchMockData(string firstName,string lastName)
+        private void EnsureFirstNameAndLastNameMatchMockData(string firstName, string lastName)
         {
             if (firstName.Equals(MockData.Employee.FirstName) && lastName.Equals(MockData.Employee.LastName))
             {
@@ -273,11 +239,12 @@ namespace DotNetHelper.Serialization.Csv.Tests
                 {
                     Assert.Fail("The entire stream has not been read");
                 }
-            }catch(ObjectDisposedException disposedException)
+            }
+            catch (ObjectDisposedException disposedException)
             {
                 Assert.Fail($"The stream has been disposed {disposedException.Message}");
             }
-            
+
         }
 
 
@@ -291,10 +258,10 @@ namespace DotNetHelper.Serialization.Csv.Tests
             catch (ObjectDisposedException)
             {
                 return;
-            }           
+            }
         }
 
- 
+
 
 
     }
