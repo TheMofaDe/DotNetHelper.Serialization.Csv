@@ -11,7 +11,7 @@ namespace DotNetHelper.Serialization.Csv.Tests.Deserialize
 {
     [TestFixture]
     [NonParallelizable] //since were sharing a single file across multiple test cases we don't want Parallelizable
-    public class StreamTestFixture
+    public class StreamTestFixture : BaseDeserialize
     {
         public DataSourceCsv DataSource { get; set; } = new DataSourceCsv(new Configuration { Encoding = Encoding.UTF8 });
         public StreamTestFixture()
@@ -47,220 +47,113 @@ namespace DotNetHelper.Serialization.Csv.Tests.Deserialize
 
         [Author("Joseph McNeal Jr", "josephmcnealjr@gmail.com")]
         [Test]
-        public void Test_Deserialize_Stream_To_Dynamic_And_Stream_Is_Dispose()
+        public void Test_Deserialize_Stream_To_Dynamic([Values(false,true)] bool leaveStreamOpen)
         {
             var stream = MockData.GetEmployeeAsStream(DataSource.Configuration.Encoding);
-            var dyn = DataSource.Deserialize(stream);
+            var dyn = DataSource.Deserialize(stream,1024, leaveStreamOpen);
             EnsureDynamicObjectMatchMockData(dyn);
-            EnsureStreamIsDispose(stream);
+            if (leaveStreamOpen)
+            {
+                EnsureStreamIsNotDisposeAndIsAtEndOfStream(stream);
+            }
+            else
+            {
+                EnsureStreamIsDispose(stream);
+            }
         }
         
-        [Author("Joseph McNeal Jr", "josephmcnealjr@gmail.com")]
-        [Test]
-        public void Test_Deserialize_Stream_To_Dynamic_And_Stream_Wont_Dispose()
-        {
-            var stream = MockData.GetEmployeeAsStream(DataSource.Configuration.Encoding);
-            var dyn = DataSource.Deserialize(stream, 1024, true);
-            EnsureDynamicObjectMatchMockData(dyn);
-            EnsureStreamIsNotDisposeAndIsAtEndOfStream(stream);
-        }
+      
 
         [Author("Joseph McNeal Jr", "josephmcnealjr@gmail.com")]
         [Test]
-        public void Test_Deserialize_Stream_To_Generic_And_Stream_Is_Dispose()
+        public void Test_Deserialize_Stream_To_Generic([Values(false, true)] bool leaveStreamOpen)
         {
             var stream = MockData.GetEmployeeAsStream(DataSource.Configuration.Encoding);
-            var dyn = DataSource.Deserialize<Employee>(stream);
+            var dyn = DataSource.Deserialize<Employee>(stream,1024,leaveStreamOpen);
             EnsureGenericObjectMatchMockData(dyn);
-            EnsureStreamIsDispose(stream);
-
+            if (leaveStreamOpen)
+            {
+                EnsureStreamIsNotDisposeAndIsAtEndOfStream(stream);
+            }
+            else
+            {
+                EnsureStreamIsDispose(stream);
+            }
         }
+
 
         [Author("Joseph McNeal Jr", "josephmcnealjr@gmail.com")]
         [Test]
-        public void Test_Deserialize_Stream_To_Generic()
+        public void Test_Deserialize_Stream_To_Typed_Object([Values(false, true)] bool leaveStreamOpen)
         {
             var stream = MockData.GetEmployeeAsStream(DataSource.Configuration.Encoding);
-            var dyn = DataSource.Deserialize<Employee>(stream, 1024, true);
-            EnsureGenericObjectMatchMockData(dyn);
-            EnsureStreamIsNotDisposeAndIsAtEndOfStream(stream);
-
+            var employee = DataSource.Deserialize(stream, typeof(Employee),1024,leaveStreamOpen);
+            if (employee is Employee dyn)
+            {
+                EnsureFirstNameAndLastNameMatchMockData(dyn.FirstName.ToString(), dyn.LastName.ToString());
+                if (leaveStreamOpen)
+                {
+                    EnsureStreamIsNotDisposeAndIsAtEndOfStream(stream);
+                }
+                else
+                {
+                    EnsureStreamIsDispose(stream);
+                }
+            }
+            else
+            {
+                Assert.Fail("Object did not deserialize to expected type");
+            }
         }
-
+    
 
 
         [Author("Joseph McNeal Jr", "josephmcnealjr@gmail.com")]
         [Test]
-        public void Test_Deserialize_Csv_To_Typed_Object()
-        {
-            var employee = DataSource.Deserialize(MockData.EmployeeAsCsvWithHeader, typeof(Employee));
-            dynamic dyn = employee;
-            EnsureFirstNameAndLastNameMatchMockData(dyn.FirstName.ToString(), dyn.LastName.ToString());
-        }
-
-        [Author("Joseph McNeal Jr", "josephmcnealjr@gmail.com")]
-        [Test]
-        public void Test_Deserialize_Stream_To_Typed_Object_And_Stream_Is_Dispose()
-        {
-            var stream = MockData.GetEmployeeAsStream(DataSource.Configuration.Encoding);
-            var employee = DataSource.Deserialize(stream, typeof(Employee));
-            dynamic dyn = employee;
-            EnsureFirstNameAndLastNameMatchMockData(dyn.FirstName.ToString(), dyn.LastName.ToString());
-            EnsureStreamIsDispose(stream);
-        }
-        [Author("Joseph McNeal Jr", "josephmcnealjr@gmail.com")]
-        [Test]
-        public void Test_Deserialize_Stream_To_Typed_Object_And_Stream_Wont_Dispose()
-        {
-            var stream = MockData.GetEmployeeAsStream(DataSource.Configuration.Encoding);
-            var employee = DataSource.Deserialize(stream, typeof(Employee), 1024, true);
-            dynamic dyn = employee;
-            EnsureFirstNameAndLastNameMatchMockData(dyn.FirstName.ToString(), dyn.LastName.ToString());
-            EnsureStreamIsNotDisposeAndIsAtEndOfStream(stream);
-        }
-
-
-
-
-        [Author("Joseph McNeal Jr", "josephmcnealjr@gmail.com")]
-        [Test]
-        public void Test_Deserialize_Stream_To_Dynamic_List_And_Stream_Is_Dispose()
+        public void Test_Deserialize_Stream_To_Dynamic_List([Values(false, true)] bool leaveStreamOpen)
         {
             var stream = MockData.GetEmployeeListAsStream(DataSource.Configuration.Encoding);
-            var dyn = DataSource.DeserializeToList(stream);
+            var dyn = DataSource.DeserializeToList(stream,1024,leaveStreamOpen);
             EnsureDynamicObjectMatchMockData(dyn.First());
             EnsureStreamIsDispose(stream);
-        }
-
-        [Author("Joseph McNeal Jr", "josephmcnealjr@gmail.com")]
-        [Test]
-        public void Test_Deserialize_Stream_To_Dynamic_List_And_Stream_Wont_Dispose()
-        {
-            var stream = MockData.GetEmployeeListAsStream(DataSource.Configuration.Encoding);
-            var dyn = DataSource.DeserializeToList(stream, 1024, true);
-            EnsureDynamicObjectMatchMockData(dyn.First());
-            EnsureStreamIsNotDisposeAndIsAtEndOfStream(stream);
         }
 
    
         [Author("Joseph McNeal Jr", "josephmcnealjr@gmail.com")]
         [Test]
-        public void Test_Deserialize_Stream_To_Generic_List_And_Stream_Is_Dispose()
+        public void Test_Deserialize_Stream_To_Generic_List([Values(false, true)] bool leaveStreamOpen)
         {
             var stream = MockData.GetEmployeeListAsStream(DataSource.Configuration.Encoding);
-            var dyn = DataSource.DeserializeToList<Employee>(stream);
+            var dyn = DataSource.DeserializeToList<Employee>(stream,1024,leaveStreamOpen);
             EnsureDynamicObjectMatchMockData(dyn.First());
-            EnsureStreamIsDispose(stream);
-        }
-
-        [Author("Joseph McNeal Jr", "josephmcnealjr@gmail.com")]
-        [Test]
-        public void Test_Deserialize_Stream_To_Generic_List_And_Stream_Wont_Dispose()
-        {
-            var stream = MockData.GetEmployeeListAsStream(DataSource.Configuration.Encoding);
-            var dyn = DataSource.DeserializeToList<Employee>(stream, 1024, true);
-            EnsureDynamicObjectMatchMockData(dyn.First());
-            EnsureStreamIsNotDisposeAndIsAtEndOfStream(stream);
-        }
-
-        [Author("Joseph McNeal Jr", "josephmcnealjr@gmail.com")]
-        [Test]
-        public void Test_Deserialize_Stream_To_Typed_Object_List_And_Stream_Is_Dispose()
-        {
-            var stream = MockData.GetEmployeeListAsStream(DataSource.Configuration.Encoding);
-            List<dynamic> list = DataSource.DeserializeToList(stream, typeof(Employee));
-            EnsureFirstNameAndLastNameMatchMockData(list.First().FirstName.ToString(), list.First().LastName.ToString());
-            EnsureStreamIsDispose(stream);
-        }
-        [Author("Joseph McNeal Jr", "josephmcnealjr@gmail.com")]
-        [Test]
-        public void Test_Deserialize_Stream_To_Typed_Object_List_And_Stream_Wont_Dispose()
-        {
-            var stream = MockData.GetEmployeeListAsStream(DataSource.Configuration.Encoding);
-            List<dynamic> list = DataSource.DeserializeToList(stream, typeof(Employee), 1024, true);
-            EnsureFirstNameAndLastNameMatchMockData(list.First().FirstName.ToString(), list.First().LastName.ToString());
-            EnsureStreamIsNotDisposeAndIsAtEndOfStream(stream);
-        }
-
-
-
-        [Author("Joseph McNeal Jr", "josephmcnealjr@gmail.com")]
-        [Test]
-        public void Test_Deserialize_Json_To_Typed_Object_Of_List()
-        {
-            var objects = DataSource.Deserialize(MockData.EmployeeAsCsvWithHeaderList, typeof(List<Employee>));
-            var employees = (List<Employee>)objects;
-            var employee = employees.First();
-            EnsureFirstNameAndLastNameMatchMockData(employee.FirstName, employee.LastName);
-
-
-
-        }
-
-        [Author("Joseph McNeal Jr", "josephmcnealjr@gmail.com")]
-        [Test]
-        public void Test_Deserialize_Json_To_Typed_Object_Of_List2()
-        {
-            var employees = DataSource.DeserializeToList(MockData.EmployeeAsCsvWithHeaderList, typeof(List<Employee>));
-            var employee = employees.First() as Employee;
-            EnsureFirstNameAndLastNameMatchMockData(employee.FirstName, employee.LastName);
-        }
-
-
-
-
-        private void EnsureFirstNameAndLastNameMatchMockData(string firstName, string lastName)
-        {
-            if (firstName.Equals(MockData.Employee.FirstName) && lastName.Equals(MockData.Employee.LastName))
+            if (leaveStreamOpen)
             {
-
+                EnsureStreamIsNotDisposeAndIsAtEndOfStream(stream);
             }
             else
             {
-                Assert.Fail("Dynamic Object doesn't matches expected results");
+                EnsureStreamIsDispose(stream);
             }
         }
 
-        private void EnsureDynamicObjectMatchMockData(dynamic dyn)
+
+        [Author("Joseph McNeal Jr", "josephmcnealjr@gmail.com")]
+        [Test]
+        public void Test_Deserialize_Stream_To_Typed_Object_List([Values(false, true)] bool leaveStreamOpen)
         {
-            EnsureFirstNameAndLastNameMatchMockData(dyn.FirstName.ToString(), dyn.LastName.ToString());
-        }
-
-        private void EnsureGenericObjectMatchMockData(Employee employee)
-        {
-            EnsureFirstNameAndLastNameMatchMockData(employee.FirstName, employee.LastName);
-        }
-
-        private void EnsureStreamIsNotDisposeAndIsAtEndOfStream(Stream stream)
-        {
-            try
+            var stream = MockData.GetEmployeeListAsStream(DataSource.Configuration.Encoding);
+            var list = DataSource.DeserializeToList(stream, typeof(Employee),1024,leaveStreamOpen);
+            Assert.That(list.TrueForAll(o => o is Employee));
+            EnsureGenericObjectMatchMockData(list.First() as Employee);
+            if (leaveStreamOpen)
             {
-                if (stream.Position != stream.Length)
-                {
-                    Assert.Fail("The entire stream has not been read");
-                }
+                EnsureStreamIsNotDisposeAndIsAtEndOfStream(stream);
             }
-            catch (ObjectDisposedException disposedException)
+            else
             {
-                Assert.Fail($"The stream has been disposed {disposedException.Message}");
-            }
-
-        }
-
-
-        private void EnsureStreamIsDispose(Stream stream)
-        {
-            try
-            {
-                var position = stream.Position;
-                Assert.Fail("The stream is not disposed.");
-            }
-            catch (ObjectDisposedException)
-            {
-                return;
+                EnsureStreamIsDispose(stream);
             }
         }
-
 
 
 

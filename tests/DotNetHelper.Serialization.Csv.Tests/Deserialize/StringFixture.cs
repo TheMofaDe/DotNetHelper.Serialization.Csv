@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -7,26 +7,22 @@ using CsvHelper.Configuration;
 using DotNetHelper.Serialization.Csv.Tests.Models;
 using NUnit.Framework;
 
-namespace DotNetHelper.Serialization.Csv.Tests
+namespace DotNetHelper.Serialization.Csv.Tests.Deserialize
 {
     [TestFixture]
     [NonParallelizable] //since were sharing a single file across multiple test cases we don't want Parallelizable
-    public class GenericTestFixture : BaseDeserialize
+    public class StringTestFixture
     {
-        
-
-        public DataSourceCsv DataSource { get; set; } =  new DataSourceCsv(new Configuration { Encoding = Encoding.UTF8 });
-
-        public GenericTestFixture()
+        public DataSourceCsv DataSource { get; set; } = new DataSourceCsv(new Configuration { Encoding = Encoding.UTF8 });
+        public StringTestFixture()
         {
 
         }
 
-
         [OneTimeSetUp]
         public void RunBeforeAnyTests()
         {
-           DataSource = new DataSourceCsv(new Configuration { Encoding = Encoding.UTF8 });
+            DataSource = new DataSourceCsv(new Configuration { Encoding = Encoding.UTF8 });
         }
 
         [OneTimeTearDown]
@@ -34,8 +30,6 @@ namespace DotNetHelper.Serialization.Csv.Tests
         {
 
         }
-
-
 
         [SetUp]
         public void Init()
@@ -49,24 +43,8 @@ namespace DotNetHelper.Serialization.Csv.Tests
 
         }
 
-        [Author("Joseph McNeal Jr", "josephmcnealjr@gmail.com")]
-        [Test]
-        public void Test_Deserialize_Csv_To_Dynamic()
-        {
-            var dyn = DataSource.Deserialize(MockData.EmployeeAsCsvWithHeader);
-            EnsureDynamicObjectMatchMockData(dyn);
-        }
-      
 
-        [Author("Joseph McNeal Jr", "josephmcnealjr@gmail.com")]
-        [Test]
-        public void Test_Deserialize_Csv_To_Generic()
-        {
-            var employee = DataSource.Deserialize<Employee>(MockData.EmployeeAsCsvWithHeader);
-            EnsureGenericObjectMatchMockData(employee);
-        }
 
-      
 
         [Author("Joseph McNeal Jr", "josephmcnealjr@gmail.com")]
         [Test]
@@ -77,27 +55,7 @@ namespace DotNetHelper.Serialization.Csv.Tests
             EnsureFirstNameAndLastNameMatchMockData(dyn.FirstName.ToString(), dyn.LastName.ToString());
         }
 
-    
-
-        [Author("Joseph McNeal Jr", "josephmcnealjr@gmail.com")]
-        [Test]
-        public void Test_Deserialize_Csv_To_Dynamic_List()
-        {
-            var employees = DataSource.DeserializeToList(MockData.EmployeeAsCsvWithHeaderList);
-            EnsureFirstNameAndLastNameMatchMockData(employees.First().FirstName.ToString(), employees.First().LastName.ToString());
-        }
-
        
-
-        [Author("Joseph McNeal Jr", "josephmcnealjr@gmail.com")]
-        [Test]
-        public void Test_Deserialize_Csv_To_Generic_List()
-        {
-            var employees = DataSource.DeserializeToList<Employee>(MockData.EmployeeAsCsvWithHeaderList);
-            EnsureGenericObjectMatchMockData(employees.First());
-        }
-
-
         [Author("Joseph McNeal Jr", "josephmcnealjr@gmail.com")]
         [Test]
         public void Test_Deserialize_Json_To_Typed_Object_Of_List()
@@ -110,7 +68,7 @@ namespace DotNetHelper.Serialization.Csv.Tests
 
 
         }
-        
+
         [Author("Joseph McNeal Jr", "josephmcnealjr@gmail.com")]
         [Test]
         public void Test_Deserialize_Json_To_Typed_Object_Of_List2()
@@ -123,7 +81,59 @@ namespace DotNetHelper.Serialization.Csv.Tests
 
 
 
- 
+        private void EnsureFirstNameAndLastNameMatchMockData(string firstName, string lastName)
+        {
+            if (firstName.Equals(MockData.Employee.FirstName) && lastName.Equals(MockData.Employee.LastName))
+            {
+
+            }
+            else
+            {
+                Assert.Fail("Dynamic Object doesn't matches expected results");
+            }
+        }
+
+        private void EnsureDynamicObjectMatchMockData(dynamic dyn)
+        {
+            EnsureFirstNameAndLastNameMatchMockData(dyn.FirstName.ToString(), dyn.LastName.ToString());
+        }
+
+        private void EnsureGenericObjectMatchMockData(Employee employee)
+        {
+            EnsureFirstNameAndLastNameMatchMockData(employee.FirstName, employee.LastName);
+        }
+
+        private void EnsureStreamIsNotDisposeAndIsAtEndOfStream(Stream stream)
+        {
+            try
+            {
+                if (stream.Position != stream.Length)
+                {
+                    Assert.Fail("The entire stream has not been read");
+                }
+            }
+            catch (ObjectDisposedException disposedException)
+            {
+                Assert.Fail($"The stream has been disposed {disposedException.Message}");
+            }
+
+        }
+
+
+        private void EnsureStreamIsDispose(Stream stream)
+        {
+            try
+            {
+                var position = stream.Position;
+                Assert.Fail("The stream is not disposed.");
+            }
+            catch (ObjectDisposedException)
+            {
+                return;
+            }
+        }
+
+
 
 
     }

@@ -58,9 +58,9 @@ namespace DotNetHelper.Serialization.Csv
         public T Deserialize<T>(string csv) where T : class
         {
             csv.IsNullThrow(nameof(csv));
-            using (var sr = new StreamReader(new MemoryStream(Configuration.Encoding.GetBytes(csv)), Configuration.Encoding, false, 1024, false))
-            // using (var csvReader = new CsvReader(new StringReader(csv), Configuration, false))
-            using (var csvReader = new CsvReader(sr, Configuration, false))
+           // using (var sr = new StreamReader(new MemoryStream(Configuration.Encoding.GetBytes(csv)), Configuration.Encoding, false, 1024, false))
+             using (var csvReader = new CsvReader(new StringReader(csv), Configuration, false))
+           // using (var csvReader = new CsvReader(sr, Configuration, false))
             {
                 csvReader.Read();
                 return GetRecord<T>(csvReader, typeof(T));
@@ -352,26 +352,22 @@ namespace DotNetHelper.Serialization.Csv
         private IEnumerable<T> GetRecords<T>(CsvReader csvReader, Type type)
         {
             var mapping = Configuration.Maps[type];
-            if (mapping.MemberMaps.Count <= 0)
+            
+            if (mapping == null || mapping.MemberMaps.Count <= 0)
             {
                 if (typeof(IEnumerable).IsAssignableFrom(type))
                 {
                     var underlyingType = FindElementType(type);
                     var errorMessage = $"Types that inherit IEnumerable cannot be auto mapped. If your code looks like this {Environment.NewLine} " +
-                                       $"var list = new {nameof(DataSourceCsv)}.DeserializeToList(stream, {type.FullName}) then change it to {Environment.NewLine} " +
-                                       $"var list = new {nameof(DataSourceCsv)}.DeserializeToList(stream, {underlyingType.FullName}). Otherwise you need register a ClassMap documentation on how to do that can be found here." +
+                                       $"var list = new {nameof(DataSourceCsv)}.DeserializeToList(stream, typeof({type.FullName})) then change it to {Environment.NewLine} " +
+                                       $"var list = new {nameof(DataSourceCsv)}.DeserializeToList(stream, typeof({underlyingType.FullName})). Otherwise you need register a ClassMap documentation on how to do that can be found here." +
                                        $" https://joshclose.github.io/CsvHelper/getting-started";
                     throw new ConfigurationException(errorMessage);
                 }
                 Configuration.AutoMap<T>();
-
-                var record = csvReader.GetRecords(type);
-                return (IEnumerable<T>)record;
             }
-            else
-            {
-                return csvReader.GetRecords<T>();
-            }
+           
+            return csvReader.GetRecords<T>();
         }
 
 
