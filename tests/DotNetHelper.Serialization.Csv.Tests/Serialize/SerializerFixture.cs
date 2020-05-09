@@ -9,11 +9,9 @@ namespace DotNetHelper.Serialization.Csv.Tests
 {
     [TestFixture]
     [NonParallelizable] //since were sharing a single file across multiple test cases we don't want Parallelizable
-    public class CsvSerializerTextFixture 
+    public class CsvSerializerTextFixture  : BaseSerialize
     {
         
-
-        public DataSourceCsv DataSource { get; set; } = new DataSourceCsv();
 
         public CsvSerializerTextFixture()
         {
@@ -24,8 +22,6 @@ namespace DotNetHelper.Serialization.Csv.Tests
         [OneTimeSetUp]
         public void RunBeforeAnyTests()
         {
-            var configuration = new Configuration { Encoding = Encoding.UTF8 };
-            DataSource = new DataSourceCsv(configuration);
         }
 
         [OneTimeTearDown]
@@ -173,78 +169,5 @@ namespace DotNetHelper.Serialization.Csv.Tests
         }
 
 
-
-
-
-        private void EnsureGenericObjectMatchMockDataJson(string csv)
-        {
-            var equals = string.Equals(csv, MockData.EmployeeAsCsvWithHeader, StringComparison.OrdinalIgnoreCase);
-            Assert.IsTrue(equals, $"Test failed due to json not matching mock data json");
-        }
-        private void EnsureGenericObjectMatchMockDataJsonSingleList(string csv)
-        {
-            var equals = string.Equals(csv, MockData.EmployeeAsCsvWithHeaderList, StringComparison.OrdinalIgnoreCase);
-            Assert.IsTrue(equals, $"Test failed due to json not matching mock data json");
-        }
-
-        private void EnsureStreamIsNotDisposeAndIsAtEndOfStream(Stream stream)
-        {
-            try
-            {
-                if (stream.Position != stream.Length)
-                {
-                    Assert.Fail("The entire stream has not been read");
-                }
-            }
-            catch (ObjectDisposedException disposedException)
-            {
-                Assert.Fail($"The stream has been disposed {disposedException.Message}");
-            }
-
-        }
-
-
-        private void EnsureStreamIsDispose(Stream stream)
-        {
-            try
-            {
-                var position = stream.Position;
-                Assert.Fail("The stream is not disposed.");
-            }
-            catch (ObjectDisposedException)
-            {
-                return;
-            }
-        }
-
-
-
-        private bool CompareStreams(Stream a, Stream b)
-        {
-            if (a == null &&
-                b == null)
-                return true;
-            if (a == null ||
-                b == null)
-            {
-                throw new ArgumentNullException(
-                    a == null ? "a" : "b");
-            }
-
-            if (a.Length < b.Length)
-                return false;
-            if (a.Length > b.Length)
-                return false;
-
-            for (int i = 0; i < a.Length; i++)
-            {
-                int aByte = a.ReadByte();
-                int bByte = b.ReadByte();
-                if (aByte.CompareTo(bByte) != 0)
-                    return false;
-            }
-
-            return true;
-        }
     }
 }

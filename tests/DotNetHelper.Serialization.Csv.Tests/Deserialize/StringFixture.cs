@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Dynamic;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -11,9 +12,9 @@ namespace DotNetHelper.Serialization.Csv.Tests.Deserialize
 {
     [TestFixture]
     [NonParallelizable] //since were sharing a single file across multiple test cases we don't want Parallelizable
-    public class StringTestFixture
+    public class StringTestFixture : BaseDeserialize
     {
-        public DataSourceCsv DataSource { get; set; } = new DataSourceCsv(new Configuration { Encoding = Encoding.UTF8 });
+      
         public StringTestFixture()
         {
 
@@ -22,7 +23,7 @@ namespace DotNetHelper.Serialization.Csv.Tests.Deserialize
         [OneTimeSetUp]
         public void RunBeforeAnyTests()
         {
-            DataSource = new DataSourceCsv(new Configuration { Encoding = Encoding.UTF8 });
+           
         }
 
         [OneTimeTearDown]
@@ -44,96 +45,145 @@ namespace DotNetHelper.Serialization.Csv.Tests.Deserialize
         }
 
 
-
-
         [Author("Joseph McNeal Jr", "josephmcnealjr@gmail.com")]
         [Test]
-        public void Test_Deserialize_Csv_To_Typed_Object()
+        public void Test_Deserialize_String_To_Dynamic_Object()
         {
-            var employee = DataSource.Deserialize(MockData.EmployeeAsCsvWithHeader, typeof(Employee));
-            dynamic dyn = employee;
-            EnsureFirstNameAndLastNameMatchMockData(dyn.FirstName.ToString(), dyn.LastName.ToString());
-        }
-
-       
-        [Author("Joseph McNeal Jr", "josephmcnealjr@gmail.com")]
-        [Test]
-        public void Test_Deserialize_Json_To_Typed_Object_Of_List()
-        {
-            var objects = DataSource.Deserialize(MockData.EmployeeAsCsvWithHeaderList, typeof(List<Employee>));
-            var employees = (List<Employee>)objects;
-            var employee = employees.First();
-            EnsureFirstNameAndLastNameMatchMockData(employee.FirstName, employee.LastName);
-
-
-
-        }
-
-        [Author("Joseph McNeal Jr", "josephmcnealjr@gmail.com")]
-        [Test]
-        public void Test_Deserialize_Json_To_Typed_Object_Of_List2()
-        {
-            var employees = DataSource.DeserializeToList(MockData.EmployeeAsCsvWithHeaderList, typeof(List<Employee>));
-            var employee = employees.First() as Employee;
+            var employee = DataSource.Deserialize(MockData.EmployeeAsCsvWithHeader);
             EnsureFirstNameAndLastNameMatchMockData(employee.FirstName, employee.LastName);
         }
 
-
-
-
-        private void EnsureFirstNameAndLastNameMatchMockData(string firstName, string lastName)
+        [Author("Joseph McNeal Jr", "josephmcnealjr@gmail.com")]
+        [Test]
+        public void Test_Deserialize_String_To_Dynamic_Object_List()
         {
-            if (firstName.Equals(MockData.Employee.FirstName) && lastName.Equals(MockData.Employee.LastName))
+            var employees = DataSource.DeserializeToList(MockData.EmployeeAsCsvWithHeader);
+            EnsureFirstNameAndLastNameMatchMockData(employees.First().FirstName, employees.First().LastName);
+        }
+
+
+        [Author("Joseph McNeal Jr", "josephmcnealjr@gmail.com")]
+        [Test]
+        public void Test_Deserialize_String_To_Expando_Object()
+        {
+            var employee = DataSource.Deserialize<ExpandoObject>(MockData.EmployeeAsCsvWithHeader);
+            if (employee is IDictionary<string, object> dictionary)
             {
-
+                EnsureFirstNameAndLastNameMatchMockData(dictionary["FirstName"].ToString(), dictionary["LastName"].ToString());
             }
             else
             {
-                Assert.Fail("Dynamic Object doesn't matches expected results");
+                Assert.Fail("Object did not deserialize to expected type");
             }
         }
 
-        private void EnsureDynamicObjectMatchMockData(dynamic dyn)
+        [Author("Joseph McNeal Jr", "josephmcnealjr@gmail.com")]
+        [Test]
+        public void Test_Deserialize_String_To_Expando_Object_2()
         {
-            EnsureFirstNameAndLastNameMatchMockData(dyn.FirstName.ToString(), dyn.LastName.ToString());
+            var employee2 = DataSource.Deserialize(MockData.EmployeeAsCsvWithHeader, typeof(ExpandoObject));
+            if (employee2 is IDictionary<string, object> dictionary2)
+            {
+                EnsureFirstNameAndLastNameMatchMockData(dictionary2["FirstName"].ToString(), dictionary2["LastName"].ToString());
+            }
+            else
+            {
+                Assert.Fail("Object did not deserialize to expected type");
+            }
         }
 
-        private void EnsureGenericObjectMatchMockData(Employee employee)
+
+
+        [Author("Joseph McNeal Jr", "josephmcnealjr@gmail.com")]
+        [Test]
+        public void Test_Deserialize_String_To_Expando_Object_List()
         {
+            var employees = DataSource.Deserialize<List<ExpandoObject>>(MockData.EmployeeAsCsvWithHeader);
+            EnsureDynamicObjectMatchMockData(employees.First());
+        }
+
+       //[Author("Joseph McNeal Jr", "josephmcnealjr@gmail.com")]
+       //[Test]
+       //public void Test_Deserialize_String_To_Expando_Object_List_2()
+       //{
+       //    var employees = DataSource.Deserialize(MockData.EmployeeAsCsvWithHeader, typeof(List<ExpandoObject>));
+       //    if (employees is List<ExpandoObject> list)
+       //    {
+       //        EnsureDynamicObjectMatchMockData(list.First());
+       //    }
+       //    else
+       //    {
+       //        Assert.Fail("Deserialize Failed");
+       //    }
+       //}
+
+
+
+
+        [Author("Joseph McNeal Jr", "josephmcnealjr@gmail.com")]
+        [Test]
+        public void Test_Deserialize_String_To_Typed_Object()
+        {
+            var employee = DataSource.Deserialize<Employee>(MockData.EmployeeAsCsvWithHeader);
             EnsureFirstNameAndLastNameMatchMockData(employee.FirstName, employee.LastName);
         }
 
-        private void EnsureStreamIsNotDisposeAndIsAtEndOfStream(Stream stream)
+        [Author("Joseph McNeal Jr", "josephmcnealjr@gmail.com")]
+        [Test]
+        public void Test_Deserialize_String_To_Typed_Object_2()
         {
-            try
+            var employee = DataSource.Deserialize(MockData.EmployeeAsCsvWithHeader, typeof(Employee));
+            if (employee is Employee dyn)
             {
-                if (stream.Position != stream.Length)
-                {
-                    Assert.Fail("The entire stream has not been read");
-                }
+                EnsureFirstNameAndLastNameMatchMockData(dyn.FirstName, dyn.LastName);
             }
-            catch (ObjectDisposedException disposedException)
+            else
             {
-                Assert.Fail($"The stream has been disposed {disposedException.Message}");
-            }
-
-        }
-
-
-        private void EnsureStreamIsDispose(Stream stream)
-        {
-            try
-            {
-                var position = stream.Position;
-                Assert.Fail("The stream is not disposed.");
-            }
-            catch (ObjectDisposedException)
-            {
-                return;
+                Assert.Fail("Object did not deserialize to expected type");
             }
         }
 
 
+        [Author("Joseph McNeal Jr", "josephmcnealjr@gmail.com")]
+        [Test]
+        public void Test_Deserialize_String_To_Typed_Object_List()
+        {
+            var employees = DataSource.Deserialize<List<Employee>>(MockData.EmployeeAsCsvWithHeader);
+            EnsureFirstNameAndLastNameMatchMockData(employees.First().FirstName, employees.First().LastName);
+        }
+
+        [Author("Joseph McNeal Jr", "josephmcnealjr@gmail.com")]
+        [Test]
+        public void Test_Deserialize_String_To_Typed_Object_List_2()
+        {
+            var employee = DataSource.Deserialize(MockData.EmployeeAsCsvWithHeader, typeof(List<Employee>));
+            if (employee is List<Employee> employees)
+            {
+                var dyn = employees.First();
+                EnsureFirstNameAndLastNameMatchMockData(dyn.FirstName, dyn.LastName);
+            }
+            else
+            {
+                Assert.Fail("Object did not deserialize to expected type");
+            }
+        }
+
+
+
+
+
+
+
+
+        //[Author("Joseph McNeal Jr", "josephmcnealjr@gmail.com")]
+        //[Test]
+        //public void Test_Deserialize_String_To_Typed_Object_List()
+        //{
+        //    var objects = DataSource.Deserialize(MockData.EmployeeAsCsvWithHeaderList, typeof(List<Employee>));
+        //    var employees = (List<Employee>)objects;
+        //    var employee = employees.First();
+        //    EnsureFirstNameAndLastNameMatchMockData(employee.FirstName, employee.LastName);
+        //}
 
 
     }

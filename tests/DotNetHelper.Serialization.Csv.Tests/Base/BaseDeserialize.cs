@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CsvHelper.Configuration;
 using DotNetHelper.Serialization.Csv.Tests.Models;
 using NUnit.Framework;
 
@@ -11,6 +12,8 @@ namespace DotNetHelper.Serialization.Csv.Tests
 {
     public class BaseDeserialize
     {
+
+        public DataSourceCsv DataSource { get; set; } = new DataSourceCsv();
 
         public void EnsureFirstNameAndLastNameMatchMockData(string firstName, string lastName)
         {

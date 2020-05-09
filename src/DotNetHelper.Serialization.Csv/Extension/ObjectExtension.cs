@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Dynamic;
 using System.Linq;
 using System.Text;
+using DotNetHelper.Serialization.Csv.Extension;
 
 namespace DotNetHelper.Serialization.Json.Extension
 {
@@ -30,13 +32,29 @@ namespace DotNetHelper.Serialization.Json.Extension
         /// <returns></returns>
         public static object ConvertListToTypeList(this IEnumerable<object> items, Type type)
         {
-            var containedType = type.GenericTypeArguments.First();
-            var enumerableType = typeof(Enumerable);
-            var castMethod = enumerableType.GetMethod(nameof(Enumerable.Cast)).MakeGenericMethod(containedType);
-            var toListMethod = enumerableType.GetMethod(nameof(Enumerable.ToList)).MakeGenericMethod(containedType);
-            var itemsToCast = items.Select(item => Convert.ChangeType(item, containedType));
-            var castedItems = castMethod.Invoke(null, new[] { itemsToCast });
-            return toListMethod.Invoke(null, new[] { castedItems });
+            if (type.GetEnumerableItemType().IsTypeDynamic()) return items;
+
+            var genericTypeArguments = type.GenericTypeArguments;
+            var containedType = genericTypeArguments.FirstOrDefault() ?? type;
+                var enumerableType = typeof(Enumerable);
+                var castMethod = enumerableType.GetMethod(nameof(Enumerable.Cast)).MakeGenericMethod(containedType);
+                var toListMethod = enumerableType.GetMethod(nameof(Enumerable.ToList)).MakeGenericMethod(containedType);
+                var itemsToCast = items.Select(item => Convert.ChangeType(item, containedType));
+                var castedItems = castMethod.Invoke(null, new[] {itemsToCast});
+                return toListMethod.Invoke(null, new[] {castedItems});
+            
+            return items;
+        }
+
+
+        /// <summary>
+        /// return true if the type is assignable form IDynamicMetaObjectProvider
+        /// </summary>
+        /// <param name="type"></param>
+        /// <returns></returns>
+        public static bool IsTypeDynamic(this Type type)
+        {
+            return typeof(IDynamicMetaObjectProvider).IsAssignableFrom(type);
         }
 
     }

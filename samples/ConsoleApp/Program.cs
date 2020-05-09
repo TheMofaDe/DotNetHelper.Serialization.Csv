@@ -19,7 +19,7 @@ namespace ConsoleApp
         static void Main(string[] args)
         {
             // 
-            var csvSerializer = new DataSourceCsv(new Configuration() { });
+            var csvSerializer = new DataSourceCsv();
             var employee = new Employee { Id = 1 };
 
             // WRITE A SINGLE OBJECT TO A FILE

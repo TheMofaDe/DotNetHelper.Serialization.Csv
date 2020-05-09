@@ -2,9 +2,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Dynamic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.Xml;
 using CsvHelper;
 using CsvHelper.Configuration;
@@ -22,14 +24,14 @@ namespace DotNetHelper.Serialization.Csv
         /// Gets the CSV configuration.
         /// </summary>
         /// <value>The CSV configuration.</value>
-        public Configuration Configuration { get; } = new Configuration() { UseNewObjectForNullReferenceMembers = false };
+        public CsvConfiguration Configuration { get; } = new CsvConfiguration(CultureInfo.InvariantCulture) { UseNewObjectForNullReferenceMembers = false };
 
 
         /// <summary>
         /// Initializes a new instance of the <see cref="DataSourceCsv" /> class.
         /// </summary>
         /// <param name="configuration">The configuration.</param>
-        public DataSourceCsv(Configuration configuration = null)
+        public DataSourceCsv(CsvConfiguration configuration = null)
         {
             Configuration = configuration ?? Configuration;
         }
@@ -44,6 +46,17 @@ namespace DotNetHelper.Serialization.Csv
             }
         }
 
+        public async Task<dynamic> DeserializeAsync(string csv)
+        {
+            csv.IsNullThrow(nameof(csv));
+            using (var csvReader = new CsvReader(new StringReader(csv), Configuration, false))
+            {
+                await csvReader.ReadAsync();
+                return csvReader.GetRecord<dynamic>();
+            }
+        }
+
+
         public dynamic Deserialize(Stream stream, int bufferSize = 1024, bool leaveStreamOpen = false)
         {
             stream.IsNullThrow(nameof(stream));
@@ -55,15 +68,24 @@ namespace DotNetHelper.Serialization.Csv
             }
         }
 
+        public async Task<dynamic> DeserializeAsync(Stream stream, int bufferSize = 1024, bool leaveStreamOpen = false)
+        {
+            stream.IsNullThrow(nameof(stream));
+            using (var sr = new StreamReader(stream, Configuration.Encoding, false, bufferSize, leaveStreamOpen))
+            using (var csvReader = new CsvReader(sr, Configuration, false))
+            {
+                await csvReader.ReadAsync();
+                return csvReader.GetRecord<dynamic>();
+            }
+        }
+
+
         public T Deserialize<T>(string csv) where T : class
         {
             csv.IsNullThrow(nameof(csv));
-           // using (var sr = new StreamReader(new MemoryStream(Configuration.Encoding.GetBytes(csv)), Configuration.Encoding, false, 1024, false))
-             using (var csvReader = new CsvReader(new StringReader(csv), Configuration, false))
-           // using (var csvReader = new CsvReader(sr, Configuration, false))
+            using (var csvReader = new CsvReader(new StringReader(csv), Configuration, false))
             {
-                csvReader.Read();
-                return GetRecord<T>(csvReader, typeof(T));
+               return GetRecord<T>(csvReader);
             }
         }
 
@@ -73,8 +95,7 @@ namespace DotNetHelper.Serialization.Csv
             using (var sr = new StreamReader(stream, Configuration.Encoding, false, bufferSize, leaveStreamOpen))
             using (var csvReader = new CsvReader(sr, Configuration, false))
             {
-                csvReader.Read();
-                return GetRecord<T>(csvReader, typeof(T));
+                return GetRecord<T>(csvReader);
             }
         }
 
@@ -83,12 +104,7 @@ namespace DotNetHelper.Serialization.Csv
             csv.IsNullThrow(nameof(csv));
             using (var csvReader = new CsvReader(new StringReader(csv), Configuration, false))
             {
-                if (typeof(IEnumerable).IsAssignableFrom(type))
-                {
-                    return GetRecords(csvReader, type).ConvertListToTypeList(type);//.AsList();
-                }
-                csvReader.Read();
-                return csvReader.GetRecord(type);
+                return GetRecord(csvReader, type);
             }
         }
 
@@ -98,8 +114,7 @@ namespace DotNetHelper.Serialization.Csv
             using (var sr = new StreamReader(stream, Configuration.Encoding, false, bufferSize, leaveStreamOpen))
             using (var csvReader = new CsvReader(sr, Configuration, false))
             {
-                csvReader.Read();
-                return csvReader.GetRecord(type);
+                return GetRecord(csvReader, type);
             }
         }
 
@@ -137,7 +152,7 @@ namespace DotNetHelper.Serialization.Csv
             using (var sr = new StreamReader(stream, Configuration.Encoding, false, bufferSize, leaveStreamOpen))
             using (var csvReader = new CsvReader(sr, Configuration, false))
             {
-                return GetRecords<T>(csvReader, typeof(T)).AsList();
+                return GetRecords<T>(csvReader).AsList();
             }
         }
 
@@ -334,13 +349,66 @@ namespace DotNetHelper.Serialization.Csv
         }
 
 
-        private T GetRecord<T>(CsvReader csvReader, Type type)
+
+        private object GetRecord(CsvReader csvReader, Type type)
         {
-            var mapping = Configuration.Maps[type];
-            if (mapping.MemberMaps.Count <= 0)
+            if (typeof(IEnumerable).IsAssignableFrom(type))
             {
+                if (type.IsTypeDynamic())
+                {
+                    csvReader.Read();
+                    return  csvReader.GetRecord<dynamic>();
+                }
+                else
+                {
+                    var records = GetRecords(csvReader, type);
+                    return  records.ConvertListToTypeList(type);
+                }
+            }
+            csvReader.Read();
+
+            var mapping = Configuration.Maps[type];
+            if (mapping == null || mapping.MemberMaps.Count <= 0)
+            {
+                Configuration.AutoMap(type);
+            }
+            return csvReader.GetRecord(type);
+        }
+
+        private T GetRecord<T>(CsvReader csvReader) where T : class
+        {
+
+            var type = typeof(T);
+            if (typeof(IEnumerable).IsAssignableFrom(type))
+            {
+                var underlyingType = FindElementType(type);
+                var isDynamicType = type.IsTypeDynamic();
+                if (isDynamicType)
+                {
+                    csvReader.Read();
+                    return csvReader.GetRecord<dynamic>();
+                }
+                else if (underlyingType.IsTypeDynamic())
+                {
+                    var records = csvReader.GetRecords<dynamic>(); // TODO :: Maybe oneday this will return as expando object instead of object
+                    return records.Select(rec => (ExpandoObject)rec).AsList() as dynamic;
+                }
+                var data = GetRecords(csvReader, underlyingType).AsList();
+                var convert = data.ConvertListToTypeList(underlyingType);
+           
+                return (dynamic) convert;
+            }
+
+            csvReader.Read();
+            var mapping = Configuration.Maps[typeof(T)];
+            if (mapping == null || mapping.MemberMaps.Count <= 0)
+            {
+                if (type.IsTypeDynamic())
+                {
+                    return csvReader.GetRecord<dynamic>();
+                }
                 Configuration.AutoMap<T>();
-                var record = (T)csvReader.GetRecord(type);
+                var record = csvReader.GetRecord<T>();
                 return record;
             }
             else
@@ -349,8 +417,10 @@ namespace DotNetHelper.Serialization.Csv
             }
         }
 
-        private IEnumerable<T> GetRecords<T>(CsvReader csvReader, Type type)
+
+        private IEnumerable<T> GetRecords<T>(CsvReader csvReader)
         {
+            var type = typeof(T);
             var mapping = Configuration.Maps[type];
             
             if (mapping == null || mapping.MemberMaps.Count <= 0)
@@ -381,6 +451,8 @@ namespace DotNetHelper.Serialization.Csv
                 if (mapping == null)
                 {
                     // Configuration.AutoMap(underlyType);
+                    if (underlyType.IsTypeDynamic())
+                        return csvReader.GetRecords<dynamic>();
                 }
                 var list = csvReader.GetRecords(underlyType);
                 return list;
@@ -388,7 +460,6 @@ namespace DotNetHelper.Serialization.Csv
             else
             {
                 return csvReader.GetRecords(type);
-
             }
 
 
@@ -417,7 +488,7 @@ namespace DotNetHelper.Serialization.Csv
 
             return null;
 
-            bool IsIEnum(Type t) => t == typeof(System.Collections.IEnumerable);
+            bool IsIEnum(Type t) => t == typeof(IEnumerable);
             bool ImplIEnumT(Type t) => t.IsGenericType && t.GetGenericTypeDefinition() == typeof(IEnumerable<>);
         }
 

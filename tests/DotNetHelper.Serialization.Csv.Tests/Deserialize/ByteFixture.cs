@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
- using System.Dynamic;
+using System.Dynamic;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -12,10 +12,10 @@ namespace DotNetHelper.Serialization.Csv.Tests.Deserialize
 {
     [TestFixture]
     [NonParallelizable] //since were sharing a single file across multiple test cases we don't want Parallelizable
-    public class ByteTestFixture : BaseDeserialize
+    public class StreamTestFixture : BaseDeserialize
     {
       
-        public ByteTestFixture()
+        public StreamTestFixture()
         {
 
         }
@@ -147,31 +147,29 @@ namespace DotNetHelper.Serialization.Csv.Tests.Deserialize
             }
         }
 
-
-        // TODO :: FUTURE SUPPORT 
-        // [Author("Joseph McNeal Jr", "josephmcnealjr@gmail.com")]
-        // [Test]
-        // public void Test_Deserialize_Stream_To_Expando_Object_List_2([Values(false, true)] bool leaveStreamOpen)
-        // {
-        //     var stream = MockData.GetEmployeeListAsStream(DataSource.Configuration.Encoding);
-        //     var employees = DataSource.Deserialize(stream, typeof(List<ExpandoObject>),1024,leaveStreamOpen);
-        //     if (employees is List<ExpandoObject> list)
-        //     {
-        //         EnsureDynamicObjectMatchMockData(list.First());
-        //     }
-        //     else
-        //     {
-        //         Assert.Fail("Deserialize Failed");
-        //     }
-        //     if (leaveStreamOpen)
-        //     {
-        //         EnsureStreamIsNotDisposeAndIsAtEndOfStream(stream);
-        //     }
-        //     else
-        //     {
-        //         EnsureStreamIsDispose(stream);
-        //     }
-        // }
+        [Author("Joseph McNeal Jr", "josephmcnealjr@gmail.com")]
+        [Test]
+        public void Test_Deserialize_Stream_To_Expando_Object_List_2([Values(false, true)] bool leaveStreamOpen)
+        {
+            var stream = MockData.GetEmployeeListAsStream(DataSource.Configuration.Encoding);
+            var employees = DataSource.Deserialize(stream, typeof(List<ExpandoObject>),1024,leaveStreamOpen);
+            if (employees is List<ExpandoObject> list)
+            {
+                EnsureDynamicObjectMatchMockData(list.First());
+            }
+            else
+            {
+                Assert.Fail("Deserialize Failed");
+            }
+            if (leaveStreamOpen)
+            {
+                EnsureStreamIsNotDisposeAndIsAtEndOfStream(stream);
+            }
+            else
+            {
+                EnsureStreamIsDispose(stream);
+            }
+        }
 
 
 
