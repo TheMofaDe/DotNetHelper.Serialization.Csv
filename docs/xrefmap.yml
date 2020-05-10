@@ -13,12 +13,12 @@ references:
   commentId: T:DotNetHelper.Serialization.Csv.DataSourceCsv
   fullName: DotNetHelper.Serialization.Csv.DataSourceCsv
   nameWithType: DataSourceCsv
-- uid: DotNetHelper.Serialization.Csv.DataSourceCsv.#ctor(CsvHelper.Configuration.Configuration)
-  name: DataSourceCsv(Configuration)
-  href: api/DotNetHelper.Serialization.Csv.DataSourceCsv.html#DotNetHelper_Serialization_Csv_DataSourceCsv__ctor_CsvHelper_Configuration_Configuration_
-  commentId: M:DotNetHelper.Serialization.Csv.DataSourceCsv.#ctor(CsvHelper.Configuration.Configuration)
-  fullName: DotNetHelper.Serialization.Csv.DataSourceCsv.DataSourceCsv(CsvHelper.Configuration.Configuration)
-  nameWithType: DataSourceCsv.DataSourceCsv(Configuration)
+- uid: DotNetHelper.Serialization.Csv.DataSourceCsv.#ctor(CsvHelper.Configuration.CsvConfiguration)
+  name: DataSourceCsv(CsvConfiguration)
+  href: api/DotNetHelper.Serialization.Csv.DataSourceCsv.html#DotNetHelper_Serialization_Csv_DataSourceCsv__ctor_CsvHelper_Configuration_CsvConfiguration_
+  commentId: M:DotNetHelper.Serialization.Csv.DataSourceCsv.#ctor(CsvHelper.Configuration.CsvConfiguration)
+  fullName: DotNetHelper.Serialization.Csv.DataSourceCsv.DataSourceCsv(CsvHelper.Configuration.CsvConfiguration)
+  nameWithType: DataSourceCsv.DataSourceCsv(CsvConfiguration)
 - uid: DotNetHelper.Serialization.Csv.DataSourceCsv.#ctor*
   name: DataSourceCsv
   href: api/DotNetHelper.Serialization.Csv.DataSourceCsv.html#DotNetHelper_Serialization_Csv_DataSourceCsv__ctor_
@@ -162,6 +162,31 @@ references:
   fullName.vb: DotNetHelper.Serialization.Csv.DataSourceCsv.SerializeListToStream(Of T)(System.Collections.Generic.IEnumerable(Of T), System.IO.Stream, System.Int32, System.Boolean)
   nameWithType: DataSourceCsv.SerializeListToStream<T>(IEnumerable<T>, Stream, Int32, Boolean)
   nameWithType.vb: DataSourceCsv.SerializeListToStream(Of T)(IEnumerable(Of T), Stream, Int32, Boolean)
+- uid: DotNetHelper.Serialization.Csv.DataSourceCsv.SerializeListToStreamAsync*
+  name: SerializeListToStreamAsync
+  href: api/DotNetHelper.Serialization.Csv.DataSourceCsv.html#DotNetHelper_Serialization_Csv_DataSourceCsv_SerializeListToStreamAsync_
+  commentId: Overload:DotNetHelper.Serialization.Csv.DataSourceCsv.SerializeListToStreamAsync
+  isSpec: "True"
+  fullName: DotNetHelper.Serialization.Csv.DataSourceCsv.SerializeListToStreamAsync
+  nameWithType: DataSourceCsv.SerializeListToStreamAsync
+- uid: DotNetHelper.Serialization.Csv.DataSourceCsv.SerializeListToStreamAsync``1(System.Collections.Generic.IEnumerable{``0},System.Int32)
+  name: SerializeListToStreamAsync<T>(IEnumerable<T>, Int32)
+  href: api/DotNetHelper.Serialization.Csv.DataSourceCsv.html#DotNetHelper_Serialization_Csv_DataSourceCsv_SerializeListToStreamAsync__1_System_Collections_Generic_IEnumerable___0__System_Int32_
+  commentId: M:DotNetHelper.Serialization.Csv.DataSourceCsv.SerializeListToStreamAsync``1(System.Collections.Generic.IEnumerable{``0},System.Int32)
+  name.vb: SerializeListToStreamAsync(Of T)(IEnumerable(Of T), Int32)
+  fullName: DotNetHelper.Serialization.Csv.DataSourceCsv.SerializeListToStreamAsync<T>(System.Collections.Generic.IEnumerable<T>, System.Int32)
+  fullName.vb: DotNetHelper.Serialization.Csv.DataSourceCsv.SerializeListToStreamAsync(Of T)(System.Collections.Generic.IEnumerable(Of T), System.Int32)
+  nameWithType: DataSourceCsv.SerializeListToStreamAsync<T>(IEnumerable<T>, Int32)
+  nameWithType.vb: DataSourceCsv.SerializeListToStreamAsync(Of T)(IEnumerable(Of T), Int32)
+- uid: DotNetHelper.Serialization.Csv.DataSourceCsv.SerializeListToStreamAsync``1(System.Collections.Generic.IEnumerable{``0},System.IO.Stream,System.Int32,System.Boolean)
+  name: SerializeListToStreamAsync<T>(IEnumerable<T>, Stream, Int32, Boolean)
+  href: api/DotNetHelper.Serialization.Csv.DataSourceCsv.html#DotNetHelper_Serialization_Csv_DataSourceCsv_SerializeListToStreamAsync__1_System_Collections_Generic_IEnumerable___0__System_IO_Stream_System_Int32_System_Boolean_
+  commentId: M:DotNetHelper.Serialization.Csv.DataSourceCsv.SerializeListToStreamAsync``1(System.Collections.Generic.IEnumerable{``0},System.IO.Stream,System.Int32,System.Boolean)
+  name.vb: SerializeListToStreamAsync(Of T)(IEnumerable(Of T), Stream, Int32, Boolean)
+  fullName: DotNetHelper.Serialization.Csv.DataSourceCsv.SerializeListToStreamAsync<T>(System.Collections.Generic.IEnumerable<T>, System.IO.Stream, System.Int32, System.Boolean)
+  fullName.vb: DotNetHelper.Serialization.Csv.DataSourceCsv.SerializeListToStreamAsync(Of T)(System.Collections.Generic.IEnumerable(Of T), System.IO.Stream, System.Int32, System.Boolean)
+  nameWithType: DataSourceCsv.SerializeListToStreamAsync<T>(IEnumerable<T>, Stream, Int32, Boolean)
+  nameWithType.vb: DataSourceCsv.SerializeListToStreamAsync(Of T)(IEnumerable(Of T), Stream, Int32, Boolean)
 - uid: DotNetHelper.Serialization.Csv.DataSourceCsv.SerializeListToString*
   name: SerializeListToString
   href: api/DotNetHelper.Serialization.Csv.DataSourceCsv.html#DotNetHelper_Serialization_Csv_DataSourceCsv_SerializeListToString_
@@ -178,6 +203,22 @@ references:
   fullName.vb: DotNetHelper.Serialization.Csv.DataSourceCsv.SerializeListToString(Of T)(System.Collections.Generic.IEnumerable(Of T))
   nameWithType: DataSourceCsv.SerializeListToString<T>(IEnumerable<T>)
   nameWithType.vb: DataSourceCsv.SerializeListToString(Of T)(IEnumerable(Of T))
+- uid: DotNetHelper.Serialization.Csv.DataSourceCsv.SerializeListToStringAsync*
+  name: SerializeListToStringAsync
+  href: api/DotNetHelper.Serialization.Csv.DataSourceCsv.html#DotNetHelper_Serialization_Csv_DataSourceCsv_SerializeListToStringAsync_
+  commentId: Overload:DotNetHelper.Serialization.Csv.DataSourceCsv.SerializeListToStringAsync
+  isSpec: "True"
+  fullName: DotNetHelper.Serialization.Csv.DataSourceCsv.SerializeListToStringAsync
+  nameWithType: DataSourceCsv.SerializeListToStringAsync
+- uid: DotNetHelper.Serialization.Csv.DataSourceCsv.SerializeListToStringAsync``1(System.Collections.Generic.IEnumerable{``0})
+  name: SerializeListToStringAsync<T>(IEnumerable<T>)
+  href: api/DotNetHelper.Serialization.Csv.DataSourceCsv.html#DotNetHelper_Serialization_Csv_DataSourceCsv_SerializeListToStringAsync__1_System_Collections_Generic_IEnumerable___0__
+  commentId: M:DotNetHelper.Serialization.Csv.DataSourceCsv.SerializeListToStringAsync``1(System.Collections.Generic.IEnumerable{``0})
+  name.vb: SerializeListToStringAsync(Of T)(IEnumerable(Of T))
+  fullName: DotNetHelper.Serialization.Csv.DataSourceCsv.SerializeListToStringAsync<T>(System.Collections.Generic.IEnumerable<T>)
+  fullName.vb: DotNetHelper.Serialization.Csv.DataSourceCsv.SerializeListToStringAsync(Of T)(System.Collections.Generic.IEnumerable(Of T))
+  nameWithType: DataSourceCsv.SerializeListToStringAsync<T>(IEnumerable<T>)
+  nameWithType.vb: DataSourceCsv.SerializeListToStringAsync(Of T)(IEnumerable(Of T))
 - uid: DotNetHelper.Serialization.Csv.DataSourceCsv.SerializeToStream(System.Object,System.Type,System.Int32)
   name: SerializeToStream(Object, Type, Int32)
   href: api/DotNetHelper.Serialization.Csv.DataSourceCsv.html#DotNetHelper_Serialization_Csv_DataSourceCsv_SerializeToStream_System_Object_System_Type_System_Int32_
@@ -215,6 +256,43 @@ references:
   fullName.vb: DotNetHelper.Serialization.Csv.DataSourceCsv.SerializeToStream(Of T)(T, System.IO.Stream, System.Int32, System.Boolean)
   nameWithType: DataSourceCsv.SerializeToStream<T>(T, Stream, Int32, Boolean)
   nameWithType.vb: DataSourceCsv.SerializeToStream(Of T)(T, Stream, Int32, Boolean)
+- uid: DotNetHelper.Serialization.Csv.DataSourceCsv.SerializeToStreamAsync(System.Object,System.Type,System.Int32)
+  name: SerializeToStreamAsync(Object, Type, Int32)
+  href: api/DotNetHelper.Serialization.Csv.DataSourceCsv.html#DotNetHelper_Serialization_Csv_DataSourceCsv_SerializeToStreamAsync_System_Object_System_Type_System_Int32_
+  commentId: M:DotNetHelper.Serialization.Csv.DataSourceCsv.SerializeToStreamAsync(System.Object,System.Type,System.Int32)
+  fullName: DotNetHelper.Serialization.Csv.DataSourceCsv.SerializeToStreamAsync(System.Object, System.Type, System.Int32)
+  nameWithType: DataSourceCsv.SerializeToStreamAsync(Object, Type, Int32)
+- uid: DotNetHelper.Serialization.Csv.DataSourceCsv.SerializeToStreamAsync(System.Object,System.Type,System.IO.Stream,System.Int32,System.Boolean)
+  name: SerializeToStreamAsync(Object, Type, Stream, Int32, Boolean)
+  href: api/DotNetHelper.Serialization.Csv.DataSourceCsv.html#DotNetHelper_Serialization_Csv_DataSourceCsv_SerializeToStreamAsync_System_Object_System_Type_System_IO_Stream_System_Int32_System_Boolean_
+  commentId: M:DotNetHelper.Serialization.Csv.DataSourceCsv.SerializeToStreamAsync(System.Object,System.Type,System.IO.Stream,System.Int32,System.Boolean)
+  fullName: DotNetHelper.Serialization.Csv.DataSourceCsv.SerializeToStreamAsync(System.Object, System.Type, System.IO.Stream, System.Int32, System.Boolean)
+  nameWithType: DataSourceCsv.SerializeToStreamAsync(Object, Type, Stream, Int32, Boolean)
+- uid: DotNetHelper.Serialization.Csv.DataSourceCsv.SerializeToStreamAsync*
+  name: SerializeToStreamAsync
+  href: api/DotNetHelper.Serialization.Csv.DataSourceCsv.html#DotNetHelper_Serialization_Csv_DataSourceCsv_SerializeToStreamAsync_
+  commentId: Overload:DotNetHelper.Serialization.Csv.DataSourceCsv.SerializeToStreamAsync
+  isSpec: "True"
+  fullName: DotNetHelper.Serialization.Csv.DataSourceCsv.SerializeToStreamAsync
+  nameWithType: DataSourceCsv.SerializeToStreamAsync
+- uid: DotNetHelper.Serialization.Csv.DataSourceCsv.SerializeToStreamAsync``1(``0,System.Int32)
+  name: SerializeToStreamAsync<T>(T, Int32)
+  href: api/DotNetHelper.Serialization.Csv.DataSourceCsv.html#DotNetHelper_Serialization_Csv_DataSourceCsv_SerializeToStreamAsync__1___0_System_Int32_
+  commentId: M:DotNetHelper.Serialization.Csv.DataSourceCsv.SerializeToStreamAsync``1(``0,System.Int32)
+  name.vb: SerializeToStreamAsync(Of T)(T, Int32)
+  fullName: DotNetHelper.Serialization.Csv.DataSourceCsv.SerializeToStreamAsync<T>(T, System.Int32)
+  fullName.vb: DotNetHelper.Serialization.Csv.DataSourceCsv.SerializeToStreamAsync(Of T)(T, System.Int32)
+  nameWithType: DataSourceCsv.SerializeToStreamAsync<T>(T, Int32)
+  nameWithType.vb: DataSourceCsv.SerializeToStreamAsync(Of T)(T, Int32)
+- uid: DotNetHelper.Serialization.Csv.DataSourceCsv.SerializeToStreamAsync``1(``0,System.IO.Stream,System.Int32,System.Boolean)
+  name: SerializeToStreamAsync<T>(T, Stream, Int32, Boolean)
+  href: api/DotNetHelper.Serialization.Csv.DataSourceCsv.html#DotNetHelper_Serialization_Csv_DataSourceCsv_SerializeToStreamAsync__1___0_System_IO_Stream_System_Int32_System_Boolean_
+  commentId: M:DotNetHelper.Serialization.Csv.DataSourceCsv.SerializeToStreamAsync``1(``0,System.IO.Stream,System.Int32,System.Boolean)
+  name.vb: SerializeToStreamAsync(Of T)(T, Stream, Int32, Boolean)
+  fullName: DotNetHelper.Serialization.Csv.DataSourceCsv.SerializeToStreamAsync<T>(T, System.IO.Stream, System.Int32, System.Boolean)
+  fullName.vb: DotNetHelper.Serialization.Csv.DataSourceCsv.SerializeToStreamAsync(Of T)(T, System.IO.Stream, System.Int32, System.Boolean)
+  nameWithType: DataSourceCsv.SerializeToStreamAsync<T>(T, Stream, Int32, Boolean)
+  nameWithType.vb: DataSourceCsv.SerializeToStreamAsync(Of T)(T, Stream, Int32, Boolean)
 - uid: DotNetHelper.Serialization.Csv.DataSourceCsv.SerializeToString(System.Object)
   name: SerializeToString(Object)
   href: api/DotNetHelper.Serialization.Csv.DataSourceCsv.html#DotNetHelper_Serialization_Csv_DataSourceCsv_SerializeToString_System_Object_
@@ -228,15 +306,305 @@ references:
   isSpec: "True"
   fullName: DotNetHelper.Serialization.Csv.DataSourceCsv.SerializeToString
   nameWithType: DataSourceCsv.SerializeToString
-- uid: DotNetHelper.Serialization.Csv.DataSourceCsv.SerializeToString``1(``0)
-  name: SerializeToString<T>(T)
-  href: api/DotNetHelper.Serialization.Csv.DataSourceCsv.html#DotNetHelper_Serialization_Csv_DataSourceCsv_SerializeToString__1___0_
-  commentId: M:DotNetHelper.Serialization.Csv.DataSourceCsv.SerializeToString``1(``0)
-  name.vb: SerializeToString(Of T)(T)
-  fullName: DotNetHelper.Serialization.Csv.DataSourceCsv.SerializeToString<T>(T)
-  fullName.vb: DotNetHelper.Serialization.Csv.DataSourceCsv.SerializeToString(Of T)(T)
-  nameWithType: DataSourceCsv.SerializeToString<T>(T)
-  nameWithType.vb: DataSourceCsv.SerializeToString(Of T)(T)
+- uid: DotNetHelper.Serialization.Csv.DataSourceCsv.SerializeToStringAsync(System.Object)
+  name: SerializeToStringAsync(Object)
+  href: api/DotNetHelper.Serialization.Csv.DataSourceCsv.html#DotNetHelper_Serialization_Csv_DataSourceCsv_SerializeToStringAsync_System_Object_
+  commentId: M:DotNetHelper.Serialization.Csv.DataSourceCsv.SerializeToStringAsync(System.Object)
+  fullName: DotNetHelper.Serialization.Csv.DataSourceCsv.SerializeToStringAsync(System.Object)
+  nameWithType: DataSourceCsv.SerializeToStringAsync(Object)
+- uid: DotNetHelper.Serialization.Csv.DataSourceCsv.SerializeToStringAsync*
+  name: SerializeToStringAsync
+  href: api/DotNetHelper.Serialization.Csv.DataSourceCsv.html#DotNetHelper_Serialization_Csv_DataSourceCsv_SerializeToStringAsync_
+  commentId: Overload:DotNetHelper.Serialization.Csv.DataSourceCsv.SerializeToStringAsync
+  isSpec: "True"
+  fullName: DotNetHelper.Serialization.Csv.DataSourceCsv.SerializeToStringAsync
+  nameWithType: DataSourceCsv.SerializeToStringAsync
+- uid: DotNetHelper.Serialization.Csv.ICsvSerializer
+  name: ICsvSerializer
+  href: api/DotNetHelper.Serialization.Csv.ICsvSerializer.html
+  commentId: T:DotNetHelper.Serialization.Csv.ICsvSerializer
+  fullName: DotNetHelper.Serialization.Csv.ICsvSerializer
+  nameWithType: ICsvSerializer
+- uid: DotNetHelper.Serialization.Csv.ICsvSerializer.Deserialize(System.IO.Stream,System.Int32,System.Boolean)
+  name: Deserialize(Stream, Int32, Boolean)
+  href: api/DotNetHelper.Serialization.Csv.ICsvSerializer.html#DotNetHelper_Serialization_Csv_ICsvSerializer_Deserialize_System_IO_Stream_System_Int32_System_Boolean_
+  commentId: M:DotNetHelper.Serialization.Csv.ICsvSerializer.Deserialize(System.IO.Stream,System.Int32,System.Boolean)
+  fullName: DotNetHelper.Serialization.Csv.ICsvSerializer.Deserialize(System.IO.Stream, System.Int32, System.Boolean)
+  nameWithType: ICsvSerializer.Deserialize(Stream, Int32, Boolean)
+- uid: DotNetHelper.Serialization.Csv.ICsvSerializer.Deserialize(System.IO.Stream,System.Type,System.Int32,System.Boolean)
+  name: Deserialize(Stream, Type, Int32, Boolean)
+  href: api/DotNetHelper.Serialization.Csv.ICsvSerializer.html#DotNetHelper_Serialization_Csv_ICsvSerializer_Deserialize_System_IO_Stream_System_Type_System_Int32_System_Boolean_
+  commentId: M:DotNetHelper.Serialization.Csv.ICsvSerializer.Deserialize(System.IO.Stream,System.Type,System.Int32,System.Boolean)
+  fullName: DotNetHelper.Serialization.Csv.ICsvSerializer.Deserialize(System.IO.Stream, System.Type, System.Int32, System.Boolean)
+  nameWithType: ICsvSerializer.Deserialize(Stream, Type, Int32, Boolean)
+- uid: DotNetHelper.Serialization.Csv.ICsvSerializer.Deserialize(System.String)
+  name: Deserialize(String)
+  href: api/DotNetHelper.Serialization.Csv.ICsvSerializer.html#DotNetHelper_Serialization_Csv_ICsvSerializer_Deserialize_System_String_
+  commentId: M:DotNetHelper.Serialization.Csv.ICsvSerializer.Deserialize(System.String)
+  fullName: DotNetHelper.Serialization.Csv.ICsvSerializer.Deserialize(System.String)
+  nameWithType: ICsvSerializer.Deserialize(String)
+- uid: DotNetHelper.Serialization.Csv.ICsvSerializer.Deserialize(System.String,System.Type)
+  name: Deserialize(String, Type)
+  href: api/DotNetHelper.Serialization.Csv.ICsvSerializer.html#DotNetHelper_Serialization_Csv_ICsvSerializer_Deserialize_System_String_System_Type_
+  commentId: M:DotNetHelper.Serialization.Csv.ICsvSerializer.Deserialize(System.String,System.Type)
+  fullName: DotNetHelper.Serialization.Csv.ICsvSerializer.Deserialize(System.String, System.Type)
+  nameWithType: ICsvSerializer.Deserialize(String, Type)
+- uid: DotNetHelper.Serialization.Csv.ICsvSerializer.Deserialize*
+  name: Deserialize
+  href: api/DotNetHelper.Serialization.Csv.ICsvSerializer.html#DotNetHelper_Serialization_Csv_ICsvSerializer_Deserialize_
+  commentId: Overload:DotNetHelper.Serialization.Csv.ICsvSerializer.Deserialize
+  isSpec: "True"
+  fullName: DotNetHelper.Serialization.Csv.ICsvSerializer.Deserialize
+  nameWithType: ICsvSerializer.Deserialize
+- uid: DotNetHelper.Serialization.Csv.ICsvSerializer.Deserialize``1(System.IO.Stream,System.Int32,System.Boolean)
+  name: Deserialize<T>(Stream, Int32, Boolean)
+  href: api/DotNetHelper.Serialization.Csv.ICsvSerializer.html#DotNetHelper_Serialization_Csv_ICsvSerializer_Deserialize__1_System_IO_Stream_System_Int32_System_Boolean_
+  commentId: M:DotNetHelper.Serialization.Csv.ICsvSerializer.Deserialize``1(System.IO.Stream,System.Int32,System.Boolean)
+  name.vb: Deserialize(Of T)(Stream, Int32, Boolean)
+  fullName: DotNetHelper.Serialization.Csv.ICsvSerializer.Deserialize<T>(System.IO.Stream, System.Int32, System.Boolean)
+  fullName.vb: DotNetHelper.Serialization.Csv.ICsvSerializer.Deserialize(Of T)(System.IO.Stream, System.Int32, System.Boolean)
+  nameWithType: ICsvSerializer.Deserialize<T>(Stream, Int32, Boolean)
+  nameWithType.vb: ICsvSerializer.Deserialize(Of T)(Stream, Int32, Boolean)
+- uid: DotNetHelper.Serialization.Csv.ICsvSerializer.Deserialize``1(System.String)
+  name: Deserialize<T>(String)
+  href: api/DotNetHelper.Serialization.Csv.ICsvSerializer.html#DotNetHelper_Serialization_Csv_ICsvSerializer_Deserialize__1_System_String_
+  commentId: M:DotNetHelper.Serialization.Csv.ICsvSerializer.Deserialize``1(System.String)
+  name.vb: Deserialize(Of T)(String)
+  fullName: DotNetHelper.Serialization.Csv.ICsvSerializer.Deserialize<T>(System.String)
+  fullName.vb: DotNetHelper.Serialization.Csv.ICsvSerializer.Deserialize(Of T)(System.String)
+  nameWithType: ICsvSerializer.Deserialize<T>(String)
+  nameWithType.vb: ICsvSerializer.Deserialize(Of T)(String)
+- uid: DotNetHelper.Serialization.Csv.ICsvSerializer.DeserializeToList(System.IO.Stream,System.Int32,System.Boolean)
+  name: DeserializeToList(Stream, Int32, Boolean)
+  href: api/DotNetHelper.Serialization.Csv.ICsvSerializer.html#DotNetHelper_Serialization_Csv_ICsvSerializer_DeserializeToList_System_IO_Stream_System_Int32_System_Boolean_
+  commentId: M:DotNetHelper.Serialization.Csv.ICsvSerializer.DeserializeToList(System.IO.Stream,System.Int32,System.Boolean)
+  fullName: DotNetHelper.Serialization.Csv.ICsvSerializer.DeserializeToList(System.IO.Stream, System.Int32, System.Boolean)
+  nameWithType: ICsvSerializer.DeserializeToList(Stream, Int32, Boolean)
+- uid: DotNetHelper.Serialization.Csv.ICsvSerializer.DeserializeToList(System.IO.Stream,System.Type,System.Int32,System.Boolean)
+  name: DeserializeToList(Stream, Type, Int32, Boolean)
+  href: api/DotNetHelper.Serialization.Csv.ICsvSerializer.html#DotNetHelper_Serialization_Csv_ICsvSerializer_DeserializeToList_System_IO_Stream_System_Type_System_Int32_System_Boolean_
+  commentId: M:DotNetHelper.Serialization.Csv.ICsvSerializer.DeserializeToList(System.IO.Stream,System.Type,System.Int32,System.Boolean)
+  fullName: DotNetHelper.Serialization.Csv.ICsvSerializer.DeserializeToList(System.IO.Stream, System.Type, System.Int32, System.Boolean)
+  nameWithType: ICsvSerializer.DeserializeToList(Stream, Type, Int32, Boolean)
+- uid: DotNetHelper.Serialization.Csv.ICsvSerializer.DeserializeToList(System.String)
+  name: DeserializeToList(String)
+  href: api/DotNetHelper.Serialization.Csv.ICsvSerializer.html#DotNetHelper_Serialization_Csv_ICsvSerializer_DeserializeToList_System_String_
+  commentId: M:DotNetHelper.Serialization.Csv.ICsvSerializer.DeserializeToList(System.String)
+  fullName: DotNetHelper.Serialization.Csv.ICsvSerializer.DeserializeToList(System.String)
+  nameWithType: ICsvSerializer.DeserializeToList(String)
+- uid: DotNetHelper.Serialization.Csv.ICsvSerializer.DeserializeToList(System.String,System.Type)
+  name: DeserializeToList(String, Type)
+  href: api/DotNetHelper.Serialization.Csv.ICsvSerializer.html#DotNetHelper_Serialization_Csv_ICsvSerializer_DeserializeToList_System_String_System_Type_
+  commentId: M:DotNetHelper.Serialization.Csv.ICsvSerializer.DeserializeToList(System.String,System.Type)
+  fullName: DotNetHelper.Serialization.Csv.ICsvSerializer.DeserializeToList(System.String, System.Type)
+  nameWithType: ICsvSerializer.DeserializeToList(String, Type)
+- uid: DotNetHelper.Serialization.Csv.ICsvSerializer.DeserializeToList*
+  name: DeserializeToList
+  href: api/DotNetHelper.Serialization.Csv.ICsvSerializer.html#DotNetHelper_Serialization_Csv_ICsvSerializer_DeserializeToList_
+  commentId: Overload:DotNetHelper.Serialization.Csv.ICsvSerializer.DeserializeToList
+  isSpec: "True"
+  fullName: DotNetHelper.Serialization.Csv.ICsvSerializer.DeserializeToList
+  nameWithType: ICsvSerializer.DeserializeToList
+- uid: DotNetHelper.Serialization.Csv.ICsvSerializer.DeserializeToList``1(System.IO.Stream,System.Int32,System.Boolean)
+  name: DeserializeToList<T>(Stream, Int32, Boolean)
+  href: api/DotNetHelper.Serialization.Csv.ICsvSerializer.html#DotNetHelper_Serialization_Csv_ICsvSerializer_DeserializeToList__1_System_IO_Stream_System_Int32_System_Boolean_
+  commentId: M:DotNetHelper.Serialization.Csv.ICsvSerializer.DeserializeToList``1(System.IO.Stream,System.Int32,System.Boolean)
+  name.vb: DeserializeToList(Of T)(Stream, Int32, Boolean)
+  fullName: DotNetHelper.Serialization.Csv.ICsvSerializer.DeserializeToList<T>(System.IO.Stream, System.Int32, System.Boolean)
+  fullName.vb: DotNetHelper.Serialization.Csv.ICsvSerializer.DeserializeToList(Of T)(System.IO.Stream, System.Int32, System.Boolean)
+  nameWithType: ICsvSerializer.DeserializeToList<T>(Stream, Int32, Boolean)
+  nameWithType.vb: ICsvSerializer.DeserializeToList(Of T)(Stream, Int32, Boolean)
+- uid: DotNetHelper.Serialization.Csv.ICsvSerializer.DeserializeToList``1(System.String)
+  name: DeserializeToList<T>(String)
+  href: api/DotNetHelper.Serialization.Csv.ICsvSerializer.html#DotNetHelper_Serialization_Csv_ICsvSerializer_DeserializeToList__1_System_String_
+  commentId: M:DotNetHelper.Serialization.Csv.ICsvSerializer.DeserializeToList``1(System.String)
+  name.vb: DeserializeToList(Of T)(String)
+  fullName: DotNetHelper.Serialization.Csv.ICsvSerializer.DeserializeToList<T>(System.String)
+  fullName.vb: DotNetHelper.Serialization.Csv.ICsvSerializer.DeserializeToList(Of T)(System.String)
+  nameWithType: ICsvSerializer.DeserializeToList<T>(String)
+  nameWithType.vb: ICsvSerializer.DeserializeToList(Of T)(String)
+- uid: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeListToStream*
+  name: SerializeListToStream
+  href: api/DotNetHelper.Serialization.Csv.ICsvSerializer.html#DotNetHelper_Serialization_Csv_ICsvSerializer_SerializeListToStream_
+  commentId: Overload:DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeListToStream
+  isSpec: "True"
+  fullName: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeListToStream
+  nameWithType: ICsvSerializer.SerializeListToStream
+- uid: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeListToStream``1(System.Collections.Generic.IEnumerable{``0},System.Int32)
+  name: SerializeListToStream<T>(IEnumerable<T>, Int32)
+  href: api/DotNetHelper.Serialization.Csv.ICsvSerializer.html#DotNetHelper_Serialization_Csv_ICsvSerializer_SerializeListToStream__1_System_Collections_Generic_IEnumerable___0__System_Int32_
+  commentId: M:DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeListToStream``1(System.Collections.Generic.IEnumerable{``0},System.Int32)
+  name.vb: SerializeListToStream(Of T)(IEnumerable(Of T), Int32)
+  fullName: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeListToStream<T>(System.Collections.Generic.IEnumerable<T>, System.Int32)
+  fullName.vb: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeListToStream(Of T)(System.Collections.Generic.IEnumerable(Of T), System.Int32)
+  nameWithType: ICsvSerializer.SerializeListToStream<T>(IEnumerable<T>, Int32)
+  nameWithType.vb: ICsvSerializer.SerializeListToStream(Of T)(IEnumerable(Of T), Int32)
+- uid: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeListToStream``1(System.Collections.Generic.IEnumerable{``0},System.IO.Stream,System.Int32,System.Boolean)
+  name: SerializeListToStream<T>(IEnumerable<T>, Stream, Int32, Boolean)
+  href: api/DotNetHelper.Serialization.Csv.ICsvSerializer.html#DotNetHelper_Serialization_Csv_ICsvSerializer_SerializeListToStream__1_System_Collections_Generic_IEnumerable___0__System_IO_Stream_System_Int32_System_Boolean_
+  commentId: M:DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeListToStream``1(System.Collections.Generic.IEnumerable{``0},System.IO.Stream,System.Int32,System.Boolean)
+  name.vb: SerializeListToStream(Of T)(IEnumerable(Of T), Stream, Int32, Boolean)
+  fullName: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeListToStream<T>(System.Collections.Generic.IEnumerable<T>, System.IO.Stream, System.Int32, System.Boolean)
+  fullName.vb: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeListToStream(Of T)(System.Collections.Generic.IEnumerable(Of T), System.IO.Stream, System.Int32, System.Boolean)
+  nameWithType: ICsvSerializer.SerializeListToStream<T>(IEnumerable<T>, Stream, Int32, Boolean)
+  nameWithType.vb: ICsvSerializer.SerializeListToStream(Of T)(IEnumerable(Of T), Stream, Int32, Boolean)
+- uid: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeListToStreamAsync*
+  name: SerializeListToStreamAsync
+  href: api/DotNetHelper.Serialization.Csv.ICsvSerializer.html#DotNetHelper_Serialization_Csv_ICsvSerializer_SerializeListToStreamAsync_
+  commentId: Overload:DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeListToStreamAsync
+  isSpec: "True"
+  fullName: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeListToStreamAsync
+  nameWithType: ICsvSerializer.SerializeListToStreamAsync
+- uid: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeListToStreamAsync``1(System.Collections.Generic.IEnumerable{``0},System.Int32)
+  name: SerializeListToStreamAsync<T>(IEnumerable<T>, Int32)
+  href: api/DotNetHelper.Serialization.Csv.ICsvSerializer.html#DotNetHelper_Serialization_Csv_ICsvSerializer_SerializeListToStreamAsync__1_System_Collections_Generic_IEnumerable___0__System_Int32_
+  commentId: M:DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeListToStreamAsync``1(System.Collections.Generic.IEnumerable{``0},System.Int32)
+  name.vb: SerializeListToStreamAsync(Of T)(IEnumerable(Of T), Int32)
+  fullName: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeListToStreamAsync<T>(System.Collections.Generic.IEnumerable<T>, System.Int32)
+  fullName.vb: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeListToStreamAsync(Of T)(System.Collections.Generic.IEnumerable(Of T), System.Int32)
+  nameWithType: ICsvSerializer.SerializeListToStreamAsync<T>(IEnumerable<T>, Int32)
+  nameWithType.vb: ICsvSerializer.SerializeListToStreamAsync(Of T)(IEnumerable(Of T), Int32)
+- uid: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeListToStreamAsync``1(System.Collections.Generic.IEnumerable{``0},System.IO.Stream,System.Int32,System.Boolean)
+  name: SerializeListToStreamAsync<T>(IEnumerable<T>, Stream, Int32, Boolean)
+  href: api/DotNetHelper.Serialization.Csv.ICsvSerializer.html#DotNetHelper_Serialization_Csv_ICsvSerializer_SerializeListToStreamAsync__1_System_Collections_Generic_IEnumerable___0__System_IO_Stream_System_Int32_System_Boolean_
+  commentId: M:DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeListToStreamAsync``1(System.Collections.Generic.IEnumerable{``0},System.IO.Stream,System.Int32,System.Boolean)
+  name.vb: SerializeListToStreamAsync(Of T)(IEnumerable(Of T), Stream, Int32, Boolean)
+  fullName: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeListToStreamAsync<T>(System.Collections.Generic.IEnumerable<T>, System.IO.Stream, System.Int32, System.Boolean)
+  fullName.vb: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeListToStreamAsync(Of T)(System.Collections.Generic.IEnumerable(Of T), System.IO.Stream, System.Int32, System.Boolean)
+  nameWithType: ICsvSerializer.SerializeListToStreamAsync<T>(IEnumerable<T>, Stream, Int32, Boolean)
+  nameWithType.vb: ICsvSerializer.SerializeListToStreamAsync(Of T)(IEnumerable(Of T), Stream, Int32, Boolean)
+- uid: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeListToString*
+  name: SerializeListToString
+  href: api/DotNetHelper.Serialization.Csv.ICsvSerializer.html#DotNetHelper_Serialization_Csv_ICsvSerializer_SerializeListToString_
+  commentId: Overload:DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeListToString
+  isSpec: "True"
+  fullName: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeListToString
+  nameWithType: ICsvSerializer.SerializeListToString
+- uid: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeListToString``1(System.Collections.Generic.IEnumerable{``0})
+  name: SerializeListToString<T>(IEnumerable<T>)
+  href: api/DotNetHelper.Serialization.Csv.ICsvSerializer.html#DotNetHelper_Serialization_Csv_ICsvSerializer_SerializeListToString__1_System_Collections_Generic_IEnumerable___0__
+  commentId: M:DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeListToString``1(System.Collections.Generic.IEnumerable{``0})
+  name.vb: SerializeListToString(Of T)(IEnumerable(Of T))
+  fullName: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeListToString<T>(System.Collections.Generic.IEnumerable<T>)
+  fullName.vb: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeListToString(Of T)(System.Collections.Generic.IEnumerable(Of T))
+  nameWithType: ICsvSerializer.SerializeListToString<T>(IEnumerable<T>)
+  nameWithType.vb: ICsvSerializer.SerializeListToString(Of T)(IEnumerable(Of T))
+- uid: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeListToStringAsync*
+  name: SerializeListToStringAsync
+  href: api/DotNetHelper.Serialization.Csv.ICsvSerializer.html#DotNetHelper_Serialization_Csv_ICsvSerializer_SerializeListToStringAsync_
+  commentId: Overload:DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeListToStringAsync
+  isSpec: "True"
+  fullName: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeListToStringAsync
+  nameWithType: ICsvSerializer.SerializeListToStringAsync
+- uid: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeListToStringAsync``1(System.Collections.Generic.IEnumerable{``0})
+  name: SerializeListToStringAsync<T>(IEnumerable<T>)
+  href: api/DotNetHelper.Serialization.Csv.ICsvSerializer.html#DotNetHelper_Serialization_Csv_ICsvSerializer_SerializeListToStringAsync__1_System_Collections_Generic_IEnumerable___0__
+  commentId: M:DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeListToStringAsync``1(System.Collections.Generic.IEnumerable{``0})
+  name.vb: SerializeListToStringAsync(Of T)(IEnumerable(Of T))
+  fullName: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeListToStringAsync<T>(System.Collections.Generic.IEnumerable<T>)
+  fullName.vb: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeListToStringAsync(Of T)(System.Collections.Generic.IEnumerable(Of T))
+  nameWithType: ICsvSerializer.SerializeListToStringAsync<T>(IEnumerable<T>)
+  nameWithType.vb: ICsvSerializer.SerializeListToStringAsync(Of T)(IEnumerable(Of T))
+- uid: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStream(System.Object,System.Type,System.Int32)
+  name: SerializeToStream(Object, Type, Int32)
+  href: api/DotNetHelper.Serialization.Csv.ICsvSerializer.html#DotNetHelper_Serialization_Csv_ICsvSerializer_SerializeToStream_System_Object_System_Type_System_Int32_
+  commentId: M:DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStream(System.Object,System.Type,System.Int32)
+  fullName: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStream(System.Object, System.Type, System.Int32)
+  nameWithType: ICsvSerializer.SerializeToStream(Object, Type, Int32)
+- uid: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStream(System.Object,System.Type,System.IO.Stream,System.Int32,System.Boolean)
+  name: SerializeToStream(Object, Type, Stream, Int32, Boolean)
+  href: api/DotNetHelper.Serialization.Csv.ICsvSerializer.html#DotNetHelper_Serialization_Csv_ICsvSerializer_SerializeToStream_System_Object_System_Type_System_IO_Stream_System_Int32_System_Boolean_
+  commentId: M:DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStream(System.Object,System.Type,System.IO.Stream,System.Int32,System.Boolean)
+  fullName: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStream(System.Object, System.Type, System.IO.Stream, System.Int32, System.Boolean)
+  nameWithType: ICsvSerializer.SerializeToStream(Object, Type, Stream, Int32, Boolean)
+- uid: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStream*
+  name: SerializeToStream
+  href: api/DotNetHelper.Serialization.Csv.ICsvSerializer.html#DotNetHelper_Serialization_Csv_ICsvSerializer_SerializeToStream_
+  commentId: Overload:DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStream
+  isSpec: "True"
+  fullName: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStream
+  nameWithType: ICsvSerializer.SerializeToStream
+- uid: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStream``1(``0,System.Int32)
+  name: SerializeToStream<T>(T, Int32)
+  href: api/DotNetHelper.Serialization.Csv.ICsvSerializer.html#DotNetHelper_Serialization_Csv_ICsvSerializer_SerializeToStream__1___0_System_Int32_
+  commentId: M:DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStream``1(``0,System.Int32)
+  name.vb: SerializeToStream(Of T)(T, Int32)
+  fullName: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStream<T>(T, System.Int32)
+  fullName.vb: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStream(Of T)(T, System.Int32)
+  nameWithType: ICsvSerializer.SerializeToStream<T>(T, Int32)
+  nameWithType.vb: ICsvSerializer.SerializeToStream(Of T)(T, Int32)
+- uid: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStream``1(``0,System.IO.Stream,System.Int32,System.Boolean)
+  name: SerializeToStream<T>(T, Stream, Int32, Boolean)
+  href: api/DotNetHelper.Serialization.Csv.ICsvSerializer.html#DotNetHelper_Serialization_Csv_ICsvSerializer_SerializeToStream__1___0_System_IO_Stream_System_Int32_System_Boolean_
+  commentId: M:DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStream``1(``0,System.IO.Stream,System.Int32,System.Boolean)
+  name.vb: SerializeToStream(Of T)(T, Stream, Int32, Boolean)
+  fullName: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStream<T>(T, System.IO.Stream, System.Int32, System.Boolean)
+  fullName.vb: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStream(Of T)(T, System.IO.Stream, System.Int32, System.Boolean)
+  nameWithType: ICsvSerializer.SerializeToStream<T>(T, Stream, Int32, Boolean)
+  nameWithType.vb: ICsvSerializer.SerializeToStream(Of T)(T, Stream, Int32, Boolean)
+- uid: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStreamAsync(System.Object,System.Type,System.Int32)
+  name: SerializeToStreamAsync(Object, Type, Int32)
+  href: api/DotNetHelper.Serialization.Csv.ICsvSerializer.html#DotNetHelper_Serialization_Csv_ICsvSerializer_SerializeToStreamAsync_System_Object_System_Type_System_Int32_
+  commentId: M:DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStreamAsync(System.Object,System.Type,System.Int32)
+  fullName: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStreamAsync(System.Object, System.Type, System.Int32)
+  nameWithType: ICsvSerializer.SerializeToStreamAsync(Object, Type, Int32)
+- uid: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStreamAsync(System.Object,System.Type,System.IO.Stream,System.Int32,System.Boolean)
+  name: SerializeToStreamAsync(Object, Type, Stream, Int32, Boolean)
+  href: api/DotNetHelper.Serialization.Csv.ICsvSerializer.html#DotNetHelper_Serialization_Csv_ICsvSerializer_SerializeToStreamAsync_System_Object_System_Type_System_IO_Stream_System_Int32_System_Boolean_
+  commentId: M:DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStreamAsync(System.Object,System.Type,System.IO.Stream,System.Int32,System.Boolean)
+  fullName: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStreamAsync(System.Object, System.Type, System.IO.Stream, System.Int32, System.Boolean)
+  nameWithType: ICsvSerializer.SerializeToStreamAsync(Object, Type, Stream, Int32, Boolean)
+- uid: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStreamAsync*
+  name: SerializeToStreamAsync
+  href: api/DotNetHelper.Serialization.Csv.ICsvSerializer.html#DotNetHelper_Serialization_Csv_ICsvSerializer_SerializeToStreamAsync_
+  commentId: Overload:DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStreamAsync
+  isSpec: "True"
+  fullName: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStreamAsync
+  nameWithType: ICsvSerializer.SerializeToStreamAsync
+- uid: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStreamAsync``1(``0,System.Int32)
+  name: SerializeToStreamAsync<T>(T, Int32)
+  href: api/DotNetHelper.Serialization.Csv.ICsvSerializer.html#DotNetHelper_Serialization_Csv_ICsvSerializer_SerializeToStreamAsync__1___0_System_Int32_
+  commentId: M:DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStreamAsync``1(``0,System.Int32)
+  name.vb: SerializeToStreamAsync(Of T)(T, Int32)
+  fullName: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStreamAsync<T>(T, System.Int32)
+  fullName.vb: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStreamAsync(Of T)(T, System.Int32)
+  nameWithType: ICsvSerializer.SerializeToStreamAsync<T>(T, Int32)
+  nameWithType.vb: ICsvSerializer.SerializeToStreamAsync(Of T)(T, Int32)
+- uid: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStreamAsync``1(``0,System.IO.Stream,System.Int32,System.Boolean)
+  name: SerializeToStreamAsync<T>(T, Stream, Int32, Boolean)
+  href: api/DotNetHelper.Serialization.Csv.ICsvSerializer.html#DotNetHelper_Serialization_Csv_ICsvSerializer_SerializeToStreamAsync__1___0_System_IO_Stream_System_Int32_System_Boolean_
+  commentId: M:DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStreamAsync``1(``0,System.IO.Stream,System.Int32,System.Boolean)
+  name.vb: SerializeToStreamAsync(Of T)(T, Stream, Int32, Boolean)
+  fullName: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStreamAsync<T>(T, System.IO.Stream, System.Int32, System.Boolean)
+  fullName.vb: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStreamAsync(Of T)(T, System.IO.Stream, System.Int32, System.Boolean)
+  nameWithType: ICsvSerializer.SerializeToStreamAsync<T>(T, Stream, Int32, Boolean)
+  nameWithType.vb: ICsvSerializer.SerializeToStreamAsync(Of T)(T, Stream, Int32, Boolean)
+- uid: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToString(System.Object)
+  name: SerializeToString(Object)
+  href: api/DotNetHelper.Serialization.Csv.ICsvSerializer.html#DotNetHelper_Serialization_Csv_ICsvSerializer_SerializeToString_System_Object_
+  commentId: M:DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToString(System.Object)
+  fullName: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToString(System.Object)
+  nameWithType: ICsvSerializer.SerializeToString(Object)
+- uid: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToString*
+  name: SerializeToString
+  href: api/DotNetHelper.Serialization.Csv.ICsvSerializer.html#DotNetHelper_Serialization_Csv_ICsvSerializer_SerializeToString_
+  commentId: Overload:DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToString
+  isSpec: "True"
+  fullName: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToString
+  nameWithType: ICsvSerializer.SerializeToString
+- uid: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStringAsync(System.Object)
+  name: SerializeToStringAsync(Object)
+  href: api/DotNetHelper.Serialization.Csv.ICsvSerializer.html#DotNetHelper_Serialization_Csv_ICsvSerializer_SerializeToStringAsync_System_Object_
+  commentId: M:DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStringAsync(System.Object)
+  fullName: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStringAsync(System.Object)
+  nameWithType: ICsvSerializer.SerializeToStringAsync(Object)
+- uid: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStringAsync*
+  name: SerializeToStringAsync
+  href: api/DotNetHelper.Serialization.Csv.ICsvSerializer.html#DotNetHelper_Serialization_Csv_ICsvSerializer_SerializeToStringAsync_
+  commentId: Overload:DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStringAsync
+  isSpec: "True"
+  fullName: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStringAsync
+  nameWithType: ICsvSerializer.SerializeToStringAsync
 - uid: TSD
   name: THIS IS THE HOME PAGE TO TUTORIALS
   href: tutorials/index.html

@@ -36,13 +36,13 @@ namespace DotNetHelper.Serialization.Json.Extension
 
             var genericTypeArguments = type.GenericTypeArguments;
             var containedType = genericTypeArguments.FirstOrDefault() ?? type;
-                var enumerableType = typeof(Enumerable);
-                var castMethod = enumerableType.GetMethod(nameof(Enumerable.Cast)).MakeGenericMethod(containedType);
-                var toListMethod = enumerableType.GetMethod(nameof(Enumerable.ToList)).MakeGenericMethod(containedType);
-                var itemsToCast = items.Select(item => Convert.ChangeType(item, containedType));
-                var castedItems = castMethod.Invoke(null, new[] {itemsToCast});
-                return toListMethod.Invoke(null, new[] {castedItems});
-            
+            var enumerableType = typeof(Enumerable);
+            var castMethod = enumerableType.GetMethod(nameof(Enumerable.Cast)).MakeGenericMethod(containedType);
+            var toListMethod = enumerableType.GetMethod(nameof(Enumerable.ToList)).MakeGenericMethod(containedType);
+            var itemsToCast = items.Select(item => Convert.ChangeType(item, containedType));
+            var castedItems = castMethod.Invoke(null, new[] { itemsToCast });
+            return toListMethod.Invoke(null, new[] { castedItems });
+
             return items;
         }
 

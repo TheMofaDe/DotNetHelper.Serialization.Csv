@@ -14,7 +14,7 @@ namespace DotNetHelper.Serialization.Csv.Tests.Deserialize
     [NonParallelizable] //since were sharing a single file across multiple test cases we don't want Parallelizable
     public class StringTestFixture : BaseDeserialize
     {
-      
+
         public StringTestFixture()
         {
 
@@ -23,7 +23,7 @@ namespace DotNetHelper.Serialization.Csv.Tests.Deserialize
         [OneTimeSetUp]
         public void RunBeforeAnyTests()
         {
-           
+
         }
 
         [OneTimeTearDown]

@@ -61,7 +61,7 @@ namespace DotNetHelper.Serialization.Csv
             csv.IsNullThrow(nameof(csv));
             using (var csvReader = new CsvReader(new StringReader(csv), Configuration, false))
             {
-               return GetRecord<T>(csvReader);
+                return GetRecord<T>(csvReader);
             }
         }
 
@@ -187,7 +187,7 @@ namespace DotNetHelper.Serialization.Csv
             {
                 using (var csv = new CsvWriter(sw, Configuration))
                 {
-                   await WriteRecordsAsync(csv, objs);
+                    await WriteRecordsAsync(csv, objs);
                 }
             }
         }
@@ -239,7 +239,7 @@ namespace DotNetHelper.Serialization.Csv
             {
                 using (var csv = new CsvWriter(sw, Configuration))
                 {
-                   await WriteRecordAsync(csv, obj.GetType(), obj);
+                    await WriteRecordAsync(csv, obj.GetType(), obj);
                 }
             }
             return memoryStream;
@@ -343,7 +343,7 @@ namespace DotNetHelper.Serialization.Csv
             using (var sw = new StringWriter(sb))
             using (var csv = new CsvWriter(sw, Configuration))
             {
-               await WriteRecordAsync(csv, obj.GetType(), obj);
+                await WriteRecordAsync(csv, obj.GetType(), obj);
             }
             return sb.ToString();
         }
@@ -361,7 +361,7 @@ namespace DotNetHelper.Serialization.Csv
             using (var sw = new StringWriter(sb))
             using (var csv = new CsvWriter(sw, Configuration))
             {
-               await WriteRecordsAsync(csv, obj);
+                await WriteRecordsAsync(csv, obj);
             }
             return sb.ToString();
         }
@@ -503,7 +503,7 @@ namespace DotNetHelper.Serialization.Csv
                 if (isDynamicType)
                 {
                     csvReader.Read();
-                    return  csvReader.GetRecord<dynamic>();
+                    return csvReader.GetRecord<dynamic>();
                 }
                 else if (underlyingType.IsTypeDynamic())
                 {
@@ -513,7 +513,7 @@ namespace DotNetHelper.Serialization.Csv
                 else
                 {
                     var records = GetRecords(csvReader, type);
-                    return  records.ConvertListToTypeList(type);
+                    return records.ConvertListToTypeList(type);
                 }
             }
             csvReader.Read();

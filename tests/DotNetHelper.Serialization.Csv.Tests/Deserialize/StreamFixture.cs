@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
- using System.Dynamic;
+using System.Dynamic;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -14,7 +14,7 @@ namespace DotNetHelper.Serialization.Csv.Tests.Deserialize
     [NonParallelizable] //since were sharing a single file across multiple test cases we don't want Parallelizable
     public class ByteTestFixture : BaseDeserialize
     {
-      
+
         public ByteTestFixture()
         {
 
@@ -50,7 +50,7 @@ namespace DotNetHelper.Serialization.Csv.Tests.Deserialize
         public void Test_Deserialize_Stream_To_Dynamic_Object([Values(false, true)] bool leaveStreamOpen)
         {
             var stream = MockData.GetEmployeeAsStream(DataSource.Configuration.Encoding);
-            var employee = DataSource.Deserialize(stream,1024,leaveStreamOpen);
+            var employee = DataSource.Deserialize(stream, 1024, leaveStreamOpen);
             EnsureFirstNameAndLastNameMatchMockData(employee.FirstName, employee.LastName);
             if (leaveStreamOpen)
             {
@@ -67,7 +67,7 @@ namespace DotNetHelper.Serialization.Csv.Tests.Deserialize
         public void Test_Deserialize_Stream_To_Dynamic_Object_List([Values(false, true)] bool leaveStreamOpen)
         {
             var stream = MockData.GetEmployeeAsStream(DataSource.Configuration.Encoding);
-            var employees = DataSource.DeserializeToList(stream,1024,leaveStreamOpen);
+            var employees = DataSource.DeserializeToList(stream, 1024, leaveStreamOpen);
             EnsureFirstNameAndLastNameMatchMockData(employees.First().FirstName, employees.First().LastName);
             if (leaveStreamOpen)
             {
@@ -85,7 +85,7 @@ namespace DotNetHelper.Serialization.Csv.Tests.Deserialize
         public void Test_Deserialize_Stream_To_Expando_Object([Values(false, true)] bool leaveStreamOpen)
         {
             var stream = MockData.GetEmployeeAsStream(DataSource.Configuration.Encoding);
-            var employee = DataSource.Deserialize<ExpandoObject>(stream,1024,leaveStreamOpen);
+            var employee = DataSource.Deserialize<ExpandoObject>(stream, 1024, leaveStreamOpen);
             if (employee is IDictionary<string, object> dictionary)
             {
                 EnsureFirstNameAndLastNameMatchMockData(dictionary["FirstName"].ToString(), dictionary["LastName"].ToString());
@@ -109,7 +109,7 @@ namespace DotNetHelper.Serialization.Csv.Tests.Deserialize
         public void Test_Deserialize_Stream_To_Expando_Object_2([Values(false, true)] bool leaveStreamOpen)
         {
             var stream = MockData.GetEmployeeAsStream(DataSource.Configuration.Encoding);
-            var employee2 = DataSource.Deserialize(stream, typeof(ExpandoObject),1024,leaveStreamOpen);
+            var employee2 = DataSource.Deserialize(stream, typeof(ExpandoObject), 1024, leaveStreamOpen);
             if (employee2 is IDictionary<string, object> dictionary2)
             {
                 EnsureFirstNameAndLastNameMatchMockData(dictionary2["FirstName"].ToString(), dictionary2["LastName"].ToString());
@@ -135,7 +135,7 @@ namespace DotNetHelper.Serialization.Csv.Tests.Deserialize
         public void Test_Deserialize_Stream_To_Expando_Object_List([Values(false, true)] bool leaveStreamOpen)
         {
             var stream = MockData.GetEmployeeListAsStream(DataSource.Configuration.Encoding);
-            var employees = DataSource.Deserialize<List<ExpandoObject>>(stream,1024,leaveStreamOpen);
+            var employees = DataSource.Deserialize<List<ExpandoObject>>(stream, 1024, leaveStreamOpen);
             EnsureDynamicObjectMatchMockData(employees.First());
             if (leaveStreamOpen)
             {
@@ -148,7 +148,7 @@ namespace DotNetHelper.Serialization.Csv.Tests.Deserialize
         }
 
 
-       // TODO::FUTURE SUPPORT
+        // TODO::FUTURE SUPPORT
         [Author("Joseph McNeal Jr", "josephmcnealjr@gmail.com")]
         [Test]
         public void Test_Deserialize_Stream_To_Expando_Object_List_2([Values(false, true)] bool leaveStreamOpen)
@@ -181,7 +181,7 @@ namespace DotNetHelper.Serialization.Csv.Tests.Deserialize
         public void Test_Deserialize_Stream_To_Typed_Object([Values(false, true)] bool leaveStreamOpen)
         {
             var stream = MockData.GetEmployeeAsStream(DataSource.Configuration.Encoding);
-            var employee = DataSource.Deserialize<Employee>(stream,1024,leaveStreamOpen);
+            var employee = DataSource.Deserialize<Employee>(stream, 1024, leaveStreamOpen);
             EnsureFirstNameAndLastNameMatchMockData(employee.FirstName, employee.LastName);
             if (leaveStreamOpen)
             {
@@ -198,7 +198,7 @@ namespace DotNetHelper.Serialization.Csv.Tests.Deserialize
         public void Test_Deserialize_Stream_To_Typed_Object_2([Values(false, true)] bool leaveStreamOpen)
         {
             var stream = MockData.GetEmployeeAsStream(DataSource.Configuration.Encoding);
-            var employee = DataSource.Deserialize(stream, typeof(Employee),1024,leaveStreamOpen);
+            var employee = DataSource.Deserialize(stream, typeof(Employee), 1024, leaveStreamOpen);
             if (employee is Employee dyn)
             {
                 EnsureFirstNameAndLastNameMatchMockData(dyn.FirstName, dyn.LastName);
@@ -223,7 +223,7 @@ namespace DotNetHelper.Serialization.Csv.Tests.Deserialize
         public void Test_Deserialize_Stream_To_Typed_Object_List([Values(false, true)] bool leaveStreamOpen)
         {
             var stream = MockData.GetEmployeeListAsStream(DataSource.Configuration.Encoding);
-            var employees = DataSource.Deserialize<List<Employee>>(stream,1024,leaveStreamOpen);
+            var employees = DataSource.Deserialize<List<Employee>>(stream, 1024, leaveStreamOpen);
             EnsureFirstNameAndLastNameMatchMockData(employees.First().FirstName, employees.First().LastName);
             if (leaveStreamOpen)
             {
@@ -240,7 +240,7 @@ namespace DotNetHelper.Serialization.Csv.Tests.Deserialize
         public void Test_Deserialize_Stream_To_Typed_Object_List_2([Values(false, true)] bool leaveStreamOpen)
         {
             var stream = MockData.GetEmployeeListAsStream(DataSource.Configuration.Encoding);
-            var employee = DataSource.Deserialize(stream, typeof(List<Employee>),1024,leaveStreamOpen);
+            var employee = DataSource.Deserialize(stream, typeof(List<Employee>), 1024, leaveStreamOpen);
             if (employee is List<Employee> employees)
             {
                 var dyn = employees.First();

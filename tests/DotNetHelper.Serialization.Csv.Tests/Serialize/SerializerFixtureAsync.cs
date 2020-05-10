@@ -10,9 +10,9 @@ namespace DotNetHelper.Serialization.Csv.Tests
 {
     [TestFixture]
     [NonParallelizable] //since were sharing a single file across multiple test cases we don't want Parallelizable
-    public class CsvSerializerAsyncTextFixture  : BaseSerialize
+    public class CsvSerializerAsyncTextFixture : BaseSerialize
     {
-        
+
 
         public CsvSerializerAsyncTextFixture()
         {
@@ -70,7 +70,7 @@ namespace DotNetHelper.Serialization.Csv.Tests
         public async Task Test_Serialize_Generic_List_To_My_Stream_And_Stream_Wont_Dispose()
         {
             var stream = new MemoryStream();
-            await DataSource.SerializeToStreamAsync(MockData.EmployeeList,stream,1024,true);
+            await DataSource.SerializeToStreamAsync(MockData.EmployeeList, stream, 1024, true);
             // TODO :: EnsureStreamMatchMockDataJson(stream);
             EnsureStreamIsNotDisposeAndIsAtEndOfStream(stream);
             stream.Seek(0, SeekOrigin.Begin);
@@ -108,7 +108,7 @@ namespace DotNetHelper.Serialization.Csv.Tests
         public async Task Test_Serialize_Object_To_My_Stream_And_Stream_Wont_Dispose()
         {
             var stream = new MemoryStream();
-            await DataSource.SerializeToStreamAsync(MockData.Employee,typeof(Employee), stream, 1024, true);
+            await DataSource.SerializeToStreamAsync(MockData.Employee, typeof(Employee), stream, 1024, true);
             // TODO :: EnsureStreamMatchMockDataJson(stream);
             EnsureStreamIsNotDisposeAndIsAtEndOfStream(stream);
             stream.Seek(0, SeekOrigin.Begin);
@@ -153,7 +153,7 @@ namespace DotNetHelper.Serialization.Csv.Tests
         public async Task Test_Serialize_Object_To_Stream_And_Stream_Wont_Dispose()
         {
 
-            var stream = Stream.Synchronized(await DataSource.SerializeToStreamAsync(MockData.Employee,MockData.Employee.GetType(), 1024));
+            var stream = Stream.Synchronized(await DataSource.SerializeToStreamAsync(MockData.Employee, MockData.Employee.GetType(), 1024));
             // TODO :: EnsureStreamMatchMockDataJson(stream);
             EnsureStreamIsNotDisposeAndIsAtEndOfStream(stream);
             stream.Seek(0, SeekOrigin.Begin);
@@ -163,10 +163,10 @@ namespace DotNetHelper.Serialization.Csv.Tests
         public async Task Test_Serialize_Object_To_Stream_And_Stream_Is_Dispose()
         {
 
-            var stream = await DataSource.SerializeToStreamAsync(MockData.Employee, MockData.Employee.GetType(),1024);
+            var stream = await DataSource.SerializeToStreamAsync(MockData.Employee, MockData.Employee.GetType(), 1024);
             // TODO :: EnsureStreamMatchMockDataJson(stream);
             EnsureStreamIsNotDisposeAndIsAtEndOfStream(stream);
-            
+
         }
 
 

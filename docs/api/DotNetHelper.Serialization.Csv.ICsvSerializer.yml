@@ -1,0 +1,1590 @@
+### YamlMime:ManagedReference
+items:
+- uid: DotNetHelper.Serialization.Csv.ICsvSerializer
+  commentId: T:DotNetHelper.Serialization.Csv.ICsvSerializer
+  id: ICsvSerializer
+  parent: DotNetHelper.Serialization.Csv
+  children:
+  - DotNetHelper.Serialization.Csv.ICsvSerializer.Deserialize(System.IO.Stream,System.Int32,System.Boolean)
+  - DotNetHelper.Serialization.Csv.ICsvSerializer.Deserialize(System.IO.Stream,System.Type,System.Int32,System.Boolean)
+  - DotNetHelper.Serialization.Csv.ICsvSerializer.Deserialize(System.String)
+  - DotNetHelper.Serialization.Csv.ICsvSerializer.Deserialize(System.String,System.Type)
+  - DotNetHelper.Serialization.Csv.ICsvSerializer.Deserialize``1(System.IO.Stream,System.Int32,System.Boolean)
+  - DotNetHelper.Serialization.Csv.ICsvSerializer.Deserialize``1(System.String)
+  - DotNetHelper.Serialization.Csv.ICsvSerializer.DeserializeToList(System.IO.Stream,System.Int32,System.Boolean)
+  - DotNetHelper.Serialization.Csv.ICsvSerializer.DeserializeToList(System.IO.Stream,System.Type,System.Int32,System.Boolean)
+  - DotNetHelper.Serialization.Csv.ICsvSerializer.DeserializeToList(System.String)
+  - DotNetHelper.Serialization.Csv.ICsvSerializer.DeserializeToList(System.String,System.Type)
+  - DotNetHelper.Serialization.Csv.ICsvSerializer.DeserializeToList``1(System.IO.Stream,System.Int32,System.Boolean)
+  - DotNetHelper.Serialization.Csv.ICsvSerializer.DeserializeToList``1(System.String)
+  - DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeListToStream``1(System.Collections.Generic.IEnumerable{``0},System.Int32)
+  - DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeListToStream``1(System.Collections.Generic.IEnumerable{``0},System.IO.Stream,System.Int32,System.Boolean)
+  - DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeListToStreamAsync``1(System.Collections.Generic.IEnumerable{``0},System.Int32)
+  - DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeListToStreamAsync``1(System.Collections.Generic.IEnumerable{``0},System.IO.Stream,System.Int32,System.Boolean)
+  - DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeListToString``1(System.Collections.Generic.IEnumerable{``0})
+  - DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeListToStringAsync``1(System.Collections.Generic.IEnumerable{``0})
+  - DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStream(System.Object,System.Type,System.Int32)
+  - DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStream(System.Object,System.Type,System.IO.Stream,System.Int32,System.Boolean)
+  - DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStream``1(``0,System.Int32)
+  - DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStream``1(``0,System.IO.Stream,System.Int32,System.Boolean)
+  - DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStreamAsync(System.Object,System.Type,System.Int32)
+  - DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStreamAsync(System.Object,System.Type,System.IO.Stream,System.Int32,System.Boolean)
+  - DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStreamAsync``1(``0,System.Int32)
+  - DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStreamAsync``1(``0,System.IO.Stream,System.Int32,System.Boolean)
+  - DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToString(System.Object)
+  - DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStringAsync(System.Object)
+  langs:
+  - csharp
+  - vb
+  name: ICsvSerializer
+  nameWithType: ICsvSerializer
+  fullName: DotNetHelper.Serialization.Csv.ICsvSerializer
+  type: Interface
+  source:
+    remote:
+      path: src/DotNetHelper.Serialization.Csv/ICsvSerializer.cs
+      branch: dev
+      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv
+    id: ICsvSerializer
+    path: ../src/DotNetHelper.Serialization.Csv/ICsvSerializer.cs
+    startLine: 7
+  assemblies:
+  - DotNetHelper.Serialization.Csv
+  namespace: DotNetHelper.Serialization.Csv
+  syntax:
+    content: public interface ICsvSerializer
+    content.vb: Public Interface ICsvSerializer
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: DotNetHelper.Serialization.Csv.ICsvSerializer.Deserialize(System.String)
+  commentId: M:DotNetHelper.Serialization.Csv.ICsvSerializer.Deserialize(System.String)
+  id: Deserialize(System.String)
+  parent: DotNetHelper.Serialization.Csv.ICsvSerializer
+  langs:
+  - csharp
+  - vb
+  name: Deserialize(String)
+  nameWithType: ICsvSerializer.Deserialize(String)
+  fullName: DotNetHelper.Serialization.Csv.ICsvSerializer.Deserialize(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/DotNetHelper.Serialization.Csv/ICsvSerializer.cs
+      branch: dev
+      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv
+    id: Deserialize
+    path: ../src/DotNetHelper.Serialization.Csv/ICsvSerializer.cs
+    startLine: 9
+  assemblies:
+  - DotNetHelper.Serialization.Csv
+  namespace: DotNetHelper.Serialization.Csv
+  syntax:
+    content: dynamic Deserialize(string csv)
+    parameters:
+    - id: csv
+      type: System.String
+    return:
+      type: System.Object
+    content.vb: Function Deserialize(csv As String) As Object
+  overload: DotNetHelper.Serialization.Csv.ICsvSerializer.Deserialize*
+- uid: DotNetHelper.Serialization.Csv.ICsvSerializer.Deserialize(System.IO.Stream,System.Int32,System.Boolean)
+  commentId: M:DotNetHelper.Serialization.Csv.ICsvSerializer.Deserialize(System.IO.Stream,System.Int32,System.Boolean)
+  id: Deserialize(System.IO.Stream,System.Int32,System.Boolean)
+  parent: DotNetHelper.Serialization.Csv.ICsvSerializer
+  langs:
+  - csharp
+  - vb
+  name: Deserialize(Stream, Int32, Boolean)
+  nameWithType: ICsvSerializer.Deserialize(Stream, Int32, Boolean)
+  fullName: DotNetHelper.Serialization.Csv.ICsvSerializer.Deserialize(System.IO.Stream, System.Int32, System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: src/DotNetHelper.Serialization.Csv/ICsvSerializer.cs
+      branch: dev
+      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv
+    id: Deserialize
+    path: ../src/DotNetHelper.Serialization.Csv/ICsvSerializer.cs
+    startLine: 10
+  assemblies:
+  - DotNetHelper.Serialization.Csv
+  namespace: DotNetHelper.Serialization.Csv
+  syntax:
+    content: dynamic Deserialize(Stream stream, int bufferSize = 1024, bool leaveStreamOpen = false)
+    parameters:
+    - id: stream
+      type: System.IO.Stream
+    - id: bufferSize
+      type: System.Int32
+    - id: leaveStreamOpen
+      type: System.Boolean
+    return:
+      type: System.Object
+    content.vb: Function Deserialize(stream As Stream, bufferSize As Integer = 1024, leaveStreamOpen As Boolean = False) As Object
+  overload: DotNetHelper.Serialization.Csv.ICsvSerializer.Deserialize*
+- uid: DotNetHelper.Serialization.Csv.ICsvSerializer.Deserialize``1(System.String)
+  commentId: M:DotNetHelper.Serialization.Csv.ICsvSerializer.Deserialize``1(System.String)
+  id: Deserialize``1(System.String)
+  parent: DotNetHelper.Serialization.Csv.ICsvSerializer
+  langs:
+  - csharp
+  - vb
+  name: Deserialize<T>(String)
+  nameWithType: ICsvSerializer.Deserialize<T>(String)
+  fullName: DotNetHelper.Serialization.Csv.ICsvSerializer.Deserialize<T>(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/DotNetHelper.Serialization.Csv/ICsvSerializer.cs
+      branch: dev
+      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv
+    id: Deserialize
+    path: ../src/DotNetHelper.Serialization.Csv/ICsvSerializer.cs
+    startLine: 11
+  assemblies:
+  - DotNetHelper.Serialization.Csv
+  namespace: DotNetHelper.Serialization.Csv
+  syntax:
+    content: >-
+      T Deserialize<T>(string csv)
+          where T : class
+    parameters:
+    - id: csv
+      type: System.String
+    typeParameters:
+    - id: T
+    return:
+      type: '{T}'
+    content.vb: Function Deserialize(Of T As Class)(csv As String) As T
+  overload: DotNetHelper.Serialization.Csv.ICsvSerializer.Deserialize*
+  nameWithType.vb: ICsvSerializer.Deserialize(Of T)(String)
+  fullName.vb: DotNetHelper.Serialization.Csv.ICsvSerializer.Deserialize(Of T)(System.String)
+  name.vb: Deserialize(Of T)(String)
+- uid: DotNetHelper.Serialization.Csv.ICsvSerializer.Deserialize``1(System.IO.Stream,System.Int32,System.Boolean)
+  commentId: M:DotNetHelper.Serialization.Csv.ICsvSerializer.Deserialize``1(System.IO.Stream,System.Int32,System.Boolean)
+  id: Deserialize``1(System.IO.Stream,System.Int32,System.Boolean)
+  parent: DotNetHelper.Serialization.Csv.ICsvSerializer
+  langs:
+  - csharp
+  - vb
+  name: Deserialize<T>(Stream, Int32, Boolean)
+  nameWithType: ICsvSerializer.Deserialize<T>(Stream, Int32, Boolean)
+  fullName: DotNetHelper.Serialization.Csv.ICsvSerializer.Deserialize<T>(System.IO.Stream, System.Int32, System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: src/DotNetHelper.Serialization.Csv/ICsvSerializer.cs
+      branch: dev
+      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv
+    id: Deserialize
+    path: ../src/DotNetHelper.Serialization.Csv/ICsvSerializer.cs
+    startLine: 12
+  assemblies:
+  - DotNetHelper.Serialization.Csv
+  namespace: DotNetHelper.Serialization.Csv
+  syntax:
+    content: >-
+      T Deserialize<T>(Stream stream, int bufferSize = 1024, bool leaveStreamOpen = false)
+          where T : class
+    parameters:
+    - id: stream
+      type: System.IO.Stream
+    - id: bufferSize
+      type: System.Int32
+    - id: leaveStreamOpen
+      type: System.Boolean
+    typeParameters:
+    - id: T
+    return:
+      type: '{T}'
+    content.vb: Function Deserialize(Of T As Class)(stream As Stream, bufferSize As Integer = 1024, leaveStreamOpen As Boolean = False) As T
+  overload: DotNetHelper.Serialization.Csv.ICsvSerializer.Deserialize*
+  nameWithType.vb: ICsvSerializer.Deserialize(Of T)(Stream, Int32, Boolean)
+  fullName.vb: DotNetHelper.Serialization.Csv.ICsvSerializer.Deserialize(Of T)(System.IO.Stream, System.Int32, System.Boolean)
+  name.vb: Deserialize(Of T)(Stream, Int32, Boolean)
+- uid: DotNetHelper.Serialization.Csv.ICsvSerializer.Deserialize(System.String,System.Type)
+  commentId: M:DotNetHelper.Serialization.Csv.ICsvSerializer.Deserialize(System.String,System.Type)
+  id: Deserialize(System.String,System.Type)
+  parent: DotNetHelper.Serialization.Csv.ICsvSerializer
+  langs:
+  - csharp
+  - vb
+  name: Deserialize(String, Type)
+  nameWithType: ICsvSerializer.Deserialize(String, Type)
+  fullName: DotNetHelper.Serialization.Csv.ICsvSerializer.Deserialize(System.String, System.Type)
+  type: Method
+  source:
+    remote:
+      path: src/DotNetHelper.Serialization.Csv/ICsvSerializer.cs
+      branch: dev
+      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv
+    id: Deserialize
+    path: ../src/DotNetHelper.Serialization.Csv/ICsvSerializer.cs
+    startLine: 13
+  assemblies:
+  - DotNetHelper.Serialization.Csv
+  namespace: DotNetHelper.Serialization.Csv
+  syntax:
+    content: object Deserialize(string csv, Type type)
+    parameters:
+    - id: csv
+      type: System.String
+    - id: type
+      type: System.Type
+    return:
+      type: System.Object
+    content.vb: Function Deserialize(csv As String, type As Type) As Object
+  overload: DotNetHelper.Serialization.Csv.ICsvSerializer.Deserialize*
+- uid: DotNetHelper.Serialization.Csv.ICsvSerializer.Deserialize(System.IO.Stream,System.Type,System.Int32,System.Boolean)
+  commentId: M:DotNetHelper.Serialization.Csv.ICsvSerializer.Deserialize(System.IO.Stream,System.Type,System.Int32,System.Boolean)
+  id: Deserialize(System.IO.Stream,System.Type,System.Int32,System.Boolean)
+  parent: DotNetHelper.Serialization.Csv.ICsvSerializer
+  langs:
+  - csharp
+  - vb
+  name: Deserialize(Stream, Type, Int32, Boolean)
+  nameWithType: ICsvSerializer.Deserialize(Stream, Type, Int32, Boolean)
+  fullName: DotNetHelper.Serialization.Csv.ICsvSerializer.Deserialize(System.IO.Stream, System.Type, System.Int32, System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: src/DotNetHelper.Serialization.Csv/ICsvSerializer.cs
+      branch: dev
+      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv
+    id: Deserialize
+    path: ../src/DotNetHelper.Serialization.Csv/ICsvSerializer.cs
+    startLine: 14
+  assemblies:
+  - DotNetHelper.Serialization.Csv
+  namespace: DotNetHelper.Serialization.Csv
+  syntax:
+    content: object Deserialize(Stream stream, Type type, int bufferSize = 1024, bool leaveStreamOpen = false)
+    parameters:
+    - id: stream
+      type: System.IO.Stream
+    - id: type
+      type: System.Type
+    - id: bufferSize
+      type: System.Int32
+    - id: leaveStreamOpen
+      type: System.Boolean
+    return:
+      type: System.Object
+    content.vb: Function Deserialize(stream As Stream, type As Type, bufferSize As Integer = 1024, leaveStreamOpen As Boolean = False) As Object
+  overload: DotNetHelper.Serialization.Csv.ICsvSerializer.Deserialize*
+- uid: DotNetHelper.Serialization.Csv.ICsvSerializer.DeserializeToList(System.String)
+  commentId: M:DotNetHelper.Serialization.Csv.ICsvSerializer.DeserializeToList(System.String)
+  id: DeserializeToList(System.String)
+  parent: DotNetHelper.Serialization.Csv.ICsvSerializer
+  langs:
+  - csharp
+  - vb
+  name: DeserializeToList(String)
+  nameWithType: ICsvSerializer.DeserializeToList(String)
+  fullName: DotNetHelper.Serialization.Csv.ICsvSerializer.DeserializeToList(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/DotNetHelper.Serialization.Csv/ICsvSerializer.cs
+      branch: dev
+      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv
+    id: DeserializeToList
+    path: ../src/DotNetHelper.Serialization.Csv/ICsvSerializer.cs
+    startLine: 15
+  assemblies:
+  - DotNetHelper.Serialization.Csv
+  namespace: DotNetHelper.Serialization.Csv
+  syntax:
+    content: List<object> DeserializeToList(string csv)
+    parameters:
+    - id: csv
+      type: System.String
+    return:
+      type: System.Collections.Generic.List{System.Object}
+    content.vb: Function DeserializeToList(csv As String) As List(Of Object)
+  overload: DotNetHelper.Serialization.Csv.ICsvSerializer.DeserializeToList*
+- uid: DotNetHelper.Serialization.Csv.ICsvSerializer.DeserializeToList(System.IO.Stream,System.Int32,System.Boolean)
+  commentId: M:DotNetHelper.Serialization.Csv.ICsvSerializer.DeserializeToList(System.IO.Stream,System.Int32,System.Boolean)
+  id: DeserializeToList(System.IO.Stream,System.Int32,System.Boolean)
+  parent: DotNetHelper.Serialization.Csv.ICsvSerializer
+  langs:
+  - csharp
+  - vb
+  name: DeserializeToList(Stream, Int32, Boolean)
+  nameWithType: ICsvSerializer.DeserializeToList(Stream, Int32, Boolean)
+  fullName: DotNetHelper.Serialization.Csv.ICsvSerializer.DeserializeToList(System.IO.Stream, System.Int32, System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: src/DotNetHelper.Serialization.Csv/ICsvSerializer.cs
+      branch: dev
+      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv
+    id: DeserializeToList
+    path: ../src/DotNetHelper.Serialization.Csv/ICsvSerializer.cs
+    startLine: 16
+  assemblies:
+  - DotNetHelper.Serialization.Csv
+  namespace: DotNetHelper.Serialization.Csv
+  syntax:
+    content: List<object> DeserializeToList(Stream stream, int bufferSize = 1024, bool leaveStreamOpen = false)
+    parameters:
+    - id: stream
+      type: System.IO.Stream
+    - id: bufferSize
+      type: System.Int32
+    - id: leaveStreamOpen
+      type: System.Boolean
+    return:
+      type: System.Collections.Generic.List{System.Object}
+    content.vb: Function DeserializeToList(stream As Stream, bufferSize As Integer = 1024, leaveStreamOpen As Boolean = False) As List(Of Object)
+  overload: DotNetHelper.Serialization.Csv.ICsvSerializer.DeserializeToList*
+- uid: DotNetHelper.Serialization.Csv.ICsvSerializer.DeserializeToList``1(System.String)
+  commentId: M:DotNetHelper.Serialization.Csv.ICsvSerializer.DeserializeToList``1(System.String)
+  id: DeserializeToList``1(System.String)
+  parent: DotNetHelper.Serialization.Csv.ICsvSerializer
+  langs:
+  - csharp
+  - vb
+  name: DeserializeToList<T>(String)
+  nameWithType: ICsvSerializer.DeserializeToList<T>(String)
+  fullName: DotNetHelper.Serialization.Csv.ICsvSerializer.DeserializeToList<T>(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/DotNetHelper.Serialization.Csv/ICsvSerializer.cs
+      branch: dev
+      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv
+    id: DeserializeToList
+    path: ../src/DotNetHelper.Serialization.Csv/ICsvSerializer.cs
+    startLine: 17
+  assemblies:
+  - DotNetHelper.Serialization.Csv
+  namespace: DotNetHelper.Serialization.Csv
+  syntax:
+    content: >-
+      List<T> DeserializeToList<T>(string csv)
+          where T : class
+    parameters:
+    - id: csv
+      type: System.String
+    typeParameters:
+    - id: T
+    return:
+      type: System.Collections.Generic.List{{T}}
+    content.vb: Function DeserializeToList(Of T As Class)(csv As String) As List(Of T)
+  overload: DotNetHelper.Serialization.Csv.ICsvSerializer.DeserializeToList*
+  nameWithType.vb: ICsvSerializer.DeserializeToList(Of T)(String)
+  fullName.vb: DotNetHelper.Serialization.Csv.ICsvSerializer.DeserializeToList(Of T)(System.String)
+  name.vb: DeserializeToList(Of T)(String)
+- uid: DotNetHelper.Serialization.Csv.ICsvSerializer.DeserializeToList``1(System.IO.Stream,System.Int32,System.Boolean)
+  commentId: M:DotNetHelper.Serialization.Csv.ICsvSerializer.DeserializeToList``1(System.IO.Stream,System.Int32,System.Boolean)
+  id: DeserializeToList``1(System.IO.Stream,System.Int32,System.Boolean)
+  parent: DotNetHelper.Serialization.Csv.ICsvSerializer
+  langs:
+  - csharp
+  - vb
+  name: DeserializeToList<T>(Stream, Int32, Boolean)
+  nameWithType: ICsvSerializer.DeserializeToList<T>(Stream, Int32, Boolean)
+  fullName: DotNetHelper.Serialization.Csv.ICsvSerializer.DeserializeToList<T>(System.IO.Stream, System.Int32, System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: src/DotNetHelper.Serialization.Csv/ICsvSerializer.cs
+      branch: dev
+      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv
+    id: DeserializeToList
+    path: ../src/DotNetHelper.Serialization.Csv/ICsvSerializer.cs
+    startLine: 18
+  assemblies:
+  - DotNetHelper.Serialization.Csv
+  namespace: DotNetHelper.Serialization.Csv
+  syntax:
+    content: >-
+      List<T> DeserializeToList<T>(Stream stream, int bufferSize = 1024, bool leaveStreamOpen = false)
+          where T : class
+    parameters:
+    - id: stream
+      type: System.IO.Stream
+    - id: bufferSize
+      type: System.Int32
+    - id: leaveStreamOpen
+      type: System.Boolean
+    typeParameters:
+    - id: T
+    return:
+      type: System.Collections.Generic.List{{T}}
+    content.vb: Function DeserializeToList(Of T As Class)(stream As Stream, bufferSize As Integer = 1024, leaveStreamOpen As Boolean = False) As List(Of T)
+  overload: DotNetHelper.Serialization.Csv.ICsvSerializer.DeserializeToList*
+  nameWithType.vb: ICsvSerializer.DeserializeToList(Of T)(Stream, Int32, Boolean)
+  fullName.vb: DotNetHelper.Serialization.Csv.ICsvSerializer.DeserializeToList(Of T)(System.IO.Stream, System.Int32, System.Boolean)
+  name.vb: DeserializeToList(Of T)(Stream, Int32, Boolean)
+- uid: DotNetHelper.Serialization.Csv.ICsvSerializer.DeserializeToList(System.String,System.Type)
+  commentId: M:DotNetHelper.Serialization.Csv.ICsvSerializer.DeserializeToList(System.String,System.Type)
+  id: DeserializeToList(System.String,System.Type)
+  parent: DotNetHelper.Serialization.Csv.ICsvSerializer
+  langs:
+  - csharp
+  - vb
+  name: DeserializeToList(String, Type)
+  nameWithType: ICsvSerializer.DeserializeToList(String, Type)
+  fullName: DotNetHelper.Serialization.Csv.ICsvSerializer.DeserializeToList(System.String, System.Type)
+  type: Method
+  source:
+    remote:
+      path: src/DotNetHelper.Serialization.Csv/ICsvSerializer.cs
+      branch: dev
+      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv
+    id: DeserializeToList
+    path: ../src/DotNetHelper.Serialization.Csv/ICsvSerializer.cs
+    startLine: 19
+  assemblies:
+  - DotNetHelper.Serialization.Csv
+  namespace: DotNetHelper.Serialization.Csv
+  syntax:
+    content: List<object> DeserializeToList(string csv, Type type)
+    parameters:
+    - id: csv
+      type: System.String
+    - id: type
+      type: System.Type
+    return:
+      type: System.Collections.Generic.List{System.Object}
+    content.vb: Function DeserializeToList(csv As String, type As Type) As List(Of Object)
+  overload: DotNetHelper.Serialization.Csv.ICsvSerializer.DeserializeToList*
+- uid: DotNetHelper.Serialization.Csv.ICsvSerializer.DeserializeToList(System.IO.Stream,System.Type,System.Int32,System.Boolean)
+  commentId: M:DotNetHelper.Serialization.Csv.ICsvSerializer.DeserializeToList(System.IO.Stream,System.Type,System.Int32,System.Boolean)
+  id: DeserializeToList(System.IO.Stream,System.Type,System.Int32,System.Boolean)
+  parent: DotNetHelper.Serialization.Csv.ICsvSerializer
+  langs:
+  - csharp
+  - vb
+  name: DeserializeToList(Stream, Type, Int32, Boolean)
+  nameWithType: ICsvSerializer.DeserializeToList(Stream, Type, Int32, Boolean)
+  fullName: DotNetHelper.Serialization.Csv.ICsvSerializer.DeserializeToList(System.IO.Stream, System.Type, System.Int32, System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: src/DotNetHelper.Serialization.Csv/ICsvSerializer.cs
+      branch: dev
+      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv
+    id: DeserializeToList
+    path: ../src/DotNetHelper.Serialization.Csv/ICsvSerializer.cs
+    startLine: 20
+  assemblies:
+  - DotNetHelper.Serialization.Csv
+  namespace: DotNetHelper.Serialization.Csv
+  syntax:
+    content: List<object> DeserializeToList(Stream stream, Type type, int bufferSize = 1024, bool leaveStreamOpen = false)
+    parameters:
+    - id: stream
+      type: System.IO.Stream
+    - id: type
+      type: System.Type
+    - id: bufferSize
+      type: System.Int32
+    - id: leaveStreamOpen
+      type: System.Boolean
+    return:
+      type: System.Collections.Generic.List{System.Object}
+    content.vb: Function DeserializeToList(stream As Stream, type As Type, bufferSize As Integer = 1024, leaveStreamOpen As Boolean = False) As List(Of Object)
+  overload: DotNetHelper.Serialization.Csv.ICsvSerializer.DeserializeToList*
+- uid: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStreamAsync``1(``0,System.IO.Stream,System.Int32,System.Boolean)
+  commentId: M:DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStreamAsync``1(``0,System.IO.Stream,System.Int32,System.Boolean)
+  id: SerializeToStreamAsync``1(``0,System.IO.Stream,System.Int32,System.Boolean)
+  parent: DotNetHelper.Serialization.Csv.ICsvSerializer
+  langs:
+  - csharp
+  - vb
+  name: SerializeToStreamAsync<T>(T, Stream, Int32, Boolean)
+  nameWithType: ICsvSerializer.SerializeToStreamAsync<T>(T, Stream, Int32, Boolean)
+  fullName: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStreamAsync<T>(T, System.IO.Stream, System.Int32, System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: src/DotNetHelper.Serialization.Csv/ICsvSerializer.cs
+      branch: dev
+      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv
+    id: SerializeToStreamAsync
+    path: ../src/DotNetHelper.Serialization.Csv/ICsvSerializer.cs
+    startLine: 21
+  assemblies:
+  - DotNetHelper.Serialization.Csv
+  namespace: DotNetHelper.Serialization.Csv
+  syntax:
+    content: >-
+      Task SerializeToStreamAsync<T>(T obj, Stream stream, int bufferSize = 1024, bool leaveStreamOpen = false)
+          where T : class
+    parameters:
+    - id: obj
+      type: '{T}'
+    - id: stream
+      type: System.IO.Stream
+    - id: bufferSize
+      type: System.Int32
+    - id: leaveStreamOpen
+      type: System.Boolean
+    typeParameters:
+    - id: T
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Function SerializeToStreamAsync(Of T As Class)(obj As T, stream As Stream, bufferSize As Integer = 1024, leaveStreamOpen As Boolean = False) As Task
+  overload: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStreamAsync*
+  nameWithType.vb: ICsvSerializer.SerializeToStreamAsync(Of T)(T, Stream, Int32, Boolean)
+  fullName.vb: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStreamAsync(Of T)(T, System.IO.Stream, System.Int32, System.Boolean)
+  name.vb: SerializeToStreamAsync(Of T)(T, Stream, Int32, Boolean)
+- uid: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStream``1(``0,System.IO.Stream,System.Int32,System.Boolean)
+  commentId: M:DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStream``1(``0,System.IO.Stream,System.Int32,System.Boolean)
+  id: SerializeToStream``1(``0,System.IO.Stream,System.Int32,System.Boolean)
+  parent: DotNetHelper.Serialization.Csv.ICsvSerializer
+  langs:
+  - csharp
+  - vb
+  name: SerializeToStream<T>(T, Stream, Int32, Boolean)
+  nameWithType: ICsvSerializer.SerializeToStream<T>(T, Stream, Int32, Boolean)
+  fullName: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStream<T>(T, System.IO.Stream, System.Int32, System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: src/DotNetHelper.Serialization.Csv/ICsvSerializer.cs
+      branch: dev
+      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv
+    id: SerializeToStream
+    path: ../src/DotNetHelper.Serialization.Csv/ICsvSerializer.cs
+    startLine: 22
+  assemblies:
+  - DotNetHelper.Serialization.Csv
+  namespace: DotNetHelper.Serialization.Csv
+  syntax:
+    content: >-
+      void SerializeToStream<T>(T obj, Stream stream, int bufferSize = 1024, bool leaveStreamOpen = false)
+          where T : class
+    parameters:
+    - id: obj
+      type: '{T}'
+    - id: stream
+      type: System.IO.Stream
+    - id: bufferSize
+      type: System.Int32
+    - id: leaveStreamOpen
+      type: System.Boolean
+    typeParameters:
+    - id: T
+    content.vb: Sub SerializeToStream(Of T As Class)(obj As T, stream As Stream, bufferSize As Integer = 1024, leaveStreamOpen As Boolean = False)
+  overload: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStream*
+  nameWithType.vb: ICsvSerializer.SerializeToStream(Of T)(T, Stream, Int32, Boolean)
+  fullName.vb: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStream(Of T)(T, System.IO.Stream, System.Int32, System.Boolean)
+  name.vb: SerializeToStream(Of T)(T, Stream, Int32, Boolean)
+- uid: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeListToStreamAsync``1(System.Collections.Generic.IEnumerable{``0},System.IO.Stream,System.Int32,System.Boolean)
+  commentId: M:DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeListToStreamAsync``1(System.Collections.Generic.IEnumerable{``0},System.IO.Stream,System.Int32,System.Boolean)
+  id: SerializeListToStreamAsync``1(System.Collections.Generic.IEnumerable{``0},System.IO.Stream,System.Int32,System.Boolean)
+  parent: DotNetHelper.Serialization.Csv.ICsvSerializer
+  langs:
+  - csharp
+  - vb
+  name: SerializeListToStreamAsync<T>(IEnumerable<T>, Stream, Int32, Boolean)
+  nameWithType: ICsvSerializer.SerializeListToStreamAsync<T>(IEnumerable<T>, Stream, Int32, Boolean)
+  fullName: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeListToStreamAsync<T>(System.Collections.Generic.IEnumerable<T>, System.IO.Stream, System.Int32, System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: src/DotNetHelper.Serialization.Csv/ICsvSerializer.cs
+      branch: dev
+      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv
+    id: SerializeListToStreamAsync
+    path: ../src/DotNetHelper.Serialization.Csv/ICsvSerializer.cs
+    startLine: 23
+  assemblies:
+  - DotNetHelper.Serialization.Csv
+  namespace: DotNetHelper.Serialization.Csv
+  syntax:
+    content: >-
+      Task SerializeListToStreamAsync<T>(IEnumerable<T> objs, Stream stream, int bufferSize = 1024, bool leaveStreamOpen = false)
+          where T : class
+    parameters:
+    - id: objs
+      type: System.Collections.Generic.IEnumerable{{T}}
+    - id: stream
+      type: System.IO.Stream
+    - id: bufferSize
+      type: System.Int32
+    - id: leaveStreamOpen
+      type: System.Boolean
+    typeParameters:
+    - id: T
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Function SerializeListToStreamAsync(Of T As Class)(objs As IEnumerable(Of T), stream As Stream, bufferSize As Integer = 1024, leaveStreamOpen As Boolean = False) As Task
+  overload: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeListToStreamAsync*
+  nameWithType.vb: ICsvSerializer.SerializeListToStreamAsync(Of T)(IEnumerable(Of T), Stream, Int32, Boolean)
+  fullName.vb: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeListToStreamAsync(Of T)(System.Collections.Generic.IEnumerable(Of T), System.IO.Stream, System.Int32, System.Boolean)
+  name.vb: SerializeListToStreamAsync(Of T)(IEnumerable(Of T), Stream, Int32, Boolean)
+- uid: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeListToStream``1(System.Collections.Generic.IEnumerable{``0},System.IO.Stream,System.Int32,System.Boolean)
+  commentId: M:DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeListToStream``1(System.Collections.Generic.IEnumerable{``0},System.IO.Stream,System.Int32,System.Boolean)
+  id: SerializeListToStream``1(System.Collections.Generic.IEnumerable{``0},System.IO.Stream,System.Int32,System.Boolean)
+  parent: DotNetHelper.Serialization.Csv.ICsvSerializer
+  langs:
+  - csharp
+  - vb
+  name: SerializeListToStream<T>(IEnumerable<T>, Stream, Int32, Boolean)
+  nameWithType: ICsvSerializer.SerializeListToStream<T>(IEnumerable<T>, Stream, Int32, Boolean)
+  fullName: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeListToStream<T>(System.Collections.Generic.IEnumerable<T>, System.IO.Stream, System.Int32, System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: src/DotNetHelper.Serialization.Csv/ICsvSerializer.cs
+      branch: dev
+      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv
+    id: SerializeListToStream
+    path: ../src/DotNetHelper.Serialization.Csv/ICsvSerializer.cs
+    startLine: 24
+  assemblies:
+  - DotNetHelper.Serialization.Csv
+  namespace: DotNetHelper.Serialization.Csv
+  syntax:
+    content: >-
+      void SerializeListToStream<T>(IEnumerable<T> objs, Stream stream, int bufferSize = 1024, bool leaveStreamOpen = false)
+          where T : class
+    parameters:
+    - id: objs
+      type: System.Collections.Generic.IEnumerable{{T}}
+    - id: stream
+      type: System.IO.Stream
+    - id: bufferSize
+      type: System.Int32
+    - id: leaveStreamOpen
+      type: System.Boolean
+    typeParameters:
+    - id: T
+    content.vb: Sub SerializeListToStream(Of T As Class)(objs As IEnumerable(Of T), stream As Stream, bufferSize As Integer = 1024, leaveStreamOpen As Boolean = False)
+  overload: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeListToStream*
+  nameWithType.vb: ICsvSerializer.SerializeListToStream(Of T)(IEnumerable(Of T), Stream, Int32, Boolean)
+  fullName.vb: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeListToStream(Of T)(System.Collections.Generic.IEnumerable(Of T), System.IO.Stream, System.Int32, System.Boolean)
+  name.vb: SerializeListToStream(Of T)(IEnumerable(Of T), Stream, Int32, Boolean)
+- uid: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStreamAsync(System.Object,System.Type,System.IO.Stream,System.Int32,System.Boolean)
+  commentId: M:DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStreamAsync(System.Object,System.Type,System.IO.Stream,System.Int32,System.Boolean)
+  id: SerializeToStreamAsync(System.Object,System.Type,System.IO.Stream,System.Int32,System.Boolean)
+  parent: DotNetHelper.Serialization.Csv.ICsvSerializer
+  langs:
+  - csharp
+  - vb
+  name: SerializeToStreamAsync(Object, Type, Stream, Int32, Boolean)
+  nameWithType: ICsvSerializer.SerializeToStreamAsync(Object, Type, Stream, Int32, Boolean)
+  fullName: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStreamAsync(System.Object, System.Type, System.IO.Stream, System.Int32, System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: src/DotNetHelper.Serialization.Csv/ICsvSerializer.cs
+      branch: dev
+      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv
+    id: SerializeToStreamAsync
+    path: ../src/DotNetHelper.Serialization.Csv/ICsvSerializer.cs
+    startLine: 25
+  assemblies:
+  - DotNetHelper.Serialization.Csv
+  namespace: DotNetHelper.Serialization.Csv
+  syntax:
+    content: Task SerializeToStreamAsync(object obj, Type type, Stream stream, int bufferSize = 1024, bool leaveStreamOpen = false)
+    parameters:
+    - id: obj
+      type: System.Object
+    - id: type
+      type: System.Type
+    - id: stream
+      type: System.IO.Stream
+    - id: bufferSize
+      type: System.Int32
+    - id: leaveStreamOpen
+      type: System.Boolean
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Function SerializeToStreamAsync(obj As Object, type As Type, stream As Stream, bufferSize As Integer = 1024, leaveStreamOpen As Boolean = False) As Task
+  overload: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStreamAsync*
+- uid: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStream(System.Object,System.Type,System.IO.Stream,System.Int32,System.Boolean)
+  commentId: M:DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStream(System.Object,System.Type,System.IO.Stream,System.Int32,System.Boolean)
+  id: SerializeToStream(System.Object,System.Type,System.IO.Stream,System.Int32,System.Boolean)
+  parent: DotNetHelper.Serialization.Csv.ICsvSerializer
+  langs:
+  - csharp
+  - vb
+  name: SerializeToStream(Object, Type, Stream, Int32, Boolean)
+  nameWithType: ICsvSerializer.SerializeToStream(Object, Type, Stream, Int32, Boolean)
+  fullName: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStream(System.Object, System.Type, System.IO.Stream, System.Int32, System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: src/DotNetHelper.Serialization.Csv/ICsvSerializer.cs
+      branch: dev
+      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv
+    id: SerializeToStream
+    path: ../src/DotNetHelper.Serialization.Csv/ICsvSerializer.cs
+    startLine: 26
+  assemblies:
+  - DotNetHelper.Serialization.Csv
+  namespace: DotNetHelper.Serialization.Csv
+  syntax:
+    content: void SerializeToStream(object obj, Type type, Stream stream, int bufferSize = 1024, bool leaveStreamOpen = false)
+    parameters:
+    - id: obj
+      type: System.Object
+    - id: type
+      type: System.Type
+    - id: stream
+      type: System.IO.Stream
+    - id: bufferSize
+      type: System.Int32
+    - id: leaveStreamOpen
+      type: System.Boolean
+    content.vb: Sub SerializeToStream(obj As Object, type As Type, stream As Stream, bufferSize As Integer = 1024, leaveStreamOpen As Boolean = False)
+  overload: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStream*
+- uid: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStreamAsync``1(``0,System.Int32)
+  commentId: M:DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStreamAsync``1(``0,System.Int32)
+  id: SerializeToStreamAsync``1(``0,System.Int32)
+  parent: DotNetHelper.Serialization.Csv.ICsvSerializer
+  langs:
+  - csharp
+  - vb
+  name: SerializeToStreamAsync<T>(T, Int32)
+  nameWithType: ICsvSerializer.SerializeToStreamAsync<T>(T, Int32)
+  fullName: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStreamAsync<T>(T, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: src/DotNetHelper.Serialization.Csv/ICsvSerializer.cs
+      branch: dev
+      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv
+    id: SerializeToStreamAsync
+    path: ../src/DotNetHelper.Serialization.Csv/ICsvSerializer.cs
+    startLine: 27
+  assemblies:
+  - DotNetHelper.Serialization.Csv
+  namespace: DotNetHelper.Serialization.Csv
+  syntax:
+    content: >-
+      Task<Stream> SerializeToStreamAsync<T>(T obj, int bufferSize = 1024)
+          where T : class
+    parameters:
+    - id: obj
+      type: '{T}'
+    - id: bufferSize
+      type: System.Int32
+    typeParameters:
+    - id: T
+    return:
+      type: System.Threading.Tasks.Task{System.IO.Stream}
+    content.vb: Function SerializeToStreamAsync(Of T As Class)(obj As T, bufferSize As Integer = 1024) As Task(Of Stream)
+  overload: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStreamAsync*
+  nameWithType.vb: ICsvSerializer.SerializeToStreamAsync(Of T)(T, Int32)
+  fullName.vb: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStreamAsync(Of T)(T, System.Int32)
+  name.vb: SerializeToStreamAsync(Of T)(T, Int32)
+- uid: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStream``1(``0,System.Int32)
+  commentId: M:DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStream``1(``0,System.Int32)
+  id: SerializeToStream``1(``0,System.Int32)
+  parent: DotNetHelper.Serialization.Csv.ICsvSerializer
+  langs:
+  - csharp
+  - vb
+  name: SerializeToStream<T>(T, Int32)
+  nameWithType: ICsvSerializer.SerializeToStream<T>(T, Int32)
+  fullName: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStream<T>(T, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: src/DotNetHelper.Serialization.Csv/ICsvSerializer.cs
+      branch: dev
+      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv
+    id: SerializeToStream
+    path: ../src/DotNetHelper.Serialization.Csv/ICsvSerializer.cs
+    startLine: 28
+  assemblies:
+  - DotNetHelper.Serialization.Csv
+  namespace: DotNetHelper.Serialization.Csv
+  syntax:
+    content: >-
+      Stream SerializeToStream<T>(T obj, int bufferSize = 1024)
+          where T : class
+    parameters:
+    - id: obj
+      type: '{T}'
+    - id: bufferSize
+      type: System.Int32
+    typeParameters:
+    - id: T
+    return:
+      type: System.IO.Stream
+    content.vb: Function SerializeToStream(Of T As Class)(obj As T, bufferSize As Integer = 1024) As Stream
+  overload: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStream*
+  nameWithType.vb: ICsvSerializer.SerializeToStream(Of T)(T, Int32)
+  fullName.vb: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStream(Of T)(T, System.Int32)
+  name.vb: SerializeToStream(Of T)(T, Int32)
+- uid: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeListToStreamAsync``1(System.Collections.Generic.IEnumerable{``0},System.Int32)
+  commentId: M:DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeListToStreamAsync``1(System.Collections.Generic.IEnumerable{``0},System.Int32)
+  id: SerializeListToStreamAsync``1(System.Collections.Generic.IEnumerable{``0},System.Int32)
+  parent: DotNetHelper.Serialization.Csv.ICsvSerializer
+  langs:
+  - csharp
+  - vb
+  name: SerializeListToStreamAsync<T>(IEnumerable<T>, Int32)
+  nameWithType: ICsvSerializer.SerializeListToStreamAsync<T>(IEnumerable<T>, Int32)
+  fullName: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeListToStreamAsync<T>(System.Collections.Generic.IEnumerable<T>, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: src/DotNetHelper.Serialization.Csv/ICsvSerializer.cs
+      branch: dev
+      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv
+    id: SerializeListToStreamAsync
+    path: ../src/DotNetHelper.Serialization.Csv/ICsvSerializer.cs
+    startLine: 29
+  assemblies:
+  - DotNetHelper.Serialization.Csv
+  namespace: DotNetHelper.Serialization.Csv
+  syntax:
+    content: >-
+      Task<Stream> SerializeListToStreamAsync<T>(IEnumerable<T> objs, int bufferSize = 1024)
+          where T : class
+    parameters:
+    - id: objs
+      type: System.Collections.Generic.IEnumerable{{T}}
+    - id: bufferSize
+      type: System.Int32
+    typeParameters:
+    - id: T
+    return:
+      type: System.Threading.Tasks.Task{System.IO.Stream}
+    content.vb: Function SerializeListToStreamAsync(Of T As Class)(objs As IEnumerable(Of T), bufferSize As Integer = 1024) As Task(Of Stream)
+  overload: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeListToStreamAsync*
+  nameWithType.vb: ICsvSerializer.SerializeListToStreamAsync(Of T)(IEnumerable(Of T), Int32)
+  fullName.vb: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeListToStreamAsync(Of T)(System.Collections.Generic.IEnumerable(Of T), System.Int32)
+  name.vb: SerializeListToStreamAsync(Of T)(IEnumerable(Of T), Int32)
+- uid: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeListToStream``1(System.Collections.Generic.IEnumerable{``0},System.Int32)
+  commentId: M:DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeListToStream``1(System.Collections.Generic.IEnumerable{``0},System.Int32)
+  id: SerializeListToStream``1(System.Collections.Generic.IEnumerable{``0},System.Int32)
+  parent: DotNetHelper.Serialization.Csv.ICsvSerializer
+  langs:
+  - csharp
+  - vb
+  name: SerializeListToStream<T>(IEnumerable<T>, Int32)
+  nameWithType: ICsvSerializer.SerializeListToStream<T>(IEnumerable<T>, Int32)
+  fullName: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeListToStream<T>(System.Collections.Generic.IEnumerable<T>, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: src/DotNetHelper.Serialization.Csv/ICsvSerializer.cs
+      branch: dev
+      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv
+    id: SerializeListToStream
+    path: ../src/DotNetHelper.Serialization.Csv/ICsvSerializer.cs
+    startLine: 30
+  assemblies:
+  - DotNetHelper.Serialization.Csv
+  namespace: DotNetHelper.Serialization.Csv
+  syntax:
+    content: >-
+      Stream SerializeListToStream<T>(IEnumerable<T> objs, int bufferSize = 1024)
+          where T : class
+    parameters:
+    - id: objs
+      type: System.Collections.Generic.IEnumerable{{T}}
+    - id: bufferSize
+      type: System.Int32
+    typeParameters:
+    - id: T
+    return:
+      type: System.IO.Stream
+    content.vb: Function SerializeListToStream(Of T As Class)(objs As IEnumerable(Of T), bufferSize As Integer = 1024) As Stream
+  overload: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeListToStream*
+  nameWithType.vb: ICsvSerializer.SerializeListToStream(Of T)(IEnumerable(Of T), Int32)
+  fullName.vb: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeListToStream(Of T)(System.Collections.Generic.IEnumerable(Of T), System.Int32)
+  name.vb: SerializeListToStream(Of T)(IEnumerable(Of T), Int32)
+- uid: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStreamAsync(System.Object,System.Type,System.Int32)
+  commentId: M:DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStreamAsync(System.Object,System.Type,System.Int32)
+  id: SerializeToStreamAsync(System.Object,System.Type,System.Int32)
+  parent: DotNetHelper.Serialization.Csv.ICsvSerializer
+  langs:
+  - csharp
+  - vb
+  name: SerializeToStreamAsync(Object, Type, Int32)
+  nameWithType: ICsvSerializer.SerializeToStreamAsync(Object, Type, Int32)
+  fullName: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStreamAsync(System.Object, System.Type, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: src/DotNetHelper.Serialization.Csv/ICsvSerializer.cs
+      branch: dev
+      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv
+    id: SerializeToStreamAsync
+    path: ../src/DotNetHelper.Serialization.Csv/ICsvSerializer.cs
+    startLine: 31
+  assemblies:
+  - DotNetHelper.Serialization.Csv
+  namespace: DotNetHelper.Serialization.Csv
+  syntax:
+    content: Task<Stream> SerializeToStreamAsync(object obj, Type type, int bufferSize = 1024)
+    parameters:
+    - id: obj
+      type: System.Object
+    - id: type
+      type: System.Type
+    - id: bufferSize
+      type: System.Int32
+    return:
+      type: System.Threading.Tasks.Task{System.IO.Stream}
+    content.vb: Function SerializeToStreamAsync(obj As Object, type As Type, bufferSize As Integer = 1024) As Task(Of Stream)
+  overload: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStreamAsync*
+- uid: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStream(System.Object,System.Type,System.Int32)
+  commentId: M:DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStream(System.Object,System.Type,System.Int32)
+  id: SerializeToStream(System.Object,System.Type,System.Int32)
+  parent: DotNetHelper.Serialization.Csv.ICsvSerializer
+  langs:
+  - csharp
+  - vb
+  name: SerializeToStream(Object, Type, Int32)
+  nameWithType: ICsvSerializer.SerializeToStream(Object, Type, Int32)
+  fullName: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStream(System.Object, System.Type, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: src/DotNetHelper.Serialization.Csv/ICsvSerializer.cs
+      branch: dev
+      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv
+    id: SerializeToStream
+    path: ../src/DotNetHelper.Serialization.Csv/ICsvSerializer.cs
+    startLine: 32
+  assemblies:
+  - DotNetHelper.Serialization.Csv
+  namespace: DotNetHelper.Serialization.Csv
+  syntax:
+    content: Stream SerializeToStream(object obj, Type type, int bufferSize = 1024)
+    parameters:
+    - id: obj
+      type: System.Object
+    - id: type
+      type: System.Type
+    - id: bufferSize
+      type: System.Int32
+    return:
+      type: System.IO.Stream
+    content.vb: Function SerializeToStream(obj As Object, type As Type, bufferSize As Integer = 1024) As Stream
+  overload: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStream*
+- uid: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToString(System.Object)
+  commentId: M:DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToString(System.Object)
+  id: SerializeToString(System.Object)
+  parent: DotNetHelper.Serialization.Csv.ICsvSerializer
+  langs:
+  - csharp
+  - vb
+  name: SerializeToString(Object)
+  nameWithType: ICsvSerializer.SerializeToString(Object)
+  fullName: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToString(System.Object)
+  type: Method
+  source:
+    remote:
+      path: src/DotNetHelper.Serialization.Csv/ICsvSerializer.cs
+      branch: dev
+      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv
+    id: SerializeToString
+    path: ../src/DotNetHelper.Serialization.Csv/ICsvSerializer.cs
+    startLine: 39
+  assemblies:
+  - DotNetHelper.Serialization.Csv
+  namespace: DotNetHelper.Serialization.Csv
+  summary: "\n\n"
+  example: []
+  syntax:
+    content: string SerializeToString(object obj)
+    parameters:
+    - id: obj
+      type: System.Object
+      description: ''
+    return:
+      type: System.String
+      description: ''
+    content.vb: Function SerializeToString(obj As Object) As String
+  overload: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToString*
+- uid: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStringAsync(System.Object)
+  commentId: M:DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStringAsync(System.Object)
+  id: SerializeToStringAsync(System.Object)
+  parent: DotNetHelper.Serialization.Csv.ICsvSerializer
+  langs:
+  - csharp
+  - vb
+  name: SerializeToStringAsync(Object)
+  nameWithType: ICsvSerializer.SerializeToStringAsync(Object)
+  fullName: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStringAsync(System.Object)
+  type: Method
+  source:
+    remote:
+      path: src/DotNetHelper.Serialization.Csv/ICsvSerializer.cs
+      branch: dev
+      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv
+    id: SerializeToStringAsync
+    path: ../src/DotNetHelper.Serialization.Csv/ICsvSerializer.cs
+    startLine: 46
+  assemblies:
+  - DotNetHelper.Serialization.Csv
+  namespace: DotNetHelper.Serialization.Csv
+  summary: "\n\n"
+  example: []
+  syntax:
+    content: Task<string> SerializeToStringAsync(object obj)
+    parameters:
+    - id: obj
+      type: System.Object
+      description: ''
+    return:
+      type: System.Threading.Tasks.Task{System.String}
+      description: ''
+    content.vb: Function SerializeToStringAsync(obj As Object) As Task(Of String)
+  overload: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStringAsync*
+- uid: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeListToStringAsync``1(System.Collections.Generic.IEnumerable{``0})
+  commentId: M:DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeListToStringAsync``1(System.Collections.Generic.IEnumerable{``0})
+  id: SerializeListToStringAsync``1(System.Collections.Generic.IEnumerable{``0})
+  parent: DotNetHelper.Serialization.Csv.ICsvSerializer
+  langs:
+  - csharp
+  - vb
+  name: SerializeListToStringAsync<T>(IEnumerable<T>)
+  nameWithType: ICsvSerializer.SerializeListToStringAsync<T>(IEnumerable<T>)
+  fullName: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeListToStringAsync<T>(System.Collections.Generic.IEnumerable<T>)
+  type: Method
+  source:
+    remote:
+      path: src/DotNetHelper.Serialization.Csv/ICsvSerializer.cs
+      branch: dev
+      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv
+    id: SerializeListToStringAsync
+    path: ../src/DotNetHelper.Serialization.Csv/ICsvSerializer.cs
+    startLine: 54
+  assemblies:
+  - DotNetHelper.Serialization.Csv
+  namespace: DotNetHelper.Serialization.Csv
+  summary: "\n\n"
+  example: []
+  syntax:
+    content: >-
+      Task<string> SerializeListToStringAsync<T>(IEnumerable<T> obj)
+          where T : class
+    parameters:
+    - id: obj
+      type: System.Collections.Generic.IEnumerable{{T}}
+      description: ''
+    typeParameters:
+    - id: T
+      description: ''
+    return:
+      type: System.Threading.Tasks.Task{System.String}
+      description: ''
+    content.vb: Function SerializeListToStringAsync(Of T As Class)(obj As IEnumerable(Of T)) As Task(Of String)
+  overload: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeListToStringAsync*
+  nameWithType.vb: ICsvSerializer.SerializeListToStringAsync(Of T)(IEnumerable(Of T))
+  fullName.vb: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeListToStringAsync(Of T)(System.Collections.Generic.IEnumerable(Of T))
+  name.vb: SerializeListToStringAsync(Of T)(IEnumerable(Of T))
+- uid: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeListToString``1(System.Collections.Generic.IEnumerable{``0})
+  commentId: M:DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeListToString``1(System.Collections.Generic.IEnumerable{``0})
+  id: SerializeListToString``1(System.Collections.Generic.IEnumerable{``0})
+  parent: DotNetHelper.Serialization.Csv.ICsvSerializer
+  langs:
+  - csharp
+  - vb
+  name: SerializeListToString<T>(IEnumerable<T>)
+  nameWithType: ICsvSerializer.SerializeListToString<T>(IEnumerable<T>)
+  fullName: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeListToString<T>(System.Collections.Generic.IEnumerable<T>)
+  type: Method
+  source:
+    remote:
+      path: src/DotNetHelper.Serialization.Csv/ICsvSerializer.cs
+      branch: dev
+      repo: https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv
+    id: SerializeListToString
+    path: ../src/DotNetHelper.Serialization.Csv/ICsvSerializer.cs
+    startLine: 62
+  assemblies:
+  - DotNetHelper.Serialization.Csv
+  namespace: DotNetHelper.Serialization.Csv
+  summary: "\n\n"
+  example: []
+  syntax:
+    content: >-
+      string SerializeListToString<T>(IEnumerable<T> obj)
+          where T : class
+    parameters:
+    - id: obj
+      type: System.Collections.Generic.IEnumerable{{T}}
+      description: ''
+    typeParameters:
+    - id: T
+      description: ''
+    return:
+      type: System.String
+      description: ''
+    content.vb: Function SerializeListToString(Of T As Class)(obj As IEnumerable(Of T)) As String
+  overload: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeListToString*
+  nameWithType.vb: ICsvSerializer.SerializeListToString(Of T)(IEnumerable(Of T))
+  fullName.vb: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeListToString(Of T)(System.Collections.Generic.IEnumerable(Of T))
+  name.vb: SerializeListToString(Of T)(IEnumerable(Of T))
+references:
+- uid: DotNetHelper.Serialization.Csv
+  commentId: N:DotNetHelper.Serialization.Csv
+  name: DotNetHelper.Serialization.Csv
+  nameWithType: DotNetHelper.Serialization.Csv
+  fullName: DotNetHelper.Serialization.Csv
+- uid: DotNetHelper.Serialization.Csv.ICsvSerializer.Deserialize*
+  commentId: Overload:DotNetHelper.Serialization.Csv.ICsvSerializer.Deserialize
+  name: Deserialize
+  nameWithType: ICsvSerializer.Deserialize
+  fullName: DotNetHelper.Serialization.Csv.ICsvSerializer.Deserialize
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.IO.Stream
+  commentId: T:System.IO.Stream
+  parent: System.IO
+  isExternal: true
+  name: Stream
+  nameWithType: Stream
+  fullName: System.IO.Stream
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.IO
+  commentId: N:System.IO
+  isExternal: true
+  name: System.IO
+  nameWithType: System.IO
+  fullName: System.IO
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: System.Type
+  commentId: T:System.Type
+  parent: System
+  isExternal: true
+  name: Type
+  nameWithType: Type
+  fullName: System.Type
+- uid: DotNetHelper.Serialization.Csv.ICsvSerializer.DeserializeToList*
+  commentId: Overload:DotNetHelper.Serialization.Csv.ICsvSerializer.DeserializeToList
+  name: DeserializeToList
+  nameWithType: ICsvSerializer.DeserializeToList
+  fullName: DotNetHelper.Serialization.Csv.ICsvSerializer.DeserializeToList
+- uid: System.Collections.Generic.List{System.Object}
+  commentId: T:System.Collections.Generic.List{System.Object}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<Object>
+  nameWithType: List<Object>
+  fullName: System.Collections.Generic.List<System.Object>
+  nameWithType.vb: List(Of )
+  fullName.vb: System.Collections.Generic.List(Of )
+  name.vb: List(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: System.Collections.Generic.List{{T}}
+  commentId: T:System.Collections.Generic.List{``0}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStreamAsync*
+  commentId: Overload:DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStreamAsync
+  name: SerializeToStreamAsync
+  nameWithType: ICsvSerializer.SerializeToStreamAsync
+  fullName: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStreamAsync
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+- uid: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStream*
+  commentId: Overload:DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStream
+  name: SerializeToStream
+  nameWithType: ICsvSerializer.SerializeToStream
+  fullName: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStream
+- uid: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeListToStreamAsync*
+  commentId: Overload:DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeListToStreamAsync
+  name: SerializeListToStreamAsync
+  nameWithType: ICsvSerializer.SerializeListToStreamAsync
+  fullName: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeListToStreamAsync
+- uid: System.Collections.Generic.IEnumerable{{T}}
+  commentId: T:System.Collections.Generic.IEnumerable{``0}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeListToStream*
+  commentId: Overload:DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeListToStream
+  name: SerializeListToStream
+  nameWithType: ICsvSerializer.SerializeListToStream
+  fullName: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeListToStream
+- uid: System.Threading.Tasks.Task{System.IO.Stream}
+  commentId: T:System.Threading.Tasks.Task{System.IO.Stream}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  name: Task<Stream>
+  nameWithType: Task<Stream>
+  fullName: System.Threading.Tasks.Task<System.IO.Stream>
+  nameWithType.vb: Task(Of Stream)
+  fullName.vb: System.Threading.Tasks.Task(Of System.IO.Stream)
+  name.vb: Task(Of Stream)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.IO.Stream
+    name: Stream
+    nameWithType: Stream
+    fullName: System.IO.Stream
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.IO.Stream
+    name: Stream
+    nameWithType: Stream
+    fullName: System.IO.Stream
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToString*
+  commentId: Overload:DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToString
+  name: SerializeToString
+  nameWithType: ICsvSerializer.SerializeToString
+  fullName: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToString
+- uid: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStringAsync*
+  commentId: Overload:DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStringAsync
+  name: SerializeToStringAsync
+  nameWithType: ICsvSerializer.SerializeToStringAsync
+  fullName: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeToStringAsync
+- uid: System.Threading.Tasks.Task{System.String}
+  commentId: T:System.Threading.Tasks.Task{System.String}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  name: Task<String>
+  nameWithType: Task<String>
+  fullName: System.Threading.Tasks.Task<System.String>
+  nameWithType.vb: Task(Of String)
+  fullName.vb: System.Threading.Tasks.Task(Of System.String)
+  name.vb: Task(Of String)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeListToStringAsync*
+  commentId: Overload:DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeListToStringAsync
+  name: SerializeListToStringAsync
+  nameWithType: ICsvSerializer.SerializeListToStringAsync
+  fullName: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeListToStringAsync
+- uid: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeListToString*
+  commentId: Overload:DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeListToString
+  name: SerializeListToString
+  nameWithType: ICsvSerializer.SerializeListToString
+  fullName: DotNetHelper.Serialization.Csv.ICsvSerializer.SerializeListToString

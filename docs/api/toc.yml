@@ -4,3 +4,5 @@
   items:
   - uid: DotNetHelper.Serialization.Csv.DataSourceCsv
     name: DataSourceCsv
+  - uid: DotNetHelper.Serialization.Csv.ICsvSerializer
+    name: ICsvSerializer
