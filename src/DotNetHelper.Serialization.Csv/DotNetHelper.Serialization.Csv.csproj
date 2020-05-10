@@ -2,10 +2,24 @@
 
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0;net452;net45</TargetFrameworks>
+    <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+    <PackageProjectUrl>https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <Description>DotNetHelper.Serialization.Csv is a easy to use serialization library for csv. supports</Description>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="CsvHelper" Version="15.0.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\LICENSE.md">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>
