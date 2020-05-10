@@ -6,7 +6,7 @@
     <PackageProjectUrl>https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv</PackageProjectUrl>
     <RepositoryUrl>https://github.com/TheMofaDe/DotNetHelper.Serialization.Csv</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <Description>DotNetHelper.Serialization.Csv is a easy to use serialization library for csv. supports</Description>
+    <Description>DotNetHelper.Serialization.Csv is a wrapper over csvhelper but that will auto map class for you and allow you to use the same method for dealing with list or a single object</Description>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
   </PropertyGroup>
