@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using CsvHelper.Configuration;
 using DotNetHelper.Serialization.Csv;
-using Microsoft.Win32.SafeHandles;
+
 
 namespace ConsoleApp
 {

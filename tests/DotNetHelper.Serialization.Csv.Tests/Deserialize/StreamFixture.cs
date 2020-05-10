@@ -148,30 +148,30 @@ namespace DotNetHelper.Serialization.Csv.Tests.Deserialize
         }
 
 
-        // TODO :: FUTURE SUPPORT 
-        // [Author("Joseph McNeal Jr", "josephmcnealjr@gmail.com")]
-        // [Test]
-        // public void Test_Deserialize_Stream_To_Expando_Object_List_2([Values(false, true)] bool leaveStreamOpen)
-        // {
-        //     var stream = MockData.GetEmployeeListAsStream(DataSource.Configuration.Encoding);
-        //     var employees = DataSource.Deserialize(stream, typeof(List<ExpandoObject>),1024,leaveStreamOpen);
-        //     if (employees is List<ExpandoObject> list)
-        //     {
-        //         EnsureDynamicObjectMatchMockData(list.First());
-        //     }
-        //     else
-        //     {
-        //         Assert.Fail("Deserialize Failed");
-        //     }
-        //     if (leaveStreamOpen)
-        //     {
-        //         EnsureStreamIsNotDisposeAndIsAtEndOfStream(stream);
-        //     }
-        //     else
-        //     {
-        //         EnsureStreamIsDispose(stream);
-        //     }
-        // }
+       // TODO::FUTURE SUPPORT
+        [Author("Joseph McNeal Jr", "josephmcnealjr@gmail.com")]
+        [Test]
+        public void Test_Deserialize_Stream_To_Expando_Object_List_2([Values(false, true)] bool leaveStreamOpen)
+        {
+            var stream = MockData.GetEmployeeListAsStream(DataSource.Configuration.Encoding);
+            var employees = DataSource.Deserialize(stream, typeof(List<ExpandoObject>), 1024, leaveStreamOpen);
+            if (employees is List<ExpandoObject> list)
+            {
+                EnsureDynamicObjectMatchMockData(list.First());
+            }
+            else
+            {
+                Assert.Fail("Deserialize Failed");
+            }
+            if (leaveStreamOpen)
+            {
+                EnsureStreamIsNotDisposeAndIsAtEndOfStream(stream);
+            }
+            else
+            {
+                EnsureStreamIsDispose(stream);
+            }
+        }
 
 
 

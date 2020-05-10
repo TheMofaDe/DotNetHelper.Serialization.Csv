@@ -102,20 +102,20 @@ namespace DotNetHelper.Serialization.Csv.Tests.Deserialize
             EnsureDynamicObjectMatchMockData(employees.First());
         }
 
-       //[Author("Joseph McNeal Jr", "josephmcnealjr@gmail.com")]
-       //[Test]
-       //public void Test_Deserialize_String_To_Expando_Object_List_2()
-       //{
-       //    var employees = DataSource.Deserialize(MockData.EmployeeAsCsvWithHeader, typeof(List<ExpandoObject>));
-       //    if (employees is List<ExpandoObject> list)
-       //    {
-       //        EnsureDynamicObjectMatchMockData(list.First());
-       //    }
-       //    else
-       //    {
-       //        Assert.Fail("Deserialize Failed");
-       //    }
-       //}
+        [Author("Joseph McNeal Jr", "josephmcnealjr@gmail.com")]
+        [Test]
+        public void Test_Deserialize_String_To_Expando_Object_List_2()
+        {
+            var employees = DataSource.Deserialize(MockData.EmployeeAsCsvWithHeader, typeof(List<ExpandoObject>));
+            if (employees is List<ExpandoObject> list)
+            {
+                EnsureDynamicObjectMatchMockData(list.First());
+            }
+            else
+            {
+                Assert.Fail("Deserialize Failed");
+            }
+        }
 
 
 
