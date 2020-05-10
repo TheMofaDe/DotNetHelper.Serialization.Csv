@@ -5,6 +5,7 @@ items:
   id: DotNetHelper.Serialization.Csv
   children:
   - DotNetHelper.Serialization.Csv.DataSourceCsv
+  - DotNetHelper.Serialization.Csv.ICsvSerializer
   langs:
   - csharp
   - vb
@@ -20,3 +21,14 @@ references:
   name: DataSourceCsv
   nameWithType: DataSourceCsv
   fullName: DotNetHelper.Serialization.Csv.DataSourceCsv
+- uid: DotNetHelper.Serialization.Csv.ICsvSerializer
+  commentId: T:DotNetHelper.Serialization.Csv.ICsvSerializer
+  parent: DotNetHelper.Serialization.Csv
+  name: ICsvSerializer
+  nameWithType: ICsvSerializer
+  fullName: DotNetHelper.Serialization.Csv.ICsvSerializer
+- uid: DotNetHelper.Serialization.Csv
+  commentId: N:DotNetHelper.Serialization.Csv
+  name: DotNetHelper.Serialization.Csv
+  nameWithType: DotNetHelper.Serialization.Csv
+  fullName: DotNetHelper.Serialization.Csv
